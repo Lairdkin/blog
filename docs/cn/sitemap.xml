@@ -2,73 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.com/blog/</loc>
+    <loc>https://radish.cloud/blog/</loc>
     <lastmod>2021-05-28T01:56:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.com/en/blog/"
+                href="https://radish.cloud/en/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://example.com/blog/"
+                href="https://radish.cloud/blog/"
                 />
   </url><url>
-    <loc>http://example.com/</loc>
+    <loc>https://radish.cloud/</loc>
     <lastmod>2021-05-28T01:56:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.com/en/"
+                href="https://radish.cloud/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://example.com/"
+                href="https://radish.cloud/"
                 />
   </url><url>
-    <loc>http://example.com/blog/testblog/</loc>
+    <loc>https://radish.cloud/blog/testblog/</loc>
     <lastmod>2021-05-28T01:56:47+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.com/en/blog/testblog/"
+                href="https://radish.cloud/en/blog/testblog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://example.com/blog/testblog/"
+                href="https://radish.cloud/blog/testblog/"
                 />
   </url><url>
-    <loc>http://example.com/projects/</loc>
+    <loc>https://radish.cloud/projects/</loc>
     <lastmod>2021-05-28T01:55:54+08:00</lastmod>
   </url><url>
-    <loc>http://example.com/home/</loc>
+    <loc>https://radish.cloud/home/</loc>
     <lastmod>2021-05-28T01:53:59+08:00</lastmod>
   </url><url>
-    <loc>http://example.com/series/</loc>
+    <loc>https://radish.cloud/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.com/en/series/"
+                href="https://radish.cloud/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://example.com/series/"
+                href="https://radish.cloud/series/"
                 />
   </url><url>
-    <loc>http://example.com/tags/</loc>
+    <loc>https://radish.cloud/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.com/en/tags/"
+                href="https://radish.cloud/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
-                href="http://example.com/tags/"
+                href="https://radish.cloud/tags/"
                 />
   </url>
 </urlset>
