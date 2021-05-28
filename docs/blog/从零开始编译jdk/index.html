@@ -248,16 +248,16 @@
 <li>gcc，g++ 4.4+ (据官网说gcc版本最高只测试到7.4)</li>
 </ul>
 <p>执行</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>sudo pacman -S java-8-openjdk gcc g++
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>sudo pacman -S java-8-openjdk gcc g++
 </code></pre></div>
 <h3 id="下载源码" class="anchor-link"><a href="#%e4%b8%8b%e8%bd%bd%e6%ba%90%e7%a0%81">下载源码</a></h3>
 <p>openjdk团队使用Mercurial工具管理源代码
 安装:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>sudo pacman -S Mercurial  
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>sudo pacman -S Mercurial  
 </code></pre></div><p>克隆代码</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/
 </code></pre></div><p>clone完成后，进入源码目录，执行脚本</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>bash get_source.sh
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>bash get_source.sh
 </code></pre></div><p>会自动获取全部源码</p>
 <blockquote>
 <p>如果下载太慢，可以使用github上的代码镜像
@@ -267,10 +267,10 @@
 
 <h2 id="编译" class="anchor-link"><a href="#%e7%bc%96%e8%af%91">编译</a></h2>
 <p>自动生成编译文件并检查依赖</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>bash ./configure
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>bash ./configure
 </code></pre></div><p>如果中途中断，请检查输出，安装对应的依赖库</p>
 <p>执行编译命令</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>make all
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>make all
 </code></pre></div><p>如果成功会在所在文件夹下生成一个images的文件夹</p>
 <p>然后我失败了QAQ</p>
 <p>目前知道是遇到了一个已知bug，另外编译环境也炸了hhhh，下篇文章再说吧</p>
