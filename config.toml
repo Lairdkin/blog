@@ -26,7 +26,7 @@ DefaultContentLanguage           = "cn"                    # Default language fo
         numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
         localTime                = true                    # Show your current local time in contact section
         timeZone                 = "Asia/Shanghai"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        timeFormat               = "zh-cn"                 # Language specific format to use
+        timeFormat               = "zh-CN"                 # Language specific format to use
     [params.projects]
         useTwoColumns            = false                   # Use a layout with two columns instead of three
 
@@ -108,12 +108,12 @@ DefaultContentLanguage           = "cn"                    # Default language fo
 
     [languages.cn]
         languageName     = "简体中文"
-        languageCode     = "zh-cn"
+        languageCode     = "zh-CN"
         contentDir       = "content/cn"
         weight           = 0
         title            = "RaidishCloud"
         [languages.cn.params]
             description  = "站点描述"
-            footerText   = "  © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可"
+            # footerText   = "  © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可"
 
     
