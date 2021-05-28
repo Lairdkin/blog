@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="站点描述">
+<title>
+[转载] Pojo, Javabean, Entity区别 - RaidishCloud
+</title>
+
+
+
+        
+        <meta property="og:title" content="[转载]POJO,JAVABEAN,Entity区别 - RaidishCloud" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="站点描述"/>
+<meta property="og:url" content="https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/"/>
+<meta property="og:site_name" content="RaidishCloud"/>
+
+
+
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.3679995ba0ed4b91edeef430fd34cce1e8b53c123f9993c4861941eee80b46b1.css" integrity="sha256-NnmZW6DtS5Ht7vQw/TTM4ei1PBI/mZPEhhlB7ugLRrE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">博客</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/"></a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://radish.cloud/projects/">
+                  
+                  
+                  项目
+                  
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://radish.cloud/blog/">
+                  
+                  
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">联系我</a>
+            
+            
+
+            
+            
+            
+            
+            <a class="navbar-item" href="https://radish.cloud/en/">English</a>
+            
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/">[转载]POJO,JAVABEAN,Entity区别</a>
+    </h2>
+    <div class="post-data">
+        May 28, 2018 |
+        
+    </div>
+    
+    <div class="blog-share">
+        :
+        
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=%5b%e8%bd%ac%e8%bd%bd%5dPOJO%2cJAVABEAN%2cEntity%e5%8c%ba%e5%88%ab%20https%3a%2f%2fradish.cloud%2fblog%2fpojo-javabean-entity%25E5%258C%25BA%25E5%2588%25AB%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fab fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+        
+        
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fradish.cloud%2fblog%2fpojo-javabean-entity%25E5%258C%25BA%25E5%2588%25AB%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fab fa-facebook-f"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+        
+        
+        <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fradish.cloud%2fblog%2fpojo-javabean-entity%25E5%258C%25BA%25E5%2588%25AB%2f&amp;description=%5b%e8%bd%ac%e8%bd%bd%5dPOJO%2cJAVABEAN%2cEntity%e5%8c%ba%e5%88%ab" onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+            <i class="fab fa-pinterest-p"></i>
+            <span class="hidden">Pinterest</span>
+        </a>
+        
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      
+     <p>
+         Tags: 
+          
+           <a href="/tags/java">
+             java</a>,
+         
+           <a href="/tags/javaee">
+             JavaEE</a>
+         
+        </p>
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>转载自  ：
+{% blockquote 哎呦AU的博客 <a href="https://www.cnblogs.com/aurum324/p/8167996.html">https://www.cnblogs.com/aurum324/p/8167996.html</a> POJO,JAVABEAN,Entity区别 %}
+{% endblockquote %}</p>
+
+<h3 id="1javabean" class="anchor-link"><a href="#1javabean">1、javaBean</a></h3>
+<p>javaBean是一种Java语言写成的可重用组件。为写成JavaBean，类必须是具体和公共的，并且具有无参数的构造器。JavaBean通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。更多的是一种规范，即包含一组set和get方法的java对象。javaBean可以使应用程序更加面向对象，可以把数据封装起来，把应用的业务逻辑和显示逻辑分离开，降低了开发的复杂程度和维护成本。</p>
+
+<h3 id="2ejb" class="anchor-link"><a href="#2ejb">2、ejb</a></h3>
+<p>即EnterpriseBean，也就是Enterprise JavaBean（EJB）。
+ejb是JavaEE的一部分，定义了一个用于开发基于组件的企业多重应用程序标准。它被称为Java企业Bean，是java的核心代码，分别是回话Bean（Session Bean）、实体Bean（Entity Bean）、和消息驱动Bean（MessageDriven Bean）。</p>
+
+<h3 id="3pojo" class="anchor-link"><a href="#3pojo">3、pojo</a></h3>
+<p>（Plain Ordinary Java Object）简单的Java对象，实际就是普通JavaBeans，是为了避免和EJB混淆所创造的简称。
+其中有一些属性及其getter、setter方法的类，没有业务逻辑，有时可以作为VO（value-object）或DTO（Data Transfer Object）来使用。不允许有业务方法，也不能携带connection之类的方法。
+与javaBean相比，javaBean则复杂很多，JavaBean是可复用的组件，对JavaBean并没有严格的规范，理论上讲，任何一个Java类都可以是一个Bean。但通常情况下，由于JavaBean是被容器创建的，所以JavaBean应具有一个无参的构造器。另外，通常JavaBean还要实现Serializable接口用于实现Bean的持久性。一般在web应用程序中建立一个数据库的映射对象时，我们只能称他为POJO。用来强调它是一个普通的对象，而不是一个特殊的对象，其主要用来指代哪些没有遵从特定的java对象模型、约定或框架（如EJB）的java对象。理想的将，一个POJO是一个不受任何限制的java对象</p>
+
+<h3 id="4entity" class="anchor-link"><a href="#4entity">4、entity</a></h3>
+<p>实体bean，一般是用于ORM对象关系映射，一个实体映射成一张表，一般无业务逻辑代码。
+负责将数据库中的表记录映射为内存中的Entity对象，事实上，创建一个EntityBean对象相当于创建一条记录，删除一个EntityBean对象会同时从数据库中删除对应记录，修改一个Entity Bean时，容器会自动将Entity Bean的状态和数据库同步。</p>
+
+<h3 id="5-dto" class="anchor-link"><a href="#5-dto">5 、DTO</a></h3>
+<p>数据传输对象（Data Transfer Object）。是一种设计模式之间传输数据的软件应用系统。数据传输目标往往是数据访问对象从数据库中检索数据</p>
+
+</div>
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity="sha256-9sl3Ip&#43;Ero34nIZHvvzzoXC4FX8YCj8K&#43;kYgsZozaZQ="></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

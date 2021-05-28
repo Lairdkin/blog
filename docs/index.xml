@@ -29,5 +29,164 @@ Seitan tumblr freegan，现成的健康哥特豆腐凸版混音带。病毒微�
 匿名ブログblog(blog)</description>
     </item>
     
+    <item>
+      <title>[转载]POJO,JAVABEAN,Entity区别</title>
+      <link>https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/</guid>
+      <description>转载自 ： {% blockquote 哎呦AU的博客 https://www.cnblogs.com/aurum324/p/8167996.html POJO,JAVABEAN,Entity区别 %} {% endblockquote %}
+1、javaBeanjavaBean是一种Java语言写成的可重用组件。为写成JavaBean，类必须是具体和公共的，并且具有无参数的构造器。JavaBean通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。更多的是一种规范，即包含一组set和get方法的java对象。javaBean可以使应用程序更加面向对象，可以把数据封装起来，把应用的业务逻辑和显示逻辑分离开，降低了开发的复杂程度和维护成本。
+2、ejb即EnterpriseBean，也就是Enterprise JavaBean（EJB）。 ejb是JavaEE的一部分，定义了一个用于开发基于组件的企业多重应用程序标准。它被称为Java企业Bean，是java的核心代码，分别是回话Bean（Session Bean）、实体Bean（Entity Bean）、和消息驱动Bean（MessageDriven Bean）。
+3、pojo（Plain Ordinary Java Object）简单的Java对象，实际就是普通JavaBeans，是为了避免和EJB混淆所创造的简称。 其中有一些属性及其getter、setter方法的类，没有业务逻辑，有时可以作为VO（value-object）或DTO（Data Transfer Object）来使用。不允许有业务方法，也不能携带connection之类的方法。 与javaBean相比，javaBean则复杂很多，JavaBean是可复用的组件，对JavaBean并没有严格的规范，理论上讲，任何一个Java类都可以是一个Bean。但通常情况下，由于JavaBean是被容器创建的，所以JavaBean应具有一个无参的构造器。另外，通常JavaBean还要实现Serializable接口用于实现Bean的持久性。一般在web应用程序中建立一个数据库的映射对象时，我们只能称他为POJO。用来强调它是一个普通的对象，而不是一个特殊的对象，其主要用来指代哪些没有遵从特定的java对象模型、约定或框架（如EJB）的java对象。理想的将，一个POJO是一个不受任何限制的java对象
+4、entity实体bean，一般是用于ORM对象关系映射，一个实体映射成一张表，一般无业务逻辑代码。 负责将数据库中的表记录映射为内存中的Entity对象，事实上，创建一个EntityBean对象相当于创建一条记录，删除一个EntityBean对象会同时从数据库中删除对应记录，修改一个Entity Bean时，容器会自动将Entity Bean的状态和数据库同步。
+5 、DTO数据传输对象（Data Transfer Object）。是一种设计模式之间传输数据的软件应用系统。数据传输目标往往是数据访问对象从数据库中检索数据</description>
+    </item>
+    
+    <item>
+      <title>[转载]常用jdb_curl格式</title>
+      <link>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
+      <description>转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %}
+一 常用数据库 JDBC URL 格式1 sqLite驱动程序包名：sqlitejdbc-v056.jar
+驱动程序类名: org.sqlite.JDBC
+JDBC URL: jdbc:sqlite:c:\*.db
+默认端口 无
+2 Microsoft SQL ServerMicrosoft SQL Server JDBC Driver
+驱动程序包名：msbase.jar mssqlserver.jar msutil.jar
+驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver
+JDBC URL: jdbc:microsoft:sqlserver://&amp;lt;server_name&amp;gt;:&amp;lt;port&amp;gt;
+默认端口1433，如果服务器使用默认端口则port可以省略
+3 OracleOracle Thin JDBC Driver
+驱动程序包名：ojdbc14.jar
+驱动程序类名: oracle.jdbc.driver.OracleDriver
+JDBC URL:
+jdbc:oracle:thin:@//&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/ServiceName 或
+jdbc:oracle:thin:@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;:&amp;lt;SID&amp;gt;
+4 IBM DB2IBM DB2 Universal Driver Type 4</description>
+    </item>
+    
+    <item>
+      <title>Docker入门笔记（一）</title>
+      <link>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>如今，如果你作为一个开发者而不知道容器化技术，那你可能要反思一下自己了，作为计算机领域发展最快最热门的技术之一，容器成为了现代互联网服务架构的基石。
+2013年DotCloud发布了容器服务Docker，并在2015年发布了其第一个正式版本，同年国内的Daocloud和灵雀云等公司开始提供基于docker的云服务业务，正是在此机会下我有幸接触了当时还非常先进的容器化技术（其实我当时对容器化还没有任何概念）。Docker在当时给我留下了最大的印象就是启动快，部署非常快，并且我当时参照daocloud官方提供的教程构建了一些镜像，不过当时的我，只是把Docker作为了一种新奇好玩的玩具，而没有深入的了解和使用。
+时间转到今天，随着微服务的兴起，容器化技术已经成为了微服务架构中的重要基石，docker对我来说不再是一个玩具，而是重要的开发部署工具，从今天起，我将重新开始学习docker,并用一系列文章来记录我学习过程。
+Docker 概述什么是Docker虽然Docker及其背后代表的容器化技术已经非常热门了，但是容器化并不是什么新技术，于1979年出现的Chroot Jailb被认为是Dcoker技术的起源，也就是现代Linux系统中的chroot环境，下面列出的一些都是早期的容器服务：
+ Chroot Jail FreeBSD Jails Linux VServer Solaris Containers OpenVZ Process Containers LXC Warden LMCTFY Docker RKT  正如我们所看到的，docker 并不是第一个容器化技术，但它的确是最知名的一个。Docker 诞生于 2013 年，并获得了快速的发展。
+所以到底什么是Docker呢？
+我们看看书本上的说法：
+ Docker使用Google公司推出的Go语言进行开发实现，基于 Linux内核的cgroup，namespace，以及AUFS类的Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于LXC，从0.7以后开始去除LXC，转而使用自行开发的libcontainer，从1.11开始，则进一步演进为使用runC和containerd。
+Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。
+ 实际上docker本质上就是一种虚拟化技术，与传统的虚拟化技术不同的是，他没有在虚拟化环境中虚拟出一个完整的操作系统内核，而是将虚拟化环境中的进程放在物理机内核中执行,这就是docker容器化的核心。这种方式使docker具有了很多传统虚拟化方式没有的优势。
+为什么选择docker更高效的利用系统资源由前文我们知道，dcoker容器内的程序本质上就是宿主机上运行的进程，这样就极大减小了性能的损耗，由于不需要模拟内核和周边硬件，也节省了这部分的性能损耗
+更快的启动时间docker容器本质就是一个个宿主机内核程序，所以启动较快
+运行环境一致性Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性
+持续交付和部署使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment) 系统进行自动部署。
+更轻松的维护和拓展Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易
+Docekr的镜像与容器首先我们了解三个Docker的基本概念
+ 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍</description>
+    </item>
+    
+    <item>
+      <title>Springboot快速上手</title>
+      <link>https://radish.cloud/blog/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
+      <description>Springboot是由spring开发团队Pivotal推出的全新框架，他设计目的简化繁琐的Spring配置,专注于应用的开发。SpringBoot采用了&amp;quot;约定优先于配置（COC，Convnetion Over Configuration）&amp;ldquo;的设计思想，通过为企业开发应用环境设计出了很多自动配置的依赖模块,这些模块几乎不需要配置，开箱即用，极大的简化了开发周期和代码量。
+环境本文开发环境以写作时的最新版本2.1.0.RELEASE为基准
+ JDK1.8及以上 Maven 3.2 Tomcat 8及以上 hibernate 5.2以上  使用最新版idea可以快速创建一个springboot项目并初始化一些模块，如果不使用idea，可以新建Maven项目并从官网下载并定制所需组件
+项目Maven依赖我们使用Maven作为项目的的依赖管理，有关Maven的内容可以查看网上的其他相关信息，下面列出了项目所有使用的模块
+继承Springboot的核心依赖
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; jpa
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; web核心组件
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; lmbok，减少代码量
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; swagger
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构</description>
+    </item>
+    
+    <item>
+      <title>一次失败的jdk编译</title>
+      <link>https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</guid>
+      <description>想要深入了解JVM，就必须了解其实现机制。了解JVM实现的最好方法便是自己动手编译JDK。本文中，我将参照《深入理解Java虚拟机》中的教程，编译openjdk1.8
+准备工作系统环境 编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存) 操作系统：Manjaro i3wm 18.0  软件环境java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jdk（嘿嘿，我编译我自己
+所以编译环境需要以下依赖程序：
+ bootstrap jdk：jdk1.8或jdk1.7 gcc，g++ 4.4+ (据官网说gcc版本最高只测试到7.4)  执行
+sudo pacman -S java-8-openjdk gcc g++ 下载源码openjdk团队使用Mercurial工具管理源代码 安装:
+sudo pacman -S Mercurial 克隆代码
+hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ clone完成后，进入源码目录，执行脚本
+bash get_source.sh 会自动获取全部源码
+ 如果下载太慢，可以使用github上的代码镜像 https://github.com/unofficial-openjdk/openjdk/ 注意：直接克隆整个仓库会下载所有版本jdk源码
+ 编译自动生成编译文件并检查依赖
+bash ./configure如果中途中断，请检查输出，安装对应的依赖库
+执行编译命令
+make all 如果成功会在所在文件夹下生成一个images的文件夹
+然后我失败了QAQ
+目前知道是遇到了一个已知bug，另外编译环境也炸了hhhh，下篇文章再说吧
+咕咕咕</description>
+    </item>
+    
+    <item>
+      <title>夏默</title>
+      <link>https://radish.cloud/blog/%E5%A4%8F%E9%BB%98/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E5%A4%8F%E9%BB%98/</guid>
+      <description>黄前久美子不怎么喜欢夏天。明晃晃的太阳晒起来，地面的温度几乎站不住人，室外的体育课和自主练习因此都成了折磨。往日凝视着宇治川的波光粼粼能带来平静，现在蒸腾上来的水汽也带着闷热，更别提河边的树下开始有了讨人厌的大批石蛾。</description>
+    </item>
+    
+    <item>
+      <title>熵与随机数</title>
+      <link>https://radish.cloud/blog/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</guid>
+      <description>昨天写Dockerfile那篇文章的时候，发下我的镜像中java有一个启动参数-Djava.security.egd=file:/dev/./urandom，我查了察相关资料，发现了些有趣的事情
+随机数关于这个参数，我们从随机数来说起 学过编程的同学应该都接触过随机数这个概念，虽然叫随机，但是大多数随机数生成实质上是通过一定的预先设定的算法计算出来的，根据密码学的原理，随机数的随机性检验有三个标准：
+ 统计学伪随机性:统计学伪随机性指的是在给定的随机比特流样本中，1的数量大致等于0的数量，同理，“10”“01”“00”“11”四者数量大致相等。类似的标准被称为统计学随机性。满足这类要求的数字在人类“一眼看上去”是随机的。 密码学安全伪随机性: 其定义为，给定随机样本的一部分和随机算法，不能有效的演算出随机样本的剩余部分。 真随机性：其定义为随机样本不可重现。实际上只要给定边界条件，真随机数并不存在，可是如果产生一个真随机数样本的边界条件十分复杂且难以捕捉（比如计算机当地的本底辐射波动值），可以认为用这个方法演算出来了真随机数  相应的，随机数也分为三类：
+ 伪随机数：满足第一个条件的随机数。 密码学安全的伪随机数：同时满足前两个条件的随机数。可以通过密码学安全伪随机数生成器计算得出。 真随机数：同时满足三个条件的随机数。  我们平时使用的大多数编程语言中所生成的随机数都是伪随机数，例如java中的Random类，可以使用时间戳作为随机种子，这种随机数足以满足我们大多数对随机数生成的需求，但是在一些特殊场合，例如在线交易中的id（这是区块链安全性中的重要一环，据我所知，有多起区块链攻击行为与区块链生成算法有缺陷有关），对随机数的安全性要求较高时，就要求达到密码学安全的伪随机数甚至真随机数，在java中，有一些提供安全随机数生成算法的类，例如org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom，在Tomcat7/8中，就使用了这个类用来产生seesion id，这个类中有一个种子生成器，他会根据配置来获取随机种子，在Tomcat中，会默认使用/dev/random返回的字符来作为种子，这个/dev/random 就是我们今天的主角。
+Linux中的熵池/dev/random是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：
+We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy. ++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ +++++++++++++++++++++++++++++.</description>
+    </item>
+    
+    <item>
+      <title>猫薄荷</title>
+      <link>https://radish.cloud/blog/%E7%8C%AB%E8%96%84%E8%8D%B7/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E7%8C%AB%E8%96%84%E8%8D%B7/</guid>
+      <description>交往后睡在一起的北欧组“嗅嗅” “艾拉，在闻什么呢？” “桑妮娅身上好香呐”“///那艾拉，知道自己是什么味道吗？”“诶？！有什么不好闻的味道&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Hexo博客搭建</title>
+      <link>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description>最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333
+环境  服务器：阿里云学生机 轻量级应用服务器
+  服务器系统：Ubuntu16.04
+阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂
+  本地系统：Manjaro 18.0 Illyria
+  部署Hexo生成的是纯静态页面，所以部署只需将hexo生成的public目录放置在 nginx 站点目录下就可以
+Hexo 安装安装Hexo 前确保系统有以下软件：
+ Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
+# Using Ubuntucurl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -sudo apt-get install -y nodejs# Using Debian, as rootcurl -sL https://deb.nodesource.com/setup_11.x | bash -apt-get install -y nodejs这个脚本会自动识别系统版本并添加ppa源
+然后
+# 安装git sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
+    </item>
+    
   </channel>
 </rss>

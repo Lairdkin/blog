@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on RaidishCloud</title>
+    <link>https://radish.cloud/tags/docker/</link>
+    <description>Recent content in docker on RaidishCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker入门笔记（一）</title>
+      <link>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>如今，如果你作为一个开发者而不知道容器化技术，那你可能要反思一下自己了，作为计算机领域发展最快最热门的技术之一，容器成为了现代互联网服务架构的基石。
+2013年DotCloud发布了容器服务Docker，并在2015年发布了其第一个正式版本，同年国内的Daocloud和灵雀云等公司开始提供基于docker的云服务业务，正是在此机会下我有幸接触了当时还非常先进的容器化技术（其实我当时对容器化还没有任何概念）。Docker在当时给我留下了最大的印象就是启动快，部署非常快，并且我当时参照daocloud官方提供的教程构建了一些镜像，不过当时的我，只是把Docker作为了一种新奇好玩的玩具，而没有深入的了解和使用。
+时间转到今天，随着微服务的兴起，容器化技术已经成为了微服务架构中的重要基石，docker对我来说不再是一个玩具，而是重要的开发部署工具，从今天起，我将重新开始学习docker,并用一系列文章来记录我学习过程。
+Docker 概述什么是Docker虽然Docker及其背后代表的容器化技术已经非常热门了，但是容器化并不是什么新技术，于1979年出现的Chroot Jailb被认为是Dcoker技术的起源，也就是现代Linux系统中的chroot环境，下面列出的一些都是早期的容器服务：
+ Chroot Jail FreeBSD Jails Linux VServer Solaris Containers OpenVZ Process Containers LXC Warden LMCTFY Docker RKT  正如我们所看到的，docker 并不是第一个容器化技术，但它的确是最知名的一个。Docker 诞生于 2013 年，并获得了快速的发展。
+所以到底什么是Docker呢？
+我们看看书本上的说法：
+ Docker使用Google公司推出的Go语言进行开发实现，基于 Linux内核的cgroup，namespace，以及AUFS类的Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于LXC，从0.7以后开始去除LXC，转而使用自行开发的libcontainer，从1.11开始，则进一步演进为使用runC和containerd。
+Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。
+ 实际上docker本质上就是一种虚拟化技术，与传统的虚拟化技术不同的是，他没有在虚拟化环境中虚拟出一个完整的操作系统内核，而是将虚拟化环境中的进程放在物理机内核中执行,这就是docker容器化的核心。这种方式使docker具有了很多传统虚拟化方式没有的优势。
+为什么选择docker更高效的利用系统资源由前文我们知道，dcoker容器内的程序本质上就是宿主机上运行的进程，这样就极大减小了性能的损耗，由于不需要模拟内核和周边硬件，也节省了这部分的性能损耗
+更快的启动时间docker容器本质就是一个个宿主机内核程序，所以启动较快
+运行环境一致性Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性
+持续交付和部署使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment) 系统进行自动部署。
+更轻松的维护和拓展Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易
+Docekr的镜像与容器首先我们了解三个Docker的基本概念
+ 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍</description>
+    </item>
+    
+  </channel>
+</rss>

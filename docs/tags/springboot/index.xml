@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Springboot on RaidishCloud</title>
+    <link>https://radish.cloud/tags/springboot/</link>
+    <description>Recent content in Springboot on RaidishCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/springboot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Springboot快速上手</title>
+      <link>https://radish.cloud/blog/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
+      <description>Springboot是由spring开发团队Pivotal推出的全新框架，他设计目的简化繁琐的Spring配置,专注于应用的开发。SpringBoot采用了&amp;quot;约定优先于配置（COC，Convnetion Over Configuration）&amp;ldquo;的设计思想，通过为企业开发应用环境设计出了很多自动配置的依赖模块,这些模块几乎不需要配置，开箱即用，极大的简化了开发周期和代码量。
+环境本文开发环境以写作时的最新版本2.1.0.RELEASE为基准
+ JDK1.8及以上 Maven 3.2 Tomcat 8及以上 hibernate 5.2以上  使用最新版idea可以快速创建一个springboot项目并初始化一些模块，如果不使用idea，可以新建Maven项目并从官网下载并定制所需组件
+项目Maven依赖我们使用Maven作为项目的的依赖管理，有关Maven的内容可以查看网上的其他相关信息，下面列出了项目所有使用的模块
+继承Springboot的核心依赖
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; jpa
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; web核心组件
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; lmbok，减少代码量
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; swagger
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构</description>
+    </item>
+    
+  </channel>
+</rss>

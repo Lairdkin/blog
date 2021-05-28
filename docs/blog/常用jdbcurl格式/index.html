@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="站点描述">
+<title>
+[转载]常用jdb Curl格式 - RaidishCloud
+</title>
+
+
+
+        
+        <meta property="og:title" content="[转载]常用jdb_curl格式 - RaidishCloud" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="站点描述"/>
+<meta property="og:url" content="https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/"/>
+<meta property="og:site_name" content="RaidishCloud"/>
+
+
+
+
+
+
+
+        
+<link rel="shortcut icon" href="/img/fav.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.3679995ba0ed4b91edeef430fd34cce1e8b53c123f9993c4861941eee80b46b1.css" integrity="sha256-NnmZW6DtS5Ht7vQw/TTM4ei1PBI/mZPEhhlB7ugLRrE=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero  fade-in one ">
+                
+
+<h1 class="bold-title is-1">博客</h1>
+
+
+            </div>
+            
+            <div class="section  fade-in two ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/"></a>
+            
+
+            
+            
+
+            
+                
+            
+
+            
+                
+            
+
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://radish.cloud/projects/">
+                  
+                  
+                  项目
+                  
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+            
+                
+                
+                
+                
+                  <a class="navbar-item" href="https://radish.cloud/blog/">
+                  
+                  
+                  
+                  </a>
+                
+                
+            
+            
+            
+            
+
+            
+            
+            <a class="navbar-item" href="/#contact">联系我</a>
+            
+            
+
+            
+            
+            
+            
+            <a class="navbar-item" href="https://radish.cloud/en/">English</a>
+            
+            
+
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/">[转载]常用jdb_curl格式</a>
+    </h2>
+    <div class="post-data">
+        May 28, 2018 |
+        
+    </div>
+    
+    <div class="blog-share">
+        :
+        
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=%5b%e8%bd%ac%e8%bd%bd%5d%e5%b8%b8%e7%94%a8jdb_curl%e6%a0%bc%e5%bc%8f%20https%3a%2f%2fradish.cloud%2fblog%2f%25E5%25B8%25B8%25E7%2594%25A8jdbcurl%25E6%25A0%25BC%25E5%25BC%258F%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fab fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+        
+        
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fradish.cloud%2fblog%2f%25E5%25B8%25B8%25E7%2594%25A8jdbcurl%25E6%25A0%25BC%25E5%25BC%258F%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fab fa-facebook-f"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+        
+        
+        <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fradish.cloud%2fblog%2f%25E5%25B8%25B8%25E7%2594%25A8jdbcurl%25E6%25A0%25BC%25E5%25BC%258F%2f&amp;description=%5b%e8%bd%ac%e8%bd%bd%5d%e5%b8%b8%e7%94%a8jdb_curl%e6%a0%bc%e5%bc%8f" onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+            <i class="fab fa-pinterest-p"></i>
+            <span class="hidden">Pinterest</span>
+        </a>
+        
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      
+     <p>
+         Tags: 
+          
+           <a href="/tags/java">
+             java</a>,
+         
+           <a href="/tags/jdbc">
+             JDBC</a>
+         
+        </p>
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>转载自  ：
+{% blockquote 落落无伤的博客 <a href="https://www.cnblogs.com/qianqian528/p/8032098.html">https://www.cnblogs.com/qianqian528/p/8032098.html</a> 常用数据库 JDBC URL 格式 %}
+{% endblockquote %}</p>
+
+<h2 id="一-常用数据库-jdbc-url-格式" class="anchor-link"><a href="#%e4%b8%80-%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e5%ba%93-jdbc-url-%e6%a0%bc%e5%bc%8f">一 常用数据库 JDBC URL 格式</a></h2>
+
+<h3 id="1-sqlite" class="anchor-link"><a href="#1-sqlite">1 sqLite</a></h3>
+<p>驱动程序包名：<code>sqlitejdbc-v056.jar</code><br>
+驱动程序类名: <code>org.sqlite.JDBC</code><br>
+JDBC URL: <code>jdbc:sqlite:c:\*.db</code><br>
+默认端口 无</p>
+
+<h3 id="2-microsoft-sql-server" class="anchor-link"><a href="#2-microsoft-sql-server">2 Microsoft SQL Server</a></h3>
+<p>Microsoft SQL Server JDBC Driver</p>
+<p>驱动程序包名：<code>msbase.jar mssqlserver.jar msutil.jar</code><br>
+驱动程序类名: <code>com.microsoft.jdbc.sqlserver.SQLServerDriver</code><br>
+JDBC URL: <code>jdbc:microsoft:sqlserver://&lt;server_name&gt;:&lt;port&gt;</code><br>
+默认端口1433，如果服务器使用默认端口则port可以省略</p>
+
+<h3 id="3-oracle" class="anchor-link"><a href="#3-oracle">3 Oracle</a></h3>
+<p>Oracle Thin JDBC Driver</p>
+<p>驱动程序包名：<code>ojdbc14.jar</code><br>
+驱动程序类名: <code>oracle.jdbc.driver.OracleDriver</code><br>
+JDBC URL:<br>
+<code>jdbc:oracle:thin:@//&lt;host&gt;:&lt;port&gt;/ServiceName</code>  或<br>
+<code>jdbc:oracle:thin:@&lt;host&gt;:&lt;port&gt;:&lt;SID&gt;</code></p>
+
+<h3 id="4-ibm-db2" class="anchor-link"><a href="#4-ibm-db2">4 IBM DB2</a></h3>
+<p>IBM DB2 Universal Driver Type 4</p>
+<p>驱动程序包名：<code>db2jcc.jar db2jcc_license_cu.jar</code><br>
+驱动程序类名: <code>com.ibm.db2.jcc.DB2Driver</code><br>
+JDBC URL:<code> jdbc:db2://&lt;host&gt;[:&lt;port&gt;]/&lt;database_name&gt;</code></p>
+
+<h3 id="5-mysql" class="anchor-link"><a href="#5-mysql">5 MySQL</a></h3>
+<p>MySQL Connector/J Driver</p>
+<p>驱动程序包名：<code>mysql-connector-java-x.x.xx-bin.jar</code><br>
+驱动程序类名: <code>com.mysql.jdbc.Driver</code><br>
+JDBC URL:<code> jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database_name&gt;</code><br>
+默认端口3306，如果服务器使用默认端口则port可以省略</p>
+<blockquote>
+<p>MySQL Connector/J Driver 允许在URL中添加额外的连接属性</p>
+</blockquote>
+<pre><code>jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database_name&gt;?property1=value1&amp;property2=value2
+</code></pre><blockquote>
+<p>注意： 需要操作记录为了避免乱码应该加上属性 useUnicode=true&amp;characterEncoding=utf8 ，比如</p>
+</blockquote>
+<pre><code>jdbc:mysql://192.168.177.129:3306/report?useUnicode=true&amp;characterEncoding=utf8
+</code></pre>
+<h2 id="二-hibernate-中数据库的方言" class="anchor-link"><a href="#%e4%ba%8c-hibernate-%e4%b8%ad%e6%95%b0%e6%8d%ae%e5%ba%93%e7%9a%84%e6%96%b9%e8%a8%80">二 Hibernate 中数据库的方言</a></h2>
+
+<h3 id="1-oracle-方言" class="anchor-link"><a href="#1-oracle-%e6%96%b9%e8%a8%80">1 Oracle 方言</a></h3>
+<pre><code>org.hibernate.dialect.OracleDialect
+</code></pre>
+<h3 id="2-mysql方言" class="anchor-link"><a href="#2-mysql%e6%96%b9%e8%a8%80">2 MySQL方言</a></h3>
+<pre><code>org.hibernate.dialect.MySQLDialect
+</code></pre><p>3 SQLServer方言</p>
+<pre><code>org.hibernate.dialect.SQLServerDialect
+</code></pre>
+</div>
+
+
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity="sha256-9sl3Ip&#43;Ero34nIZHvvzzoXC4FX8YCj8K&#43;kYgsZozaZQ="></script>
+
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

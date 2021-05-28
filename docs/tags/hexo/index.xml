@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on RaidishCloud</title>
+    <link>https://radish.cloud/tags/hexo/</link>
+    <description>Recent content in Hexo on RaidishCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="https://radish.cloud/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo博客搭建</title>
+      <link>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description>最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333
+环境  服务器：阿里云学生机 轻量级应用服务器
+  服务器系统：Ubuntu16.04
+阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂
+  本地系统：Manjaro 18.0 Illyria
+  部署Hexo生成的是纯静态页面，所以部署只需将hexo生成的public目录放置在 nginx 站点目录下就可以
+Hexo 安装安装Hexo 前确保系统有以下软件：
+ Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
+# Using Ubuntucurl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -sudo apt-get install -y nodejs# Using Debian, as rootcurl -sL https://deb.nodesource.com/setup_11.x | bash -apt-get install -y nodejs这个脚本会自动识别系统版本并添加ppa源
+然后
+# 安装git sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
+    </item>
+    
+  </channel>
+</rss>

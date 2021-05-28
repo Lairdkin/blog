@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JDBC on RaidishCloud</title>
+    <link>https://radish.cloud/tags/jdbc/</link>
+    <description>Recent content in JDBC on RaidishCloud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/jdbc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转载]常用jdb_curl格式</title>
+      <link>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
+      <description>转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %}
+一 常用数据库 JDBC URL 格式1 sqLite驱动程序包名：sqlitejdbc-v056.jar
+驱动程序类名: org.sqlite.JDBC
+JDBC URL: jdbc:sqlite:c:\*.db
+默认端口 无
+2 Microsoft SQL ServerMicrosoft SQL Server JDBC Driver
+驱动程序包名：msbase.jar mssqlserver.jar msutil.jar
+驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver
+JDBC URL: jdbc:microsoft:sqlserver://&amp;lt;server_name&amp;gt;:&amp;lt;port&amp;gt;
+默认端口1433，如果服务器使用默认端口则port可以省略
+3 OracleOracle Thin JDBC Driver
+驱动程序包名：ojdbc14.jar
+驱动程序类名: oracle.jdbc.driver.OracleDriver
+JDBC URL:
+jdbc:oracle:thin:@//&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/ServiceName 或
+jdbc:oracle:thin:@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;:&amp;lt;SID&amp;gt;
+4 IBM DB2IBM DB2 Universal Driver Type 4</description>
+    </item>
+    
+  </channel>
+</rss>
