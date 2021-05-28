@@ -21,7 +21,7 @@ DefaultContentLanguage           = "cn"                    # Default language fo
         enable = true
         repo = "Lairdkin/blog"    # 存储评论的Repo，格式为 owner/repo
         issueTerm = "title"           # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的pathname。
-        theme = "github-light" 
+        theme = "preferred-color-scheme" 
 
     # Configure the home page
     [params.home]
