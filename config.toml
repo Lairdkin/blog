@@ -1,5 +1,5 @@
 publishdir                       = "docs"
-baseURL                          = "http://example.com/"   # Your domain name. Must end with "/"
+baseURL                          = "https://radish.cloud/"   # Your domain name. Must end with "/"
 theme                            = "introduction"
 DefaultContentLanguage           = "cn"                    # Default language for multilingual sites
 # disqusshortname                 = ""                     # https://gohugo.io/content-management/comments
