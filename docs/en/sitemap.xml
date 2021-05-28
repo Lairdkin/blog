@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://radish.cloud/en/projects/demoproject/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://radish.cloud/projects/demoproject/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://radish.cloud/en/projects/demoproject/"
+                />
+  </url><url>
     <loc>https://radish.cloud/en/blog/</loc>
     <lastmod>2018-05-28T01:56:47+08:00</lastmod>
     <xhtml:link

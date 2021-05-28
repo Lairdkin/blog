@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on RaidishCloud</title>
+    <title>Series on 无名博客</title>
     <link>https://radish.cloud/series/</link>
-    <description>Recent content in Series on RaidishCloud</description>
+    <description>Recent content in Series on 无名博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language><atom:link href="https://radish.cloud/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>

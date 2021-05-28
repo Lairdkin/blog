@@ -1,0 +1,20 @@
+---
+title: "About"
+draft: false
+image: "mx.jpg"
+weight: 0
+---
+
+### RadishKin
+Undergraduate student，major is Management Information System，direction of the research：Java back-end development 
+
+* Former ACMer ，but no award is worth mentioning 
+* Development languages ：Java，Python，JavaScript
+* if you wanna reach me,please use the telegram messages or email me 
+* Games：I alyways play the following two games
+    - Final fantasy xiv 
+    - Arknights
+
+
+    You can only play with me in China Server
+
