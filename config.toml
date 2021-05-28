@@ -13,9 +13,15 @@ DefaultContentLanguage           = "cn"                    # Default language fo
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "Jan 2, 2006"
     email                        = "mx@radish.cloud"   # E-mail address for contact section
-    # customCSS                  = ["foo.css"]             # Include custom css files placed under assets/
+    customCSS                  = ["foo.css"]             # Include custom css files placed under assets/
     # customJS                   = ["foo.js"]              # Include custom JavaScript files placed under assets/
     # plausible                  = true                    # Use Plausible analytics (requires an account at Plausible.io)
+
+    [params.utteranc]
+        enable = true
+        repo = "Lairdkin/blog"    # 存储评论的Repo，格式为 owner/repo
+        issueTerm = "title"           # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的pathname。
+        theme = "github-light" 
 
     # Configure the home page
     [params.home]
