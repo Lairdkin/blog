@@ -18,7 +18,7 @@
  统计学伪随机性:统计学伪随机性指的是在给定的随机比特流样本中，1的数量大致等于0的数量，同理，“10”“01”“00”“11”四者数量大致相等。类似的标准被称为统计学随机性。满足这类要求的数字在人类“一眼看上去”是随机的。 密码学安全伪随机性: 其定义为，给定随机样本的一部分和随机算法，不能有效的演算出随机样本的剩余部分。 真随机性：其定义为随机样本不可重现。实际上只要给定边界条件，真随机数并不存在，可是如果产生一个真随机数样本的边界条件十分复杂且难以捕捉（比如计算机当地的本底辐射波动值），可以认为用这个方法演算出来了真随机数  相应的，随机数也分为三类：
  伪随机数：满足第一个条件的随机数。 密码学安全的伪随机数：同时满足前两个条件的随机数。可以通过密码学安全伪随机数生成器计算得出。 真随机数：同时满足三个条件的随机数。  我们平时使用的大多数编程语言中所生成的随机数都是伪随机数，例如java中的Random类，可以使用时间戳作为随机种子，这种随机数足以满足我们大多数对随机数生成的需求，但是在一些特殊场合，例如在线交易中的id（这是区块链安全性中的重要一环，据我所知，有多起区块链攻击行为与区块链生成算法有缺陷有关），对随机数的安全性要求较高时，就要求达到密码学安全的伪随机数甚至真随机数，在java中，有一些提供安全随机数生成算法的类，例如org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom，在Tomcat7/8中，就使用了这个类用来产生seesion id，这个类中有一个种子生成器，他会根据配置来获取随机种子，在Tomcat中，会默认使用/dev/random返回的字符来作为种子，这个/dev/random 就是我们今天的主角。
 Linux中的熵池/dev/random是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：
-We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy. ++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ +++++++++++++++++++++++++++++.</description>
+1We need to generate a lot of random bytes. It is a good idea to perform 2some other action (type on the keyboard, move the mouse, utilize the 3disks) during the prime generation; this gives the random number 4generator a better chance to gain enough entropy. 5++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ 6+++++++++++++++++++++++++++++.</description>
     </item>
     
   </channel>

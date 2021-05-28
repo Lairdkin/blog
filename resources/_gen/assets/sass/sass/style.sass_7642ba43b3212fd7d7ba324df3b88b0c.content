@@ -258,8 +258,7 @@ a {
     color: #000000; }
 
 code {
-  background-color: #dbdbdb;
-  color: #00b8d4;
+  color: #5181aa;
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em; }
@@ -8893,7 +8892,7 @@ details[open] summary {
   display: none; }
 
 pre {
-  background-color: #dbdbdb !important; }
+  background-color: #dbdbdb; }
 
 .img-responsive {
   border-radius: 5px;
@@ -9104,9 +9103,6 @@ pre {
   border-left: .25rem solid #e5e5e5; }
   .markdown blockquote blockquote p:last-child {
     margin-bottom: 0; }
-
-.markdown code {
-  background-color: #dbdbdb; }
 
 .markdown table {
   margin: 2em 0 2em 0;
@@ -12323,7 +12319,7 @@ readers do not read off random characters that represent icons */
   .hidden {
     display: none; }
   pre {
-    background-color: #222222 !important; }
+    background-color: #222222; }
   .img-responsive {
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); }
@@ -12504,8 +12500,6 @@ readers do not read off random characters that represent icons */
     border-left: .25rem solid #e5e5e5; }
     .markdown blockquote blockquote p:last-child {
       margin-bottom: 0; }
-  .markdown code {
-    background-color: #222222; }
   .markdown table {
     margin: 2em 0 2em 0;
     width: 100%;

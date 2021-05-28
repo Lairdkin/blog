@@ -40,7 +40,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.3679995ba0ed4b91edeef430fd34cce1e8b53c123f9993c4861941eee80b46b1.css" integrity="sha256-NnmZW6DtS5Ht7vQw/TTM4ei1PBI/mZPEhhlB7ugLRrE=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.20f701138a49cf7971fe80b1829416789fa588f156b3a6c8c1a09fa03d89a991.css" integrity="sha256-IPcBE4pJz3lx/oCxgpQWeJ&#43;liPFWs6bIwaCfoD2JqZE=" crossorigin="anonymous" media="screen">
 
 
 
@@ -247,39 +247,39 @@
 
 <h2 id="linux中的熵池" class="anchor-link"><a href="#linux%e4%b8%ad%e7%9a%84%e7%86%b5%e6%b1%a0">Linux中的熵池</a></h2>
 <p><code>/dev/random</code>是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">We need to generate a lot of random bytes. It is a good idea to perform
-some other action <span style="color:#666">(</span><span style="color:#007020">type</span> on the keyboard, move the mouse, utilize the
-disks<span style="color:#666">)</span> during the prime generation; this gives the random number
-generator a better chance to gain enough entropy.
-++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++
-+++++++++++++++++++++++++++++.+++++..+++++.+++++.+++++++++++++++++++++++++&gt;.
-++++++++++&gt;+++++...........................................................+++++
-Not enough random bytes available. Please <span style="color:#007020;font-weight:bold">do</span> some other work to give
-the OS a chance to collect more entropy! <span style="color:#666">(</span>Need <span style="color:#40a070">290</span> more bytes<span style="color:#666">)</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>We need to generate a lot of random bytes. It is a good idea to perform
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>some other action <span style="color:#719e07">(</span><span style="color:#b58900">type</span> on the keyboard, move the mouse, utilize the
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3</span>disks<span style="color:#719e07">)</span> during the prime generation; this gives the random number
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4</span>generator a better chance to gain enough entropy.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5</span>++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6</span>+++++++++++++++++++++++++++++.+++++..+++++.+++++.+++++++++++++++++++++++++&gt;.
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">7</span>++++++++++&gt;+++++...........................................................+++++
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">8</span>Not enough random bytes available. Please <span style="color:#719e07">do</span> some other work to give
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">9</span>the OS a chance to collect more entropy! <span style="color:#719e07">(</span>Need <span style="color:#2aa198">290</span> more bytes<span style="color:#719e07">)</span>
 </code></pre></div><p>但是假如我们的系统是一个服务器，我们没有鼠标和键盘输入。这意味着唯一的因素是你的磁盘IO。如果它是一个单独的、几乎不使用的磁盘，你将拥有较低的熵。另外一个问题是<code>/dev/random</code>是阻塞的，当你频繁生成随机数的时候，你可能会耗光你的熵池，<code>/dev/random</code> 会等待熵池收集到足够的环境噪声的时候才会继续生成随机数，这可能导致你的进程被长时间的挂起。在java 开发中，常常会遇到一些应用启动时间过长的问题，就可能是熵池空了导致线程阻塞了。</p>
 <p>幸好Linux给我们提供了另外一个随机数生成器来解决这个问题。<code>/dev/unrandom</code>,这是一个伪随机数生成器，在缺乏熵的时候，他会复用熵池中的内容而不会导致阻塞，但是复用熵池会导致安全性下降，但是在安全性不强的情况下，可以考虑使用这个，比如我们可以使用<code>-Djava.security.egd=file:/dev/./urandom</code>这个java启动参数，来确保我们生成随机数的过程不被阻塞，这也回答了我们开头那个问题，<code>java.security.egd</code>是<code>org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom</code>的配置。</p>
 <p>我们还可以用一些方法来影响熵池</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /proc/sys/kernel/random/poolsize
-<span style="color:#40a070">4096</span>
-$ cat /proc/sys/kernel/random/entropy_avail
-<span style="color:#40a070">2975</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ cat /proc/sys/kernel/random/poolsize
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span><span style="color:#2aa198">4096</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3</span>$ cat /proc/sys/kernel/random/entropy_avail
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4</span><span style="color:#2aa198">2975</span>
 </code></pre></div><p>使用这两个命令可以查看当前熵池的大小和熵池内有多少熵</p>
 <p>我们可以通过一些方法来将熵池耗尽，比如将将/dev/random 定向到/dev/null中</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat /dev/random &gt; /dev/null &amp;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ cat /dev/random &gt; /dev/null &amp;
 </code></pre></div><p>这样会快速的将熵池耗尽</p>
 <p>如果我们想填充熵池呢，最好的办法是将处理器的抖动加入熵池中，我们可以安装<code>Haveged</code>来实现这一功能</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pacman -S Hacedged
-$ systemctl <span style="color:#007020">enable</span> haveged
-$ systemctl start haveged
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ sudo pacman -S Hacedged
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>$ systemctl <span style="color:#b58900">enable</span> haveged
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3</span>$ systemctl start haveged
 </code></pre></div><p>我们可以通过<code>pv</code>命令来观察熵池的增长速度</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#60a0b0;font-style:italic"># 启用前</span>
-$ pv /dev/random &gt; /dev/null 
-25.0 B 0:00:03 <span style="color:#666">[</span>0.00 B/s<span style="color:#666">]</span> <span style="color:#666">[</span> &lt;<span style="color:#666">=</span>&gt;
-
-<span style="color:#60a0b0;font-style:italic"># 启用后</span>
-$ pv /dev/random &gt; /dev/null               
-62MiB 0:00:03 <span style="color:#666">[</span> 564KiB/s<span style="color:#666">]</span> <span style="color:#666">[</span>  &lt;<span style="color:#666">=</span>&gt;  
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span><span style="color:#586e75"># 启用前</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>$ pv /dev/random &gt; /dev/null 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3</span>25.0 B 0:00:03 <span style="color:#719e07">[</span>0.00 B/s<span style="color:#719e07">]</span> <span style="color:#719e07">[</span> &lt;<span style="color:#719e07">=</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5</span><span style="color:#586e75"># 启用后</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6</span>$ pv /dev/random &gt; /dev/null               
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">7</span>62MiB 0:00:03 <span style="color:#719e07">[</span> 564KiB/s<span style="color:#719e07">]</span> <span style="color:#719e07">[</span>  &lt;<span style="color:#719e07">=</span>&gt;  
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">8</span>
 </code></pre></div><p>可以观察到从几乎为0增长到了564kiB/s</p>
 <p>参考：<br>
 <a href="https://linux.cn/article-9697-1.html">James J - /dev/[u]random：对熵的解释</a><br>
@@ -334,6 +334,8 @@ $ pv /dev/random &gt; /dev/null
 
 
 <script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
+
+
 
 
 

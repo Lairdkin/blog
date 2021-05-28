@@ -40,7 +40,7 @@ Docker入门笔记（一） - 无名博客
 
 
 
-<link rel="stylesheet" href="/css/main.min.3679995ba0ed4b91edeef430fd34cce1e8b53c123f9993c4861941eee80b46b1.css" integrity="sha256-NnmZW6DtS5Ht7vQw/TTM4ei1PBI/mZPEhhlB7ugLRrE=" crossorigin="anonymous" media="screen">
+<link rel="stylesheet" href="/css/main.min.20f701138a49cf7971fe80b1829416789fa588f156b3a6c8c1a09fa03d89a991.css" integrity="sha256-IPcBE4pJz3lx/oCxgpQWeJ&#43;liPFWs6bIwaCfoD2JqZE=" crossorigin="anonymous" media="screen">
 
 
 
@@ -290,13 +290,13 @@ Docker在容器的基础上，进行了进一步的封装，从文件系统、�
 <li><del>远程主机环境：Ubuntu14.04+(因为写作到这的时候断网了就放弃远程环境了)</del></li>
 </ul>
 <p>在Manjaro安装Docker非常简单，在终端输入：</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo Pacman -S docker-ce
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>sudo Pacman -S docker-ce
 </code></pre></div><p><del>即可安装，并无需额外配置</del><br>
 启动Docker服务</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl start docker 
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>systemctl start docker 
 </code></pre></div><p>检查Docker版本</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker --version
-Docker version 18.09.0-ce, build 4d60db472b
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ docker --version
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>Docker version 18.09.0-ce, build 4d60db472b
 </code></pre></div><p>Docker就安装好了</p>
 
 <h3 id="镜像" class="anchor-link"><a href="#%e9%95%9c%e5%83%8f">镜像</a></h3>
@@ -309,56 +309,56 @@ Docker version 18.09.0-ce, build 4d60db472b
 <p>前文我们提到了仓库（Repository）的概念，仓库是一个集中存储和分发镜像的服务，一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。我们可以部署只自己仓库，也可以使用公共的仓库服务。</p>
 </blockquote>
 <p>获取镜像使用<code>docker pull</code>命令：</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker pull <span style="color:#666">[</span>选项<span style="color:#666">]</span> <span style="color:#666">[</span>Docker Registry地址<span style="color:#666">]</span>&lt;仓库名&gt;:&lt;标签&gt;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>docker pull <span style="color:#719e07">[</span>选项<span style="color:#719e07">]</span> <span style="color:#719e07">[</span>Docker Registry地址<span style="color:#719e07">]</span>&lt;仓库名&gt;:&lt;标签&gt;
 </code></pre></div><p>如没有仓库地址名，将使用默认的仓库。
 例如：</p>
-<pre><code>$ sudo docker pull node:latest
-latest: Pulling from library/node
-54f7e8ac135a: Already exists 
-d6341e30912f: Already exists 
-087a57faf949: Already exists 
-5d71636fb824: Pull complete 
-0c1db9598990: Pull complete 
-89669bc2deb2: Pull complete 
-647616206038: Pull complete 
-64f67f03205b: Pull complete 
-Digest: sha256:fed3f48ec9e97a57c17977ff120c3e7bf7d2d4e930ef650bba3f2ada5ac4a33a
-Status: Downloaded newer image for node:latest
-</code></pre><p>这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 1</span>$ sudo docker pull node:latest
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 2</span>latest: Pulling from library/node
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 3</span>54f7e8ac135a: Already exists 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 4</span>d6341e30912f: Already exists 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 5</span>087a57faf949: Already exists 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 6</span>5d71636fb824: Pull complete 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 7</span>0c1db9598990: Pull complete 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 8</span>89669bc2deb2: Pull complete 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 9</span>647616206038: Pull complete 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">10</span>64f67f03205b: Pull complete 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">11</span>Digest: sha256:fed3f48ec9e97a57c17977ff120c3e7bf7d2d4e930ef650bba3f2ada5ac4a33a
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">12</span>Status: Downloaded newer image for node:latest
+</code></pre></div><p>这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像</p>
 
 <h4 id="列出镜像" class="anchor-link"><a href="#%e5%88%97%e5%87%ba%e9%95%9c%e5%83%8f">列出镜像</a></h4>
 <p>我们可以使用<code>docker images</code>列出所有本地的镜像</p>
-<pre><code>$ docker images
-REPOSITORY                        TAG                 IMAGE ID            CREATED             SIZE
-docker-test                       0.0.1               ce25b22437c5        9 days ago          443MB
-node                              latest              37f455de4837        9 days ago          894MB
-tomcat                            latest              48dd385504b1        9 days ago          475MB
-ubuntu                            latest              93fd78260bd1        3 weeks ago         86.2MB
-fabric8/java-jboss-openjdk8-jdk   1.2.3               7a2a8001c977        23 months ago       422MB
-</code></pre><p>列表包含了仓库名、标签、镜像 ID、创建时间以及所占用的空间。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ docker images
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>REPOSITORY                        TAG                 IMAGE ID            CREATED             SIZE
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3</span>docker-test                       0.0.1               ce25b22437c5        9 days ago          443MB
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4</span>node                              latest              37f455de4837        9 days ago          894MB
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5</span>tomcat                            latest              48dd385504b1        9 days ago          475MB
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6</span>ubuntu                            latest              93fd78260bd1        3 weeks ago         86.2MB
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">7</span>fabric8/java-jboss-openjdk8-jdk   1.2.3               7a2a8001c977        23 months ago       422MB
+</code></pre></div><p>列表包含了仓库名、标签、镜像 ID、创建时间以及所占用的空间。</p>
 <p>docker分层构建的方式产生了大量的中间层镜像，docker默认只显示最外层的镜像，我们可以通过以下命令查看</p>
-<pre><code>$ docker images -a 
-</code></pre><p>此外<code>docker images</code>还可以通过一些条件来查看镜像：</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#60a0b0;font-style:italic"># 查看特定仓库名的镜像</span>
-$ sudo docker images ubuntu 
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ubuntu              latest              93fd78260bd1        <span style="color:#40a070">3</span> weeks ago         86.2MB
-
-<span style="color:#60a0b0;font-style:italic"># 使用过滤器查看镜像</span>
-<span style="color:#60a0b0;font-style:italic"># 从某个镜像开始的所有镜像</span>
-sudo docker images -f <span style="color:#bb60d5">since</span><span style="color:#666">=</span>ubuntu
-<span style="color:#60a0b0;font-style:italic"># 查看特点标签的镜像</span>
-docker images -f <span style="color:#bb60d5">label</span><span style="color:#666">=</span>com.example.version<span style="color:#666">=</span>0.1
-
-<span style="color:#60a0b0;font-style:italic"># 使用Go语言模板制定输出格式</span>
-$ docker images --format <span style="color:#4070a0">&#34;table {{.ID}}\t{{.Repository}}\t{{.Tag
-</span><span style="color:#4070a0">}}&#34;</span>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ docker images -a 
+</code></pre></div><p>此外<code>docker images</code>还可以通过一些条件来查看镜像：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 1</span><span style="color:#586e75"># 查看特定仓库名的镜像</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 2</span>$ sudo docker images ubuntu 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 3</span>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 4</span>ubuntu              latest              93fd78260bd1        <span style="color:#2aa198">3</span> weeks ago         86.2MB
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 5</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 6</span><span style="color:#586e75"># 使用过滤器查看镜像</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 7</span><span style="color:#586e75"># 从某个镜像开始的所有镜像</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 8</span>sudo docker images -f <span style="color:#268bd2">since</span><span style="color:#719e07">=</span>ubuntu
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 9</span><span style="color:#586e75"># 查看特点标签的镜像</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">10</span>docker images -f <span style="color:#268bd2">label</span><span style="color:#719e07">=</span>com.example.version<span style="color:#719e07">=</span>0.1
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">11</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">12</span><span style="color:#586e75"># 使用Go语言模板制定输出格式</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">13</span>$ docker images --format <span style="color:#2aa198">&#34;table {{.ID}}\t{{.Repository}}\t{{.Tag
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">14</span><span style="color:#2aa198">}}&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">15</span>
 </code></pre></div>
 <h4 id="删除镜像" class="anchor-link"><a href="#%e5%88%a0%e9%99%a4%e9%95%9c%e5%83%8f">删除镜像</a></h4>
 <p>当我们不需要某个镜像的时候，我们可以选择删除镜像，使用<code>docker rmi</code>命令即可删除镜像
 例如：</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo docker rmi tomcat:latest
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ sudo docker rmi tomcat:latest
 </code></pre></div>
 <h4 id="构建镜像" class="anchor-link"><a href="#%e6%9e%84%e5%bb%ba%e9%95%9c%e5%83%8f">构建镜像</a></h4>
 <p>使用DockerFile构建镜像将在下一篇文章中详细展开</p>
@@ -368,23 +368,23 @@ $ docker images --format <span style="color:#4070a0">&#34;table {{.ID}}\t{{.Repo
 
 <h4 id="运行" class="anchor-link"><a href="#%e8%bf%90%e8%a1%8c">运行</a></h4>
 <p>当我们有了镜像之后，我们就可以运行我们的镜像并建立新的容器（实例）,docker使用<code>docker run</code> 命令来运行容器</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-$ sudo docker run -it --rm ubuntu /bin/bash    
-root@d332f4d5aecb:/# cat /etc/os-release 
-<span style="color:#bb60d5">NAME</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;Ubuntu&#34;</span>
-<span style="color:#bb60d5">VERSION</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;18.04.1 LTS (Bionic Beaver)&#34;</span>
-<span style="color:#bb60d5">ID</span><span style="color:#666">=</span>ubuntu
-<span style="color:#bb60d5">ID_LIKE</span><span style="color:#666">=</span>debian
-<span style="color:#bb60d5">PRETTY_NAME</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;Ubuntu 18.04.1 LTS&#34;</span>
-<span style="color:#bb60d5">VERSION_ID</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;18.04&#34;</span>
-<span style="color:#bb60d5">HOME_URL</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://www.ubuntu.com/&#34;</span>
-<span style="color:#bb60d5">SUPPORT_URL</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://help.ubuntu.com/&#34;</span>
-<span style="color:#bb60d5">BUG_REPORT_URL</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://bugs.launchpad.net/ubuntu/&#34;</span>
-<span style="color:#bb60d5">PRIVACY_POLICY_URL</span><span style="color:#666">=</span><span style="color:#4070a0">&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;</span>
-<span style="color:#bb60d5">VERSION_CODENAME</span><span style="color:#666">=</span>bionic
-<span style="color:#bb60d5">UBUNTU_CODENAME</span><span style="color:#666">=</span>bionic
-root@d332f4d5aecb:/# <span style="color:#007020">exit</span>
-<span style="color:#007020">exit</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 1</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 2</span>$ sudo docker run -it --rm ubuntu /bin/bash    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 3</span>root@d332f4d5aecb:/# cat /etc/os-release 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 4</span><span style="color:#268bd2">NAME</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Ubuntu&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 5</span><span style="color:#268bd2">VERSION</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;18.04.1 LTS (Bionic Beaver)&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 6</span><span style="color:#268bd2">ID</span><span style="color:#719e07">=</span>ubuntu
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 7</span><span style="color:#268bd2">ID_LIKE</span><span style="color:#719e07">=</span>debian
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 8</span><span style="color:#268bd2">PRETTY_NAME</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Ubuntu 18.04.1 LTS&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 9</span><span style="color:#268bd2">VERSION_ID</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;18.04&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">10</span><span style="color:#268bd2">HOME_URL</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://www.ubuntu.com/&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">11</span><span style="color:#268bd2">SUPPORT_URL</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://help.ubuntu.com/&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">12</span><span style="color:#268bd2">BUG_REPORT_URL</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://bugs.launchpad.net/ubuntu/&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">13</span><span style="color:#268bd2">PRIVACY_POLICY_URL</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">14</span><span style="color:#268bd2">VERSION_CODENAME</span><span style="color:#719e07">=</span>bionic
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">15</span><span style="color:#268bd2">UBUNTU_CODENAME</span><span style="color:#719e07">=</span>bionic
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">16</span>root@d332f4d5aecb:/# <span style="color:#b58900">exit</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">17</span><span style="color:#b58900">exit</span>
 </code></pre></div><ul>
 <li>&ndash;it ：这是两个参数，一个是 -i ：交互式操作，一个是 -t 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终获取镜像终端。</li>
 <li>&ndash;rm ：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm 。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 &ndash;rm 可以避免浪费空间。</li>
@@ -403,34 +403,34 @@ root@d332f4d5aecb:/# <span style="color:#007020">exit</span>
 <li>执行完毕后容器被终止</li>
 </ul>
 <p>我们可以使用<code>-d</code>参数使容器在后台运行，例如：</p>
-<pre><code>$ sudo docker run -d ubuntu /bin/sh -c &quot;while true; do echo hello world; sleep 1; done&quot;
-77b2dc01fe0f3f1265df143181e7b9af5e05279a884f4776ee75350ea9d8017a
-</code></pre><p>使用<code>docker ps</code> 可以查看docker容器运行状态</p>
-<pre><code>$ sudo docker ps
-</code></pre><p>希望获取docker日志信息</p>
-<pre><code>docker logs 77b2dc01
-</code></pre>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ sudo docker run -d ubuntu /bin/sh -c &#34;while true; do echo hello world; sleep 1; done&#34;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>77b2dc01fe0f3f1265df143181e7b9af5e05279a884f4776ee75350ea9d8017a
+</code></pre></div><p>使用<code>docker ps</code> 可以查看docker容器运行状态</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ sudo docker ps
+</code></pre></div><p>希望获取docker日志信息</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>docker logs 77b2dc01
+</code></pre></div>
 <h4 id="终止容器" class="anchor-link"><a href="#%e7%bb%88%e6%ad%a2%e5%ae%b9%e5%99%a8">终止容器</a></h4>
 <p>当我们需要终止容器时可以使用<code>docker stop</code> 命令,当容器z中的应用终止时，容器也会自动终止，可以使用<code>docker ps -a </code>查看中止的容器，终止的容器可以用<code>docker start</code>来重新启动,同理，<code>docker restart</code> 将会将容器重启</p>
 
 <h4 id="删除容器" class="anchor-link"><a href="#%e5%88%a0%e9%99%a4%e5%ae%b9%e5%99%a8">删除容器</a></h4>
 <p>可以使用 <code>docker rm</code> 来删除一个处于终止状态的容器。 例如</p>
-<pre><code>$sudo docker rm trusting_newton
-trusting_newton
-</code></pre><p>如果要删除一个运行中的容器，可以添加<code>-f</code>参数。Docker 会发送 <code>SIGKILL</code>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$sudo docker rm trusting_newton
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2</span>trusting_newton
+</code></pre></div><p>如果要删除一个运行中的容器，可以添加<code>-f</code>参数。Docker 会发送 <code>SIGKILL</code>
 信号给容器。</p>
 <p>使用如下命令可以终结全部处于终止状态的容器</p>
-<pre><code>docker rm $(docker ps -a -q)
-</code></pre>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>docker rm $(docker ps -a -q)
+</code></pre></div>
 <h4 id="其他操作" class="anchor-link"><a href="#%e5%85%b6%e4%bb%96%e6%93%8d%e4%bd%9c">其他操作</a></h4>
 
 <h5 id="导出容器" class="anchor-link"><a href="#%e5%af%bc%e5%87%ba%e5%ae%b9%e5%99%a8">导出容器</a></h5>
 <p>如果要导出本地某个容器，可以使用 <code>docker export </code> 命令。</p>
-<pre><code>$ sudo docker export 3f6&gt;java.tar
-</code></pre>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>$ sudo docker export 3f6&gt;java.tar
+</code></pre></div>
 <h4 id="导入容器" class="anchor-link"><a href="#%e5%af%bc%e5%85%a5%e5%ae%b9%e5%99%a8">导入容器</a></h4>
 <p>导出的本地镜像可以用<code>docker import</code>命令来导入</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1</span>cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0
 </code></pre></div><p>下一篇文章，我们讲讲解docker构建镜像的常见方式</p>
 <blockquote>
 <p>参考<br>
@@ -487,6 +487,8 @@ trusting_newton
 
 
 <script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
+
+
 
 
 

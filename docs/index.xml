@@ -113,13 +113,12 @@ Docekr的镜像与容器首先我们了解三个Docker的基本概念
  JDK1.8及以上 Maven 3.2 Tomcat 8及以上 hibernate 5.2以上  使用最新版idea可以快速创建一个springboot项目并初始化一些模块，如果不使用idea，可以新建Maven项目并从官网下载并定制所需组件
 项目Maven依赖我们使用Maven作为项目的的依赖管理，有关Maven的内容可以查看网上的其他相关信息，下面列出了项目所有使用的模块
 继承Springboot的核心依赖
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; jpa
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; web核心组件
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; lmbok，减少代码量
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; swagger
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构</description>
+1&amp;lt;parent&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; 5	&amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; 6&amp;lt;/parent&amp;gt; jpa
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; web核心组件
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; lmbok，减少代码量
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; 4	&amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; 5&amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -132,15 +131,15 @@ Docekr的镜像与容器首先我们了解三个Docker的基本概念
 准备工作系统环境 编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存) 操作系统：Manjaro i3wm 18.0  软件环境java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jdk（嘿嘿，我编译我自己
 所以编译环境需要以下依赖程序：
  bootstrap jdk：jdk1.8或jdk1.7 gcc，g++ 4.4+ (据官网说gcc版本最高只测试到7.4)  执行
-sudo pacman -S java-8-openjdk gcc g++ 下载源码openjdk团队使用Mercurial工具管理源代码 安装:
-sudo pacman -S Mercurial 克隆代码
-hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ clone完成后，进入源码目录，执行脚本
-bash get_source.sh 会自动获取全部源码
+1sudo pacman -S java-8-openjdk gcc g++ 下载源码openjdk团队使用Mercurial工具管理源代码 安装:
+1sudo pacman -S Mercurial 克隆代码
+1hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ clone完成后，进入源码目录，执行脚本
+1bash get_source.sh 会自动获取全部源码
  如果下载太慢，可以使用github上的代码镜像 https://github.com/unofficial-openjdk/openjdk/ 注意：直接克隆整个仓库会下载所有版本jdk源码
  编译自动生成编译文件并检查依赖
-bash ./configure如果中途中断，请检查输出，安装对应的依赖库
+1bash ./configure 如果中途中断，请检查输出，安装对应的依赖库
 执行编译命令
-make all 如果成功会在所在文件夹下生成一个images的文件夹
+1make all 如果成功会在所在文件夹下生成一个images的文件夹
 然后我失败了QAQ
 目前知道是遇到了一个已知bug，另外编译环境也炸了hhhh，下篇文章再说吧
 咕咕咕</description>
@@ -166,7 +165,7 @@ make all 如果成功会在所在文件夹下生成一个images的文件夹
  统计学伪随机性:统计学伪随机性指的是在给定的随机比特流样本中，1的数量大致等于0的数量，同理，“10”“01”“00”“11”四者数量大致相等。类似的标准被称为统计学随机性。满足这类要求的数字在人类“一眼看上去”是随机的。 密码学安全伪随机性: 其定义为，给定随机样本的一部分和随机算法，不能有效的演算出随机样本的剩余部分。 真随机性：其定义为随机样本不可重现。实际上只要给定边界条件，真随机数并不存在，可是如果产生一个真随机数样本的边界条件十分复杂且难以捕捉（比如计算机当地的本底辐射波动值），可以认为用这个方法演算出来了真随机数  相应的，随机数也分为三类：
  伪随机数：满足第一个条件的随机数。 密码学安全的伪随机数：同时满足前两个条件的随机数。可以通过密码学安全伪随机数生成器计算得出。 真随机数：同时满足三个条件的随机数。  我们平时使用的大多数编程语言中所生成的随机数都是伪随机数，例如java中的Random类，可以使用时间戳作为随机种子，这种随机数足以满足我们大多数对随机数生成的需求，但是在一些特殊场合，例如在线交易中的id（这是区块链安全性中的重要一环，据我所知，有多起区块链攻击行为与区块链生成算法有缺陷有关），对随机数的安全性要求较高时，就要求达到密码学安全的伪随机数甚至真随机数，在java中，有一些提供安全随机数生成算法的类，例如org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom，在Tomcat7/8中，就使用了这个类用来产生seesion id，这个类中有一个种子生成器，他会根据配置来获取随机种子，在Tomcat中，会默认使用/dev/random返回的字符来作为种子，这个/dev/random 就是我们今天的主角。
 Linux中的熵池/dev/random是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：
-We need to generate a lot of random bytes. It is a good idea to perform some other action (type on the keyboard, move the mouse, utilize the disks) during the prime generation; this gives the random number generator a better chance to gain enough entropy. ++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ +++++++++++++++++++++++++++++.</description>
+1We need to generate a lot of random bytes. It is a good idea to perform 2some other action (type on the keyboard, move the mouse, utilize the 3disks) during the prime generation; this gives the random number 4generator a better chance to gain enough entropy. 5++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ 6+++++++++++++++++++++++++++++.</description>
     </item>
     
     <item>
@@ -192,9 +191,9 @@ We need to generate a lot of random bytes. It is a good idea to perform some oth
   部署Hexo生成的是纯静态页面，所以部署只需将hexo生成的public目录放置在 nginx 站点目录下就可以
 Hexo 安装安装Hexo 前确保系统有以下软件：
  Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
-# Using Ubuntucurl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -sudo apt-get install -y nodejs# Using Debian, as rootcurl -sL https://deb.nodesource.com/setup_11.x | bash -apt-get install -y nodejs这个脚本会自动识别系统版本并添加ppa源
+1# Using Ubuntu 2curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - 3sudo apt-get install -y nodejs 4 5# Using Debian, as root 6curl -sL https://deb.nodesource.com/setup_11.x | bash - 7apt-get install -y nodejs 这个脚本会自动识别系统版本并添加ppa源
 然后
-# 安装git sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
+1# 安装git 2sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
     </item>
     
   </channel>

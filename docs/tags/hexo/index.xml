@@ -20,9 +20,9 @@
   部署Hexo生成的是纯静态页面，所以部署只需将hexo生成的public目录放置在 nginx 站点目录下就可以
 Hexo 安装安装Hexo 前确保系统有以下软件：
  Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
-# Using Ubuntucurl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -sudo apt-get install -y nodejs# Using Debian, as rootcurl -sL https://deb.nodesource.com/setup_11.x | bash -apt-get install -y nodejs这个脚本会自动识别系统版本并添加ppa源
+1# Using Ubuntu 2curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - 3sudo apt-get install -y nodejs 4 5# Using Debian, as root 6curl -sL https://deb.nodesource.com/setup_11.x | bash - 7apt-get install -y nodejs 这个脚本会自动识别系统版本并添加ppa源
 然后
-# 安装git sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
+1# 安装git 2sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
     </item>
     
   </channel>

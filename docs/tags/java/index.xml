@@ -82,13 +82,12 @@ Docekr的镜像与容器首先我们了解三个Docker的基本概念
  JDK1.8及以上 Maven 3.2 Tomcat 8及以上 hibernate 5.2以上  使用最新版idea可以快速创建一个springboot项目并初始化一些模块，如果不使用idea，可以新建Maven项目并从官网下载并定制所需组件
 项目Maven依赖我们使用Maven作为项目的的依赖管理，有关Maven的内容可以查看网上的其他相关信息，下面列出了项目所有使用的模块
 继承Springboot的核心依赖
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; jpa
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; web核心组件
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; lmbok，减少代码量
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; swagger
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构</description>
+1&amp;lt;parent&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; 5	&amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; 6&amp;lt;/parent&amp;gt; jpa
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; web核心组件
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; lmbok，减少代码量
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; 4	&amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; 5&amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -101,15 +100,15 @@ Docekr的镜像与容器首先我们了解三个Docker的基本概念
 准备工作系统环境 编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存) 操作系统：Manjaro i3wm 18.0  软件环境java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jdk（嘿嘿，我编译我自己
 所以编译环境需要以下依赖程序：
  bootstrap jdk：jdk1.8或jdk1.7 gcc，g++ 4.4+ (据官网说gcc版本最高只测试到7.4)  执行
-sudo pacman -S java-8-openjdk gcc g++ 下载源码openjdk团队使用Mercurial工具管理源代码 安装:
-sudo pacman -S Mercurial 克隆代码
-hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ clone完成后，进入源码目录，执行脚本
-bash get_source.sh 会自动获取全部源码
+1sudo pacman -S java-8-openjdk gcc g++ 下载源码openjdk团队使用Mercurial工具管理源代码 安装:
+1sudo pacman -S Mercurial 克隆代码
+1hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ clone完成后，进入源码目录，执行脚本
+1bash get_source.sh 会自动获取全部源码
  如果下载太慢，可以使用github上的代码镜像 https://github.com/unofficial-openjdk/openjdk/ 注意：直接克隆整个仓库会下载所有版本jdk源码
  编译自动生成编译文件并检查依赖
-bash ./configure如果中途中断，请检查输出，安装对应的依赖库
+1bash ./configure 如果中途中断，请检查输出，安装对应的依赖库
 执行编译命令
-make all 如果成功会在所在文件夹下生成一个images的文件夹
+1make all 如果成功会在所在文件夹下生成一个images的文件夹
 然后我失败了QAQ
 目前知道是遇到了一个已知bug，另外编译环境也炸了hhhh，下篇文章再说吧
 咕咕咕</description>
