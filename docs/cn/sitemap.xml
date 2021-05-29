@@ -29,6 +29,16 @@
   </url><url>
     <loc>https://radish.cloud/links/</loc>
     <lastmod>2021-05-29T03:13:29+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://radish.cloud/en/links/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://radish.cloud/links/"
+                />
   </url><url>
     <loc>https://radish.cloud/blog/testblog/</loc>
     <lastmod>2021-05-28T01:56:47+08:00</lastmod>
