@@ -53,6 +53,20 @@ Anonymous Blog
 
 <link rel="stylesheet" href="https://radish.cloud/styles/owlCarousel.min.fb3b2db7ac73c4ba8d021450bcf5556ff7385dfd0c1ee5fb4a69c75f41f2fd29.css" integrity="" crossorigin="anonymous" media="screen">
 
+
+        <script>
+            currentLang = navigator.language;
+            if(!currentLang){    
+                currentLang = navigator.browserLanguage;
+            }
+            if(currentLang.indexOf("zh") == -1){ 
+                console.log("说英文捏，给你看这个")
+                window.location.href="https://radish.cloud/en";
+            }else{
+                console.log("说中文捏，给你看这个")
+            }
+            
+        </script>
     </head>
 
     <body>
@@ -562,6 +576,7 @@ Anonymous Blog
 
         
         <script>
+
             function update_localtime() {
                 const time = new Date().toLocaleTimeString('zh-CN', { timeZone: 'Asia\/Shanghai', timeStyle: 'short' });
                 document.getElementById('time').innerHTML = time;
