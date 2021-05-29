@@ -3,6 +3,19 @@
 
     <head>
 	<meta name="generator" content="Hugo 0.83.1" />
+        <script>
+            currentLang = navigator.language;
+            if(!currentLang){    
+                currentLang = navigator.browserLanguage;
+            }
+            if(currentLang.indexOf("zh") == -1){ 
+                console.log("说英文捏，给你看这个")
+                window.location.href="https://radish.cloud/en";
+            }else{
+                console.log("说中文捏，给你看这个")
+            }
+            
+        </script>
         <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="HandheldFriendly" content="True">
@@ -54,19 +67,7 @@ Anonymous Blog
 <link rel="stylesheet" href="https://radish.cloud/styles/owlCarousel.min.fb3b2db7ac73c4ba8d021450bcf5556ff7385dfd0c1ee5fb4a69c75f41f2fd29.css" integrity="" crossorigin="anonymous" media="screen">
 
 
-        <script>
-            currentLang = navigator.language;
-            if(!currentLang){    
-                currentLang = navigator.browserLanguage;
-            }
-            if(currentLang.indexOf("zh") == -1){ 
-                console.log("说英文捏，给你看这个")
-                window.location.href="https://radish.cloud/en";
-            }else{
-                console.log("说中文捏，给你看这个")
-            }
-            
-        </script>
+        
     </head>
 
     <body>
