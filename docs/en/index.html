@@ -5,19 +5,19 @@
 	<meta name="generator" content="Hugo 0.83.1" />
         <script>
             if(document.cookie.indexOf("a=hello")==-1){
-                console.log("是第一次訪問捏")
-                    currentLang = navigator.language;
-                    if(!currentLang){    
-                        currentLang = navigator.browserLanguage;
-                    }
-                    if(currentLang.indexOf("zh") == -1){ 
-                        console.log("说英文捏，给你看这个")
-                        window.location.href="https://radish.cloud/en";
-                    }else{
-                        console.log("说中文捏，给你看这个")
-                    }
-                    var t=new Date(new Date().getTime()+1000*60*60*24*30);
-                    document.cookie="a=hello; expires="+t.toGMTString();
+                console.log("是第一次访问捏，我记下了捏")
+                currentLang = navigator.language;
+                if(!currentLang){    
+                    currentLang = navigator.browserLanguage;
+                }
+                if(currentLang.indexOf("zh") == -1){ 
+                    console.log("说英文捏，给你看这个")
+                    window.location.href="https://radish.cloud/en";
+                }else{
+                    console.log("说中文捏，给你看这个")
+                }
+                var t=new Date(new Date().getTime()+1000*60*60*24*30);
+                document.cookie="a=hello; expires="+t.toGMTString()+";path=/";
             }
             
         </script>
