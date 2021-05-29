@@ -4,7 +4,7 @@
     <head>
 	<meta name="generator" content="Hugo 0.83.1" />
         <script>
-            if(document.cookie.indexOf("a=hello")==-1){
+            if(document.cookie.indexOf("history=1")==-1){
                 console.log("是第一次访问捏，我记下了捏")
                 currentLang = navigator.language;
                 if(!currentLang){    
@@ -12,12 +12,15 @@
                 }
                 if(currentLang.indexOf("zh") == -1){ 
                     console.log("说英文捏，给你看这个")
-                    window.location.href="https://radish.cloud/en";
+                    if(window.location.href.indexOf("en") == -1){
+                        window.location.href="/en";
+                    }
+                    
                 }else{
                     console.log("说中文捏，给你看这个")
                 }
                 var t=new Date(new Date().getTime()+1000*60*60*24*30);
-                document.cookie="a=hello; expires="+t.toGMTString()+";path=/";
+                document.cookie="history=1; expires="+t.toGMTString()+";path=/";
             }
             
         </script>
