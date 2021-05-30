@@ -22,4 +22,7 @@ utterances评论：[**https://https://utterances.radish.cloud/**](https://https:
 
 
 
-[**查看更多友情链接**](/links/)
+
+<div class="container has-text-centered top-pad">
+    <a href="/links/">查看更多友情链接</a>
+</div>
