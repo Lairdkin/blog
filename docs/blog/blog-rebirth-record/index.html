@@ -195,14 +195,21 @@
         <li><a href="#使用二进制包进行安装">使用二进制包进行安装</a></li>
         <li><a href="#使用包管理进行安装">使用包管理进行安装</a></li>
         <li><a href="#使用源代码进行安装">使用源代码进行安装</a></li>
+        <li><a href="#新建一个站点">新建一个站点</a></li>
       </ul>
     </li>
-    <li><a href="#安装introdution主题">安装Introdution主题</a></li>
+    <li><a href="#安装introdution主题">安装Introdution主题</a>
+      <ul>
+        <li><a href="#准备">准备</a></li>
+        <li><a href="#安装主题">安装主题</a></li>
+      </ul>
+    </li>
     <li><a href="#迁移旧博客文件">迁移旧博客文件</a></li>
     <li><a href="#部署github-pages和cloudflare">部署github pages和cloudflare</a></li>
     <li><a href="#为博客添加评论">为博客添加评论</a></li>
     <li><a href="#私有部署评论服务">私有部署评论服务</a></li>
     <li><a href="#主题功能修改">主题功能修改</a></li>
+    <li><a href="#todo">TODO</a></li>
   </ul>
 </nav>
     </div>
@@ -242,7 +249,7 @@
     </h2>
     <div class="post-data">
         May 30, 2021 |
-        1 分钟
+        5 分钟
     </div>
     
     <div class="blog-share">
@@ -316,7 +323,7 @@
 
 <h3 id="使用二进制包进行安装" class="anchor-link"><a href="#%e4%bd%bf%e7%94%a8%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%8c%85%e8%bf%9b%e8%a1%8c%e5%ae%89%e8%a3%85">使用二进制包进行安装</a></h3>
 <p>根据官方提供的快速指南，最直接的安装方式，就是下载二进制包，在Hugo的Github主页中，可以<a href="https://github.com/gohugoio/hugo/releases"><strong>下载</strong></a>到各种平台(Windows,Linux,Mac )的二进制包，只要解压并在操作系统的环境变量中添加进去，就可以直接使用，使用<code>hugo version</code>指令可以查看hugo的安装情况</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>PS C:\Users\19796&gt; hugo version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>	PS C:\Users\19796&gt; hugo version
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>hugo v0.83.1-5AFE0A57+extended windows/amd64 BuildDate=2021-05-02T14<span style="color:#960050;background-color:#1e0010">:</span>38<span style="color:#960050;background-color:#1e0010">:</span>05Z VendorInfo=gohugoio
 </code></pre></div>
 <h3 id="使用包管理进行安装" class="anchor-link"><a href="#%e4%bd%bf%e7%94%a8%e5%8c%85%e7%ae%a1%e7%90%86%e8%bf%9b%e8%a1%8c%e5%ae%89%e8%a3%85">使用包管理进行安装</a></h3>
@@ -343,8 +350,197 @@
 </code></pre></div><p>最近windows 中自带的包管理winget 终于转正，迎来了1.0版本，不过首批提供的1400个软件中并没有hugo，还是挺遗憾的。</p>
 
 <h3 id="使用源代码进行安装" class="anchor-link"><a href="#%e4%bd%bf%e7%94%a8%e6%ba%90%e4%bb%a3%e7%a0%81%e8%bf%9b%e8%a1%8c%e5%ae%89%e8%a3%85">使用源代码进行安装</a></h3>
+<p>使用源代码构建需要<a href="https://git-scm.com/">Git</a>和 <a href="https://golang.org/dl/">Go (版本不低于 Go 1.11)</a>，，然后执行如下脚本就可以进行安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>mkdir $HOME/src
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>cd $HOME/src
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>git clone https://github.com/gohugoio/hugo.git
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>cd hugo
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>go install --tags extended
+</code></pre></div><p>如果不需要Sass/SCSS等功能，可以去除&ndash;tags extende语句</p>
+
+<h3 id="新建一个站点" class="anchor-link"><a href="#%e6%96%b0%e5%bb%ba%e4%b8%80%e4%b8%aa%e7%ab%99%e7%82%b9">新建一个站点</a></h3>
+<p>当你安装完成hugo时，问题就解决了一大半，然后需要在任何你愿意的位置新建一个目录，用于存放站点文件，进入该目录，执行指令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hugo new site <span style="color:#f92672">[</span>your site name<span style="color:#f92672">]</span>
+</code></pre></div><p>执行完成后，hugo会新建一个和站点同名的文件夹。进入目录,，文件结构如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>├─archetypes
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>├─content
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>├─data
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>├─layouts
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>├─static
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>└─themes
+</code></pre></div><p>其中<code>content</code>是存放我们写作的文件的地方，<code>static</code>是存放站点相关静态文件的地方，例如图片，样式表等，themes是存放主题的地方，任何一个hugo站点，没有主题是无法完成构建，也就是无法看到效果的，所以我们首先需要安装一个主题。</p>
 
 <h2 id="安装introdution主题" class="anchor-link"><a href="#%e5%ae%89%e8%a3%85introdution%e4%b8%bb%e9%a2%98">安装Introdution主题</a></h2>
+<p>进入<a href="https://themes.gohugo.io/"> Hugo Themes (gohugo.io)</a>可以查看所有的Hugo主题，选择一个即可。大部分的主题都实现了开箱即用，并且有着完善的教程，经过挑选，我选中了<a href="https://themes.gohugo.io/hugo-theme-introduction/">Hugo Theme Introduction )</a>这一款主题，引用主题主页的介绍，该主题有如下优点：</p>
+<ul>
+<li>
+<p>多语言支持，官方支持英语，法语，德语，中文等多种语言</p>
+</li>
+<li>
+<p>使用Markdown自定义页面</p>
+</li>
+<li>
+<p>有一个展示项目的模块，还有博客功能</p>
+</li>
+<li>
+<p>页面有着平滑的加载和跳转动画（确实是一个比较好的优点，很多主题需要自己添加插件）</p>
+</li>
+<li>
+<p>通过<code>config.toml</code>直接定制功能</p>
+</li>
+<li>
+<p>贯穿始终的Markdown风格，包括文章标题</p>
+</li>
+<li>
+<p>支持代码高亮（代码高亮效果一言难尽）</p>
+</li>
+</ul>
+<p>其中的项目展示功能，优秀的动画系统让，我选择了这个主题，另外该主题还自动适配了黑暗模式，体验很好</p>
+
+<h3 id="准备" class="anchor-link"><a href="#%e5%87%86%e5%a4%87">准备</a></h3>
+<p>安装本主题需要<code>hugo-extend</code>版本，另外需要在系统上全局安装一些npm包用于编译scss</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>npm i -g postcss postcss-cli autoprefixer
+</code></pre></div><p>📌安装完成后，如果执行hugo server运行正常，但是执行构建报如下错误：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>Error: Error building site: POSTCSS: failed to transform &#34;css/main.css&#34; (text/css): resource &#34;sass/sass/style...&#34; not found in file cache
+</code></pre></div><p>可以参考：<a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483">CSS build issues · Issue #210 · victoriadrake/hugo-theme-introduction </a></p>
+
+<h3 id="安装主题" class="anchor-link"><a href="#%e5%ae%89%e8%a3%85%e4%b8%bb%e9%a2%98">安装主题</a></h3>
+<p>安装完成后可以进入你站点的根目录，安装主题</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction
+</code></pre></div><p>clone完成后，主题安装在站点目录的themes/introduction里，hugo的主题中均包含一个示例站点，在站点目录执行如下指令查看示例站点：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>cd themes/introduction/exampleSite/
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>hugo serve  --themesDir ../..
+</code></pre></div>
+<h4 id="配置" class="anchor-link"><a href="#%e9%85%8d%e7%bd%ae">配置</a></h4>
+<details><summary>点击查看本站完整的站点配置，关键位置均有注释</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span style="color:#a6e22e">publishdir</span>                       = <span style="color:#e6db74">&#34;docs&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span style="color:#a6e22e">baseURL</span>                          = <span style="color:#e6db74">&#34;https://radish.cloud/&#34;</span>   <span style="color:#75715e"># Your domain name. Must end with &#34;/&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span><span style="color:#a6e22e">theme</span>                            = <span style="color:#e6db74">&#34;introduction&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span><span style="color:#a6e22e">DefaultContentLanguage</span>           = <span style="color:#e6db74">&#34;cn&#34;</span>                    <span style="color:#75715e"># Default language for multilingual sites</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span><span style="color:#75715e"># disqusshortname                 = &#34;&#34;                     # https://gohugo.io/content-management/comments</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span><span style="color:#75715e"># googleAnalytics                 = &#34;&#34;                     # https://gohugo.io/templates/internal/#google-analytics</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span>[<span style="color:#a6e22e">params</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span>    <span style="color:#a6e22e">themeStyle</span>                   = <span style="color:#e6db74">&#34;auto&#34;</span>                  <span style="color:#75715e"># Choose &#34;light&#34; or &#34;dark&#34; or &#34;auto&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span>    <span style="color:#a6e22e">favicon</span>                      = <span style="color:#e6db74">&#34;/img/fav.ico&#34;</span>          <span style="color:#75715e"># Path to favicon file</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span>    <span style="color:#a6e22e">showRSSButton</span>                = <span style="color:#66d9ef">true</span>             <span style="color:#75715e"># Show rss button in navigation</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span>    <span style="color:#a6e22e">fadeIn</span>                       = <span style="color:#66d9ef">true</span>                    <span style="color:#75715e"># Turn on/off the fade-in effect</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span>    <span style="color:#a6e22e">fadeInIndex</span>                  = <span style="color:#66d9ef">false</span>                   <span style="color:#75715e"># Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span>    <span style="color:#a6e22e">dateFormat</span>                   = <span style="color:#e6db74">&#34;Jan 2, 2006&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span>    <span style="color:#a6e22e">email</span>                        = <span style="color:#e6db74">&#34;mx@radish.cloud&#34;</span>   <span style="color:#75715e"># E-mail address for contact section</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span>    <span style="color:#a6e22e">customCSS</span>                  = [<span style="color:#e6db74">&#34;foo.css&#34;</span>]             <span style="color:#75715e"># Include custom css files placed under assets/</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span>    <span style="color:#75715e"># customJS                   = [&#34;foo.js&#34;]              # Include custom JavaScript files placed under assets/</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span>    <span style="color:#75715e"># plausible                  = true                    # Use Plausible analytics (requires an account at Plausible.io)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span>    <span style="color:#a6e22e">toc</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span>    <span style="color:#75715e"># autoCollapseToc = true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span>    
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span>    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">utteranc</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span>        <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span>        <span style="color:#a6e22e">repo</span> = <span style="color:#e6db74">&#34;Lairdkin/blog&#34;</span>    <span style="color:#75715e"># 存储评论的Repo，格式为 owner/repo</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span>        <span style="color:#a6e22e">issueTerm</span> = <span style="color:#e6db74">&#34;pathname&#34;</span>           <span style="color:#75715e"># 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的pathname。</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span>        <span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;preferred-color-scheme&#34;</span> 
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span>    <span style="color:#75715e"># Configure the home page</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span>    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">home</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span>        <span style="color:#a6e22e">introHeight</span>              = <span style="color:#e6db74">&#34;fullheight&#34;</span>            <span style="color:#75715e"># Input either &#34;medium&#34; or &#34;large&#34; or &#34;fullheight&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span>        <span style="color:#a6e22e">showLatest</span>               = <span style="color:#66d9ef">true</span>                    <span style="color:#75715e"># Show latest blog post summary</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span>        <span style="color:#a6e22e">showAllPosts</span>             = <span style="color:#66d9ef">false</span>                   <span style="color:#75715e"># Set true to list all posts on home page, or set false to link to separate blog list page</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span>        <span style="color:#a6e22e">allPostsArchiveFormat</span>    = <span style="color:#66d9ef">true</span>                    <span style="color:#75715e"># show all posts in an archive format</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span>        <span style="color:#a6e22e">numberOfProjectsToShow</span>   = <span style="color:#ae81ff">3</span>                       <span style="color:#75715e"># Maximum number of projects to show on home page. Unset or comment out to show all projects</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span>        <span style="color:#a6e22e">localTime</span>                = <span style="color:#66d9ef">true</span>                    <span style="color:#75715e"># Show your current local time in contact section</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span>        <span style="color:#a6e22e">timeZone</span>                 = <span style="color:#e6db74">&#34;Asia/Shanghai&#34;</span>   <span style="color:#75715e"># Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span>        <span style="color:#a6e22e">timeFormat</span>               = <span style="color:#e6db74">&#34;zh-CN&#34;</span>                 <span style="color:#75715e"># Language specific format to use</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span>    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">projects</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span>        <span style="color:#a6e22e">useTwoColumns</span>            = <span style="color:#66d9ef">false</span>                   <span style="color:#75715e"># Use a layout with two columns instead of three</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span>    <span style="color:#75715e"># Share buttons on blog post pages</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span>    [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">share</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span>        <span style="color:#a6e22e">twitter</span>                  = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span>        <span style="color:#a6e22e">facebook</span>                 = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span>        <span style="color:#a6e22e">pinterest</span>                = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span>    <span style="color:#75715e"># Social icons appear in introduction and contact section. Add as many more as you like.</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span>    <span style="color:#75715e"># Icon pack &#34;fab&#34; includes social network icons, see: https://fontawesome.com/icons?d=gallery&amp;s=brands&amp;m=free</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span>    <span style="color:#75715e"># Icon pack &#34;fas&#34; includes solid style icons, see: https://fontawesome.com/icons?d=gallery&amp;s=solid&amp;m=free</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span>    [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span>        <span style="color:#a6e22e">url</span>   = <span style="color:#e6db74">&#34;https://twitter.com/menxin74&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span>        <span style="color:#a6e22e">icon</span>  = <span style="color:#e6db74">&#34;twitter&#34;</span> <span style="color:#75715e"># icon name without the &#39;fa-&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span>        <span style="color:#a6e22e">icon_pack</span> = <span style="color:#e6db74">&#34;fab&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span>    [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span>        <span style="color:#a6e22e">url</span>   = <span style="color:#e6db74">&#34;https://t.me/radishcloud&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span>        <span style="color:#a6e22e">icon</span>  = <span style="color:#e6db74">&#34;telegram&#34;</span> <span style="color:#75715e"># icon name without the &#39;fa-&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span>        <span style="color:#a6e22e">icon_pack</span> = <span style="color:#e6db74">&#34;fab&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span>    [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span>        <span style="color:#a6e22e">url</span>   = <span style="color:#e6db74">&#34;https://github.com/RadishKin&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span>        <span style="color:#a6e22e">icon</span>  = <span style="color:#e6db74">&#34;github&#34;</span> <span style="color:#75715e"># icon name without the &#39;fa-&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span>        <span style="color:#a6e22e">icon_pack</span> = <span style="color:#e6db74">&#34;fab&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span>    [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://weibo.com/1910759497&#34;</span>  <span style="color:#75715e"># For a direct email link, use &#34;mailto:test@example.org&#34;.</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span>        <span style="color:#a6e22e">icon</span> = <span style="color:#e6db74">&#34;weibo&#34;</span> <span style="color:#75715e"># icon name without the &#39;fa-&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span>        <span style="color:#a6e22e">icon_pack</span> = <span style="color:#e6db74">&#34;fab&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span>    [[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">social</span>]]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span>        <span style="color:#a6e22e">url</span>   = <span style="color:#e6db74">&#34;https://discord.gg/z3nEreaJvk&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span>        <span style="color:#a6e22e">icon</span>  = <span style="color:#e6db74">&#34;discord&#34;</span> <span style="color:#75715e"># icon name without the &#39;fa-&#39;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span>        <span style="color:#a6e22e">icon_pack</span> = <span style="color:#e6db74">&#34;fab&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span>        <span style="color:#a6e22e">html_attributes</span> = <span style="color:#e6db74">&#34;rel=\&#34;me\&#34;&#34;</span> <span style="color:#75715e"># Add rel attribute for Mastodon profile link verification</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span>    [<span style="color:#a6e22e">taxonomies</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span>    <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span>    <span style="color:#a6e22e">series</span> = <span style="color:#e6db74">&#34;series&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span>    [<span style="color:#a6e22e">markup</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span>    <span style="color:#a6e22e">defaultMarkdownHandler</span> = <span style="color:#e6db74">&#34;goldmark&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span>        <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span>        <span style="color:#a6e22e">codeFences</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span>        <span style="color:#a6e22e">guessSyntax</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span>        <span style="color:#a6e22e">hl_Lines</span> = <span style="color:#e6db74">&#34;&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span>        <span style="color:#a6e22e">lineNoStart</span> = <span style="color:#ae81ff">1</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span>        <span style="color:#a6e22e">lineNos</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span>        <span style="color:#a6e22e">lineNumbersInTable</span> = <span style="color:#66d9ef">false</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span>        <span style="color:#a6e22e">noClasses</span> = <span style="color:#66d9ef">true</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span>        <span style="color:#75715e"># For styles, see https://xyproto.github.io/splash/docs/longer/all.html</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span>        <span style="color:#a6e22e">style</span> = <span style="color:#e6db74">&#34;monokai&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span>        <span style="color:#a6e22e">tabWidth</span> = <span style="color:#ae81ff">4</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span>    [<span style="color:#a6e22e">languages</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span>        [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span>            <span style="color:#a6e22e">languageName</span>     = <span style="color:#e6db74">&#34;English&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span>            <span style="color:#a6e22e">languageCode</span>     = <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span>            <span style="color:#a6e22e">contentDir</span>       = <span style="color:#e6db74">&#34;content/en&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span>            <span style="color:#a6e22e">weight</span>           = <span style="color:#ae81ff">1</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span>            <span style="color:#a6e22e">title</span>            = <span style="color:#e6db74">&#34;Anonymous blog&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span>            [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span>                <span style="color:#a6e22e">description</span>  = <span style="color:#e6db74">&#34;Website Description&#34;</span>   <span style="color:#75715e"># Max 160 characters show in search results</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span>                <span style="color:#75715e"># footerText   = &#34;&#34;                      # Text to override default footer text (markdown allowed)</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106</span>        [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">cn</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107</span>            <span style="color:#a6e22e">languageName</span>     = <span style="color:#e6db74">&#34;简体中文&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108</span>            <span style="color:#a6e22e">languageCode</span>     = <span style="color:#e6db74">&#34;zh-CN&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109</span>            <span style="color:#a6e22e">contentDir</span>       = <span style="color:#e6db74">&#34;content/cn&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110</span>            <span style="color:#a6e22e">weight</span>           = <span style="color:#ae81ff">0</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111</span>            <span style="color:#a6e22e">title</span>            = <span style="color:#e6db74">&#34;无名博客&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112</span>            [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">cn</span>.<span style="color:#a6e22e">params</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113</span>                <span style="color:#a6e22e">description</span>  = <span style="color:#e6db74">&#34;站点描述&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114</span>                <span style="color:#75715e"># footerText   = &#34;  © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116</span>    
+</code></pre></div></details>
+<p>首先应该修改languages，示例站点的默认配置是英语，德语，首先删除不需要的语言，按如下格式配置语言：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">cn</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>            <span style="color:#a6e22e">languageName</span>     = <span style="color:#e6db74">&#34;简体中文&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>            <span style="color:#a6e22e">languageCode</span>     = <span style="color:#e6db74">&#34;zh-CN&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>            <span style="color:#a6e22e">contentDir</span>       = <span style="color:#e6db74">&#34;content/cn&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>            <span style="color:#a6e22e">weight</span>           = <span style="color:#ae81ff">0</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>            <span style="color:#a6e22e">title</span>            = <span style="color:#e6db74">&#34;无名博客&#34;</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>            [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">cn</span>.<span style="color:#a6e22e">params</span>]
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>                <span style="color:#a6e22e">description</span>  = <span style="color:#e6db74">&#34;站点描述&#34;</span>
+</code></pre></div><p>其中language 后面的代码，简体中文应该zh-CN，繁体中文为zh-TW，此处笔者为了方便修改了主题默认的国际化文件名称，国际化文件目录<code>themes\introduction\i18n\</code>。使用DefaultContentLanguage  参数可以选择默认显示的站点语言，使用<code>hugo new page</code>也会默认优先新建该语言文件。</p>
+<p>语言设置中还有一项<code>footerText</code>参数，在该参数中填入的文本会覆盖站点默认的footer内容，由于没有css，效果较差。建议需要修改footer的直接去对应语言的i18n文件中修改。</p>
 
 <h2 id="迁移旧博客文件" class="anchor-link"><a href="#%e8%bf%81%e7%a7%bb%e6%97%a7%e5%8d%9a%e5%ae%a2%e6%96%87%e4%bb%b6">迁移旧博客文件</a></h2>
 
@@ -355,6 +551,11 @@
 <h2 id="私有部署评论服务" class="anchor-link"><a href="#%e7%a7%81%e6%9c%89%e9%83%a8%e7%bd%b2%e8%af%84%e8%ae%ba%e6%9c%8d%e5%8a%a1">私有部署评论服务</a></h2>
 
 <h2 id="主题功能修改" class="anchor-link"><a href="#%e4%b8%bb%e9%a2%98%e5%8a%9f%e8%83%bd%e4%bf%ae%e6%94%b9">主题功能修改</a></h2>
+
+<h2 id="todo" class="anchor-link"><a href="#todo">TODO</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> 添加博客邮件订阅功能，参见 <a href="https://sspai.com/post/60025#!">博客利器：使用 mailchimp 将 RSS 转为邮件订阅 - 少数派 (sspai.com)</a></li>
+</ul>
 </div>
 
 
