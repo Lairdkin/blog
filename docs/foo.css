@@ -42,6 +42,9 @@
     word-wrap: break-word;
     box-sizing: border-box;
   }
+  /* .post-toc .post-toc-index{
+      
+  } */
   .post-toc .post-toc-title {
     margin: 0;
     font-weight: 400;

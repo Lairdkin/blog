@@ -5,11 +5,12 @@
     <link>https://radish.cloud/tags/hexo/</link>
     <description>Recent content in Hexo on 无名博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://radish.cloud/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hexo博客搭建</title>
       <link>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
       
       <guid>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description>最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333
