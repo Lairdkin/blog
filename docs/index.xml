@@ -6,7 +6,7 @@
     <description>Recent content on 无名博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 28 May 2021 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 May 2021 13:16:29 +0800</lastBuildDate><atom:link href="https://radish.cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在线招聘系统</title>
       <link>https://radish.cloud/projects/demoproject/</link>
@@ -17,6 +17,16 @@
 代码开源于：点击查看代码
 该系统设计了一个面向 IT 领域的线上招聘网站，目标客户为企业所定义的校招生群体。系统使用业界成熟的分布式微服务架构，将庞大臃肿的单实例项目以能为模块进行拆分，拆分后模块耦合度低，复用性好，对单个模块可以灵活的进行拓展。架构还支持了服务治理，持续集成等技术，提高了系统的稳定性。
 系统包括了常见的岗位管理，简历管理，职位投递等功能，还提供了模拟笔试，供应聘者学习的专栏模块，为求职者提高招聘备考效率，为求职者和企业提供双向的招聘解决方案</description>
+    </item>
+    
+    <item>
+      <title>博客重生小记</title>
+      <link>https://radish.cloud/blog/blog-rebirth-record/</link>
+      <pubDate>Sun, 30 May 2021 13:16:29 +0800</pubDate>
+      
+      <guid>https://radish.cloud/blog/blog-rebirth-record/</guid>
+      <description>&lt;p&gt;2018年的夏天，坚持了仅仅两个月的&lt;a href=&#34;https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/&#34;&gt;&lt;strong&gt;博客&lt;/strong&gt;&lt;/a&gt;，因为服务器到期关掉了，当时的我还立下了一天一篇博客的“伟大”目标。然而事实证明，我既高估了自己的毅力，也高估了自己的写作能力了——直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我常常想把博客重新捡起来，最终也因为一直也没有付诸于实践。
+最近我有了一点宽裕的时间，为了督促自己学习，也为了记录自己学习的过程，我决定复活我的博客。&lt;/p&gt;</description>
     </item>
     
     <item>
