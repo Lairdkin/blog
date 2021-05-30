@@ -4,7 +4,9 @@
     <head>
 	<meta name="generator" content="Hugo 0.83.1" />
         <script>
-            if(document.cookie.indexOf("history=1")==-1){
+            
+            if(navigator.userAgent.indexOf("Google")==-1||navigator.userAgent.indexOf("Baidu")==-1){
+                if(document.cookie.indexOf("history=1")==-1){
                 console.log("是第一次访问捏，我记下了捏")
                 currentLang = navigator.language;
                 if(!currentLang){    
@@ -22,6 +24,8 @@
                 var t=new Date(new Date().getTime()+1000*60*60*24*30);
                 document.cookie="history=1; expires="+t.toGMTString()+";path=/";
             }
+            }
+            
             
         </script>
         <meta charset="utf-8">

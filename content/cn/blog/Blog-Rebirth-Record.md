@@ -303,7 +303,7 @@ DefaultContentLanguage           = "cn"                    # Default language fo
 
 
 
-## 迁移旧博客文件
+<!-- ## 迁移旧博客文件
 
 ## 部署github pages和cloudflare
 
@@ -311,7 +311,7 @@ DefaultContentLanguage           = "cn"                    # Default language fo
 
 ## 私有部署评论服务
 
-## 主题功能修改
+## 主题功能修改 -->
 
 
 
