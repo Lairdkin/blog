@@ -65,6 +65,9 @@
 <h1 class="bold-title is-1">博客</h1>
 
 
+
+
+
             </div>
             
             <div class="section  fade-in two ">
@@ -174,7 +177,61 @@
 
 
                 
+
+
 <div class="container">
+
+    
+          <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title"></h2>
+    
+    <div
+        class="post-toc-content always-active">
+        <p style="font-size: 20px;margin-left: 0px;">目录</p>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#准备工作">准备工作</a>
+      <ul>
+        <li><a href="#系统环境">系统环境</a></li>
+        <li><a href="#软件环境">软件环境</a></li>
+        <li><a href="#下载源码">下载源码</a></li>
+      </ul>
+    </li>
+    <li><a href="#编译">编译</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        var fix = $('.post-toc');
+        var end = $('.post-comment');
+        var fixTop = fix.offset().top, fixHeight = fix.height();
+        var endTop, miss;
+        var offsetTop = fix[0].offsetTop;
+        $(window).scroll(function () {
+            var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            if (end.length > 0) {
+                endTop = end.offset().top;
+                miss = endTop - docTop - fixHeight;
+            }
+            if (fixTop < docTop) {
+                fix.css({ 'position': 'fixed' });
+                if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+                    fix.css({ top: miss });
+                } else {
+                    fix.css({ top: 0 });
+                }
+            } else {
+                fix.css({ 'position': 'absolute' });
+                fix.css({ top: offsetTop });
+            }
+        })
+    }
+</script>
+	
+    
+
     <h2 class="title is-1 top-pad strong-post-title">
         <a href="https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/">一次失败的jdk编译</a>
     </h2>
@@ -233,6 +290,8 @@
              jvm</a>
          
         </p>
+
+        
       
     
       
@@ -240,6 +299,8 @@
 </div>
 
 <div class="container markdown top-pad">
+    
+    
     <p>想要深入了解JVM，就必须了解其实现机制。了解JVM实现的最好方法便是自己动手编译JDK。本文中，我将参照《深入理解Java虚拟机》中的教程，编译openjdk1.8</p>
 
 <h2 id="准备工作" class="anchor-link"><a href="#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c">准备工作</a></h2>
@@ -339,6 +400,7 @@
 
 
 <script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
+
 
 
 

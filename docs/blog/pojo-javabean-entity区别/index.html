@@ -65,6 +65,9 @@
 <h1 class="bold-title is-1">博客</h1>
 
 
+
+
+
             </div>
             
             <div class="section  fade-in two ">
@@ -174,7 +177,62 @@
 
 
                 
+
+
 <div class="container">
+
+    
+          <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title"></h2>
+    
+    <div
+        class="post-toc-content always-active">
+        <p style="font-size: 20px;margin-left: 0px;">目录</p>
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1javabean">1、javaBean</a></li>
+        <li><a href="#2ejb">2、ejb</a></li>
+        <li><a href="#3pojo">3、pojo</a></li>
+        <li><a href="#4entity">4、entity</a></li>
+        <li><a href="#5-dto">5 、DTO</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        var fix = $('.post-toc');
+        var end = $('.post-comment');
+        var fixTop = fix.offset().top, fixHeight = fix.height();
+        var endTop, miss;
+        var offsetTop = fix[0].offsetTop;
+        $(window).scroll(function () {
+            var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            if (end.length > 0) {
+                endTop = end.offset().top;
+                miss = endTop - docTop - fixHeight;
+            }
+            if (fixTop < docTop) {
+                fix.css({ 'position': 'fixed' });
+                if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+                    fix.css({ top: miss });
+                } else {
+                    fix.css({ top: 0 });
+                }
+            } else {
+                fix.css({ 'position': 'absolute' });
+                fix.css({ top: offsetTop });
+            }
+        })
+    }
+</script>
+	
+    
+
     <h2 class="title is-1 top-pad strong-post-title">
         <a href="https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/">[转载]POJO,JAVABEAN,Entity区别</a>
     </h2>
@@ -230,6 +288,8 @@
              JavaEE</a>
          
         </p>
+
+        
       
     
       
@@ -237,6 +297,8 @@
 </div>
 
 <div class="container markdown top-pad">
+    
+    
     <p>转载自  ：
 {% blockquote 哎呦AU的博客 <a href="https://www.cnblogs.com/aurum324/p/8167996.html">https://www.cnblogs.com/aurum324/p/8167996.html</a> POJO,JAVABEAN,Entity区别 %}
 {% endblockquote %}</p>
@@ -313,6 +375,7 @@ ejb是JavaEE的一部分，定义了一个用于开发基于组件的企业多�
 
 
 <script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
+
 
 
 
