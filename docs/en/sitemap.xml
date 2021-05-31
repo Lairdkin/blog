@@ -84,16 +84,6 @@
   </url><url>
     <loc>https://radish.cloud/en/blog/testblog/</loc>
     <lastmod>2018-05-28T01:56:47+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://radish.cloud/blog/testblog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://radish.cloud/en/blog/testblog/"
-                />
   </url><url>
     <loc>https://radish.cloud/en/series/</loc>
     <xhtml:link
