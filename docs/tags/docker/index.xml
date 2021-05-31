@@ -6,17 +6,7 @@
     <description>Recent content in docker on 无名博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 30 May 2021 13:16:29 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>博客重生小记</title>
-      <link>https://radish.cloud/blog/blog-rebirth-record/</link>
-      <pubDate>Sun, 30 May 2021 13:16:29 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/blog-rebirth-record/</guid>
-      <description>&lt;p&gt;2018年的夏天，坚持了仅仅两个月的&lt;a href=&#34;https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/&#34;&gt;&lt;strong&gt;博客&lt;/strong&gt;&lt;/a&gt;，因为服务器到期关掉了，当时的我还立下了一天一篇博客的“伟大”目标。然而事实证明，我既高估了自己的毅力，也高估了自己的写作能力了——直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我常常想把博客重新捡起来，最终也因为一直也没有付诸于实践。
-最近我有了一点宽裕的时间，为了督促自己学习，也为了记录自己学习的过程，我决定复活我的博客。&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker入门笔记（一）</title>
       <link>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
