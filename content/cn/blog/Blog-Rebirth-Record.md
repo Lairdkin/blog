@@ -157,6 +157,8 @@ hugo serve  --themesDir ../..
 
 #### 配置
 
+站点配置文件位于`config.toml`文件中
+
 <details><summary>点击查看本站完整的站点配置，关键位置均有注释</summary>
 
 
@@ -298,12 +300,25 @@ DefaultContentLanguage           = "cn"                    # Default language fo
 
 语言设置中还有一项` footerText `参数，在该参数中填入的文本会覆盖站点默认的footer内容，由于没有css，效果较差。建议需要修改footer的直接去对应语言的i18n文件中修改。
 
+通过修改`markup.highlight`中 `style`属性修改代码高亮的风格，但是该主题默认的代码块区域css和大多数风格有冲突，需要修改主题样式，具体修改参见 [**主题功能修改**](#主题功能修改) 章节
+
+其他部分默认配置均根据示例配置文件修改或者保持默认即可
 
 
 
+### 编译站点
 
+修改完成配置后就可以可以编译静态站点了，首先在配置文件中添加`publishdi = "docs"`配置，编译生成的文件会默认放在站点根目录的/docs目录中，该目录是github pages的默认目录，方便后面部署。
 
-<!-- ## 迁移旧博客文件
+保存配置文件后执行
+
+```
+hugo
+```
+
+即可生成站点文件
+
+## 迁移旧博客文件
 
 ## 部署github pages和cloudflare
 
@@ -311,7 +326,7 @@ DefaultContentLanguage           = "cn"                    # Default language fo
 
 ## 私有部署评论服务
 
-## 主题功能修改 -->
+## 主题功能修改 
 
 
 

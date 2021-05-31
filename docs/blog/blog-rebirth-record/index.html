@@ -180,6 +180,8 @@
 
 
 <div class="container">
+    
+    
 
     
           <div class="post-toc" id="post-toc">
@@ -202,8 +204,14 @@
       <ul>
         <li><a href="#准备">准备</a></li>
         <li><a href="#安装主题">安装主题</a></li>
+        <li><a href="#编译站点">编译站点</a></li>
       </ul>
     </li>
+    <li><a href="#迁移旧博客文件">迁移旧博客文件</a></li>
+    <li><a href="#部署github-pages和cloudflare">部署github pages和cloudflare</a></li>
+    <li><a href="#为博客添加评论">为博客添加评论</a></li>
+    <li><a href="#私有部署评论服务">私有部署评论服务</a></li>
+    <li><a href="#主题功能修改">主题功能修改</a></li>
     <li><a href="#todo">TODO</a></li>
   </ul>
 </nav>
@@ -267,6 +275,8 @@
             <span class="hidden">Pinterest</span>
         </a>
         
+
+        
     </div>
     
     
@@ -300,6 +310,39 @@
     
       
     
+    <div class="" id="">
+    <span id="busuanzi_container_page_pv">
+        阅读量:<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    <blockquote>
+        <p id="read-times"></p>
+    </br>
+    </blockquote>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        var fix = $('.section.fade-in.two .container.markdown.top-pad');
+        function wordCount(data) {
+            var pattern = /[a-zA-Z0-9_\u0392-\u03c9]+|[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/g;
+            var m = data.match(pattern);
+            var count = 0;
+            if (m == null) { return count; }
+            for (var i = 0; i < m.length; i++) {
+                if (m[i].charCodeAt(0) >= 0x4E00) {
+                    count += m[i].length;
+                } else {
+                    count += 1;
+                }
+            }
+            return count;
+        }    
+        count = wordCount(fix[0].innerText) 
+        $('#read-times')[0].innerText = '📌提示：本文共计'+count+'字，预计📰阅读时间'+(count/270+1).toFixed(0) +'分钟'
+    }
+</script>
 </div>
 
 <div class="container markdown top-pad">
@@ -407,6 +450,7 @@
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>hugo serve  --themesDir ../..
 </code></pre></div>
 <h4 id="配置" class="anchor-link"><a href="#%e9%85%8d%e7%bd%ae">配置</a></h4>
+<p>站点配置文件位于<code>config.toml</code>文件中</p>
 <details><summary>点击查看本站完整的站点配置，关键位置均有注释</summary>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span style="color:#a6e22e">publishdir</span>                       = <span style="color:#e6db74">&#34;docs&#34;</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span style="color:#a6e22e">baseURL</span>                          = <span style="color:#e6db74">&#34;https://radish.cloud/&#34;</span>   <span style="color:#75715e"># Your domain name. Must end with &#34;/&#34;</span>
@@ -536,15 +580,24 @@
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>                <span style="color:#a6e22e">description</span>  = <span style="color:#e6db74">&#34;站点描述&#34;</span>
 </code></pre></div><p>其中language 后面的代码，简体中文应该zh-CN，繁体中文为zh-TW，此处笔者为了方便修改了主题默认的国际化文件名称，国际化文件目录<code>themes\introduction\i18n\</code>。使用DefaultContentLanguage  参数可以选择默认显示的站点语言，使用<code>hugo new page</code>也会默认优先新建该语言文件。</p>
 <p>语言设置中还有一项<code>footerText</code>参数，在该参数中填入的文本会覆盖站点默认的footer内容，由于没有css，效果较差。建议需要修改footer的直接去对应语言的i18n文件中修改。</p>
-<!-- ## 迁移旧博客文件
+<p>通过修改<code>markup.highlight</code>中 <code>style</code>属性修改代码高亮的风格，但是该主题默认的代码块区域css和大多数风格有冲突，需要修改主题样式，具体修改参见 <a href="#%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E4%BF%AE%E6%94%B9"><strong>主题功能修改</strong></a> 章节</p>
+<p>其他部分默认配置均根据示例配置文件修改或者保持默认即可</p>
 
-## 部署github pages和cloudflare
+<h3 id="编译站点" class="anchor-link"><a href="#%e7%bc%96%e8%af%91%e7%ab%99%e7%82%b9">编译站点</a></h3>
+<p>修改完成配置后就可以可以编译静态站点了，首先在配置文件中添加<code>publishdi = &quot;docs&quot;</code>配置，编译生成的文件会默认放在站点根目录的/docs目录中，该目录是github pages的默认目录，方便后面部署。</p>
+<p>保存配置文件后执行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hugo
+</code></pre></div><p>即可生成站点文件</p>
 
-## 为博客添加评论
+<h2 id="迁移旧博客文件" class="anchor-link"><a href="#%e8%bf%81%e7%a7%bb%e6%97%a7%e5%8d%9a%e5%ae%a2%e6%96%87%e4%bb%b6">迁移旧博客文件</a></h2>
 
-## 私有部署评论服务
+<h2 id="部署github-pages和cloudflare" class="anchor-link"><a href="#%e9%83%a8%e7%bd%b2github-pages%e5%92%8ccloudflare">部署github pages和cloudflare</a></h2>
 
-## 主题功能修改 -->
+<h2 id="为博客添加评论" class="anchor-link"><a href="#%e4%b8%ba%e5%8d%9a%e5%ae%a2%e6%b7%bb%e5%8a%a0%e8%af%84%e8%ae%ba">为博客添加评论</a></h2>
+
+<h2 id="私有部署评论服务" class="anchor-link"><a href="#%e7%a7%81%e6%9c%89%e9%83%a8%e7%bd%b2%e8%af%84%e8%ae%ba%e6%9c%8d%e5%8a%a1">私有部署评论服务</a></h2>
+
+<h2 id="主题功能修改" class="anchor-link"><a href="#%e4%b8%bb%e9%a2%98%e5%8a%9f%e8%83%bd%e4%bf%ae%e6%94%b9">主题功能修改</a></h2>
 
 <h2 id="todo" class="anchor-link"><a href="#todo">TODO</a></h2>
 <ul>
