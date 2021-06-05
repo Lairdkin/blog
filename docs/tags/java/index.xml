@@ -43,7 +43,19 @@ JDBC URL: jdbc:microsoft:sqlserver://&amp;lt;server_name&amp;gt;:&amp;lt;port&am
 JDBC URL:
 jdbc:oracle:thin:@//&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/ServiceName 或
 jdbc:oracle:thin:@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;:&amp;lt;SID&amp;gt;
-4 IBM DB2IBM DB2 Universal Driver Type 4</description>
+4 IBM DB2IBM DB2 Universal Driver Type 4
+驱动程序包名：db2jcc.jar db2jcc_license_cu.jar
+驱动程序类名: com.ibm.db2.jcc.DB2Driver
+JDBC URL: jdbc:db2://&amp;lt;host&amp;gt;[:&amp;lt;port&amp;gt;]/&amp;lt;database_name&amp;gt;
+5 MySQLMySQL Connector/J Driver
+驱动程序包名：mysql-connector-java-x.x.xx-bin.jar
+驱动程序类名: com.mysql.jdbc.Driver
+JDBC URL: jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;
+默认端口3306，如果服务器使用默认端口则port可以省略
+ MySQL Connector/J Driver 允许在URL中添加额外的连接属性
+ 1jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;?property1=value1&amp;amp;property2=value2  注意： 需要操作记录为了避免乱码应该加上属性 useUnicode=true&amp;amp;characterEncoding=utf8 ，比如
+ 1jdbc:mysql://192.168.177.129:3306/report?useUnicode=true&amp;amp;characterEncoding=utf8 二 Hibernate 中数据库的方言1 Oracle 方言1org.hibernate.dialect.OracleDialect 2 MySQL方言1org.hibernate.dialect.MySQLDialect 3 SQLServer方言
+1org.hibernate.dialect.SQLServerDialect </description>
     </item>
     
     <item>
@@ -68,7 +80,22 @@ Docker在容器的基础上，进行了进一步的封装，从文件系统、�
 持续交付和部署使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment) 系统进行自动部署。
 更轻松的维护和拓展Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易
 Docekr的镜像与容器首先我们了解三个Docker的基本概念
- 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍</description>
+ 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍
+环境如今，Docker可以运行在所有的主流操作系统上，包括Linux，Windows，MacOSX，因为我平时喜欢使用Linux，本文将在Linux上部署和使用，我将使用我的笔记本电脑和一台Daocloud胶囊主机来完成本文的内容
+ 本地环境：Manjaro Linux18.0+Docker18.09.0-ce, 远程主机环境：Ubuntu14.04+(因为写作到这的时候断网了就放弃远程环境了)  在Manjaro安装Docker非常简单，在终端输入：
+1sudo Pacman -S docker-ce 即可安装，并无需额外配置
+启动Docker服务
+1systemctl start docker 检查Docker版本
+1$ docker --version 2Docker version 18.09.0-ce, build 4d60db472b Docker就安装好了
+镜像首先我们将了解Docker最核心的概念之一：镜像。镜像是Docker特殊的文件存储形式，其中储存了Linux运行时的用户空间，根据Linux的设计，Linux分为内核和用户空间，宿主机为Docker容器运行提供了内核支持，而Linux镜像为Docker运行提供了用户空间的支持。除了Linux的用户空间外，Docker镜像还储存了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等），Docker镜像不包含任何动态数据，构建完成后不会被改变。
+由于docker使用了UnionFS技术，所以Docker实现了分层储存的特性，镜像并非是一个完整的“镜像”文件，而是一种抽象概念，在存储中，Docker镜像根据构建顺序依次完成储存，不同的镜像可以共享其中的中间层，大大减小了Docker镜像的体积。
+获取镜像Docker运行前需要对应的镜像，所以我们可以从镜像仓库拉取镜像，Docker默认的镜像仓库是DockerHub，其中内置了大量高质量的Dokcer基础镜像，我们也可以将自己的镜像发布至DockerHub
+ 前文我们提到了仓库（Repository）的概念，仓库是一个集中存储和分发镜像的服务，一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。我们可以部署只自己仓库，也可以使用公共的仓库服务。
+ 获取镜像使用docker pull命令：
+1docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt; 如没有仓库地址名，将使用默认的仓库。 例如：
+1$ sudo docker pull node:latest 2latest: Pulling from library/node 354f7e8ac135a: Already exists 4d6341e30912f: Already exists 5087a57faf949: Already exists 65d71636fb824: Pull complete 70c1db9598990: Pull complete 889669bc2deb2: Pull complete 9647616206038: Pull complete 1064f67f03205b: Pull complete 11Digest: sha256:fed3f48ec9e97a57c17977ff120c3e7bf7d2d4e930ef650bba3f2ada5ac4a33a 12Status: Downloaded newer image for node:latest 这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像
+列出镜像我们可以使用docker images列出所有本地的镜像
+1$ docker images 2REPOSITORY TAG IMAGE ID CREATED SIZE 3docker-test 0.0.1 ce25b22437c5 9 days ago 443MB 4node latest 37f455de4837 9 days ago 894MB 5tomcat latest 48dd385504b1 9 days ago 475MB 6ubuntu latest 93fd78260bd1 3 weeks ago 86.</description>
     </item>
     
     <item>
@@ -87,7 +114,12 @@ Docekr的镜像与容器首先我们了解三个Docker的基本概念
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; lmbok，减少代码量
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; 4	&amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; 5&amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.</description>
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; swagger
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 6 7&amp;lt;dependency&amp;gt; 8	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 9	&amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; 10	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 11&amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构
+1$ tree 2. 3├── mvnw 4├── mvnw.cmd 5├── pom.xml 6├── src 7│ ├── main 8│ │ ├── java 9│ │ │ └── top/ljmx/springboot/demo/demo 10│ │ │ └── DemoApplication.java 11│ │ └── resources 12│ │ ├── application.properties 13│ │ ├── static 14│ │ └── templates 15│ └── test 16│ └── java 17│ └── top/ljmx/springboot/demo/demo 18│ └── DemoApplicationTests.java 19└── srpingboot-sdemo.iml 20 2118 directories, 7 files src是项目的主文件夹，其中main是主要代码，test是测试代码，这是一个典型的Maven工程的文件结构，pom.xml是Maven的依赖文件。main先分为java和resources，java存放代码，resources存放静态资源，目录中的application.properties是工程的配置文件
+Springboot遵循springMVC的分层结构结构，所以我们先在包top.ljmx.springboot.demo.demo下新建以下几个子包
+ controller 存放所有的控制器代码 model 存放所有的数据模型 repository 存放所有的数据操作 service 业务代码  其他可选包
+ config 存放配置代码，如swagger util 存放工具类 expection 统一异常处理  一个简单的Springboot入门实例 本实例参照库米云微王华杰老师课程代码</description>
     </item>
     
     <item>

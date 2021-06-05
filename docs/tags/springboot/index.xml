@@ -23,7 +23,12 @@
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; lmbok，减少代码量
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; 4	&amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; 5&amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.</description>
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; swagger
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 6 7&amp;lt;dependency&amp;gt; 8	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 9	&amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; 10	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 11&amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构
+1$ tree 2. 3├── mvnw 4├── mvnw.cmd 5├── pom.xml 6├── src 7│ ├── main 8│ │ ├── java 9│ │ │ └── top/ljmx/springboot/demo/demo 10│ │ │ └── DemoApplication.java 11│ │ └── resources 12│ │ ├── application.properties 13│ │ ├── static 14│ │ └── templates 15│ └── test 16│ └── java 17│ └── top/ljmx/springboot/demo/demo 18│ └── DemoApplicationTests.java 19└── srpingboot-sdemo.iml 20 2118 directories, 7 files src是项目的主文件夹，其中main是主要代码，test是测试代码，这是一个典型的Maven工程的文件结构，pom.xml是Maven的依赖文件。main先分为java和resources，java存放代码，resources存放静态资源，目录中的application.properties是工程的配置文件
+Springboot遵循springMVC的分层结构结构，所以我们先在包top.ljmx.springboot.demo.demo下新建以下几个子包
+ controller 存放所有的控制器代码 model 存放所有的数据模型 repository 存放所有的数据操作 service 业务代码  其他可选包
+ config 存放配置代码，如swagger util 存放工具类 expection 统一异常处理  一个简单的Springboot入门实例 本实例参照库米云微王华杰老师课程代码</description>
     </item>
     
   </channel>

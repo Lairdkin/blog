@@ -4,6 +4,7 @@ theme                            = "introduction"
 DefaultContentLanguage           = "cn"                    # Default language for multilingual sites
 # disqusshortname                 = ""                     # https://gohugo.io/content-management/comments
 # googleAnalytics                 = ""                     # https://gohugo.io/templates/internal/#google-analytics
+summaryLength = 180
 
 [params]
     themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"

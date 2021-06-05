@@ -99,7 +99,19 @@ JDBC URL: jdbc:microsoft:sqlserver://&amp;lt;server_name&amp;gt;:&amp;lt;port&am
 JDBC URL:
 jdbc:oracle:thin:@//&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/ServiceName 或
 jdbc:oracle:thin:@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;:&amp;lt;SID&amp;gt;
-4 IBM DB2IBM DB2 Universal Driver Type 4</description>
+4 IBM DB2IBM DB2 Universal Driver Type 4
+驱动程序包名：db2jcc.jar db2jcc_license_cu.jar
+驱动程序类名: com.ibm.db2.jcc.DB2Driver
+JDBC URL: jdbc:db2://&amp;lt;host&amp;gt;[:&amp;lt;port&amp;gt;]/&amp;lt;database_name&amp;gt;
+5 MySQLMySQL Connector/J Driver
+驱动程序包名：mysql-connector-java-x.x.xx-bin.jar
+驱动程序类名: com.mysql.jdbc.Driver
+JDBC URL: jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;
+默认端口3306，如果服务器使用默认端口则port可以省略
+ MySQL Connector/J Driver 允许在URL中添加额外的连接属性
+ 1jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;?property1=value1&amp;amp;property2=value2  注意： 需要操作记录为了避免乱码应该加上属性 useUnicode=true&amp;amp;characterEncoding=utf8 ，比如
+ 1jdbc:mysql://192.168.177.129:3306/report?useUnicode=true&amp;amp;characterEncoding=utf8 二 Hibernate 中数据库的方言1 Oracle 方言1org.hibernate.dialect.OracleDialect 2 MySQL方言1org.hibernate.dialect.MySQLDialect 3 SQLServer方言
+1org.hibernate.dialect.SQLServerDialect </description>
     </item>
     
     <item>
@@ -124,7 +136,22 @@ Docker在容器的基础上，进行了进一步的封装，从文件系统、�
 持续交付和部署使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment) 系统进行自动部署。
 更轻松的维护和拓展Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易
 Docekr的镜像与容器首先我们了解三个Docker的基本概念
- 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍</description>
+ 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍
+环境如今，Docker可以运行在所有的主流操作系统上，包括Linux，Windows，MacOSX，因为我平时喜欢使用Linux，本文将在Linux上部署和使用，我将使用我的笔记本电脑和一台Daocloud胶囊主机来完成本文的内容
+ 本地环境：Manjaro Linux18.0+Docker18.09.0-ce, 远程主机环境：Ubuntu14.04+(因为写作到这的时候断网了就放弃远程环境了)  在Manjaro安装Docker非常简单，在终端输入：
+1sudo Pacman -S docker-ce 即可安装，并无需额外配置
+启动Docker服务
+1systemctl start docker 检查Docker版本
+1$ docker --version 2Docker version 18.09.0-ce, build 4d60db472b Docker就安装好了
+镜像首先我们将了解Docker最核心的概念之一：镜像。镜像是Docker特殊的文件存储形式，其中储存了Linux运行时的用户空间，根据Linux的设计，Linux分为内核和用户空间，宿主机为Docker容器运行提供了内核支持，而Linux镜像为Docker运行提供了用户空间的支持。除了Linux的用户空间外，Docker镜像还储存了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等），Docker镜像不包含任何动态数据，构建完成后不会被改变。
+由于docker使用了UnionFS技术，所以Docker实现了分层储存的特性，镜像并非是一个完整的“镜像”文件，而是一种抽象概念，在存储中，Docker镜像根据构建顺序依次完成储存，不同的镜像可以共享其中的中间层，大大减小了Docker镜像的体积。
+获取镜像Docker运行前需要对应的镜像，所以我们可以从镜像仓库拉取镜像，Docker默认的镜像仓库是DockerHub，其中内置了大量高质量的Dokcer基础镜像，我们也可以将自己的镜像发布至DockerHub
+ 前文我们提到了仓库（Repository）的概念，仓库是一个集中存储和分发镜像的服务，一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。我们可以部署只自己仓库，也可以使用公共的仓库服务。
+ 获取镜像使用docker pull命令：
+1docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt; 如没有仓库地址名，将使用默认的仓库。 例如：
+1$ sudo docker pull node:latest 2latest: Pulling from library/node 354f7e8ac135a: Already exists 4d6341e30912f: Already exists 5087a57faf949: Already exists 65d71636fb824: Pull complete 70c1db9598990: Pull complete 889669bc2deb2: Pull complete 9647616206038: Pull complete 1064f67f03205b: Pull complete 11Digest: sha256:fed3f48ec9e97a57c17977ff120c3e7bf7d2d4e930ef650bba3f2ada5ac4a33a 12Status: Downloaded newer image for node:latest 这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像
+列出镜像我们可以使用docker images列出所有本地的镜像
+1$ docker images 2REPOSITORY TAG IMAGE ID CREATED SIZE 3docker-test 0.0.1 ce25b22437c5 9 days ago 443MB 4node latest 37f455de4837 9 days ago 894MB 5tomcat latest 48dd385504b1 9 days ago 475MB 6ubuntu latest 93fd78260bd1 3 weeks ago 86.</description>
     </item>
     
     <item>
@@ -143,7 +170,19 @@ Hexo 安装安装Hexo 前确保系统有以下软件：
  Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
 1# Using Ubuntu 2curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - 3sudo apt-get install -y nodejs 4 5# Using Debian, as root 6curl -sL https://deb.nodesource.com/setup_11.x | bash - 7apt-get install -y nodejs 这个脚本会自动识别系统版本并添加ppa源
 然后
-1# 安装git 2sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以</description>
+1# 安装git 2sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以
+1# manjaro 安装git 2sudo pacman -S git 3# 也可以在本地安装nodejs，方便调试 4sudo pacman -S nodejs 然后安装hexo
+1 npm install -g hexo-cli 测试一下
+1hexo -v 输出
+1hexo-cli: 1.1.0 2os: Linux 4.19.1-1-MANJARO linux x64 3http_parser: 2.8.1 4node: 11.1.0 5v8: 7.0.276.32-node.7 6uv: 1.23.2 7zlib: 1.2.11 8ares: 1.15.0 9modules: 67 10nghttp2: 1.34.0 11napi: 3 12openssl: 1.1.1 13icu: 63.1 14unicode: 11.0 15cldr: 34.0 16tz: 2018e 17 Hexo 安装完毕
+Hexo新建站点和基本配置选择一个存放站点文件的目录，执行
+1hexo init “站点名” hexo会在当前目录下新建一个站点文件夹，cd进站点文件夹，执行
+1npm install 执行完成后，生成目录如下
+1$ tree blog 2blog 3├── _config.yml 4├── db.json 5├── node_modules 6├── package.json 7├── package-lock.json 8├── scaffolds 9├── source 10└── themes 其中_config.yml是整个站点的配置文件，source是存放文章来源的md文件的，package.json存放了站点的依赖，theme是主题文件
+在站点文件夹内，使用
+1hexo g 生成静态文件，静态文件存放在该目录的public/下
+然后编辑_config.yml
+1 2# 站点基本信息 3title: #站点名称 4subtitle: #子标题 5description: 6keywords: 7author: 8language: zh-cn #语言设置为简体中文 9timezone: 10 11# 站点链接配置 12url: http://ljmx.</description>
     </item>
     
     <item>
@@ -162,7 +201,12 @@ Hexo 安装安装Hexo 前确保系统有以下软件：
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; lmbok，减少代码量
 1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; 4	&amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; 5&amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.</description>
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; swagger
+1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 6 7&amp;lt;dependency&amp;gt; 8	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 9	&amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; 10	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 11&amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构
+1$ tree 2. 3├── mvnw 4├── mvnw.cmd 5├── pom.xml 6├── src 7│ ├── main 8│ │ ├── java 9│ │ │ └── top/ljmx/springboot/demo/demo 10│ │ │ └── DemoApplication.java 11│ │ └── resources 12│ │ ├── application.properties 13│ │ ├── static 14│ │ └── templates 15│ └── test 16│ └── java 17│ └── top/ljmx/springboot/demo/demo 18│ └── DemoApplicationTests.java 19└── srpingboot-sdemo.iml 20 2118 directories, 7 files src是项目的主文件夹，其中main是主要代码，test是测试代码，这是一个典型的Maven工程的文件结构，pom.xml是Maven的依赖文件。main先分为java和resources，java存放代码，resources存放静态资源，目录中的application.properties是工程的配置文件
+Springboot遵循springMVC的分层结构结构，所以我们先在包top.ljmx.springboot.demo.demo下新建以下几个子包
+ controller 存放所有的控制器代码 model 存放所有的数据模型 repository 存放所有的数据操作 service 业务代码  其他可选包
+ config 存放配置代码，如swagger util 存放工具类 expection 统一异常处理  一个简单的Springboot入门实例 本实例参照库米云微王华杰老师课程代码</description>
     </item>
     
     <item>
@@ -200,7 +244,18 @@ Hexo 安装安装Hexo 前确保系统有以下软件：
  统计学伪随机性:统计学伪随机性指的是在给定的随机比特流样本中，1的数量大致等于0的数量，同理，“10”“01”“00”“11”四者数量大致相等。类似的标准被称为统计学随机性。满足这类要求的数字在人类“一眼看上去”是随机的。 密码学安全伪随机性: 其定义为，给定随机样本的一部分和随机算法，不能有效的演算出随机样本的剩余部分。 真随机性：其定义为随机样本不可重现。实际上只要给定边界条件，真随机数并不存在，可是如果产生一个真随机数样本的边界条件十分复杂且难以捕捉（比如计算机当地的本底辐射波动值），可以认为用这个方法演算出来了真随机数  相应的，随机数也分为三类：
  伪随机数：满足第一个条件的随机数。 密码学安全的伪随机数：同时满足前两个条件的随机数。可以通过密码学安全伪随机数生成器计算得出。 真随机数：同时满足三个条件的随机数。  我们平时使用的大多数编程语言中所生成的随机数都是伪随机数，例如java中的Random类，可以使用时间戳作为随机种子，这种随机数足以满足我们大多数对随机数生成的需求，但是在一些特殊场合，例如在线交易中的id（这是区块链安全性中的重要一环，据我所知，有多起区块链攻击行为与区块链生成算法有缺陷有关），对随机数的安全性要求较高时，就要求达到密码学安全的伪随机数甚至真随机数，在java中，有一些提供安全随机数生成算法的类，例如org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom，在Tomcat7/8中，就使用了这个类用来产生seesion id，这个类中有一个种子生成器，他会根据配置来获取随机种子，在Tomcat中，会默认使用/dev/random返回的字符来作为种子，这个/dev/random 就是我们今天的主角。
 Linux中的熵池/dev/random是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：
-1We need to generate a lot of random bytes. It is a good idea to perform 2some other action (type on the keyboard, move the mouse, utilize the 3disks) during the prime generation; this gives the random number 4generator a better chance to gain enough entropy. 5++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ 6+++++++++++++++++++++++++++++.</description>
+1We need to generate a lot of random bytes. It is a good idea to perform 2some other action (type on the keyboard, move the mouse, utilize the 3disks) during the prime generation; this gives the random number 4generator a better chance to gain enough entropy. 5++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ 6+++++++++++++++++++++++++++++.+++++..+++++.+++++.+++++++++++++++++++++++++&amp;gt;. 7++++++++++&amp;gt;+++++...........................................................+++++ 8Not enough random bytes available. Please do some other work to give 9the OS a chance to collect more entropy! (Need 290 more bytes) 但是假如我们的系统是一个服务器，我们没有鼠标和键盘输入。这意味着唯一的因素是你的磁盘IO。如果它是一个单独的、几乎不使用的磁盘，你将拥有较低的熵。另外一个问题是/dev/random是阻塞的，当你频繁生成随机数的时候，你可能会耗光你的熵池，/dev/random 会等待熵池收集到足够的环境噪声的时候才会继续生成随机数，这可能导致你的进程被长时间的挂起。在java 开发中，常常会遇到一些应用启动时间过长的问题，就可能是熵池空了导致线程阻塞了。
+幸好Linux给我们提供了另外一个随机数生成器来解决这个问题。/dev/unrandom,这是一个伪随机数生成器，在缺乏熵的时候，他会复用熵池中的内容而不会导致阻塞，但是复用熵池会导致安全性下降，但是在安全性不强的情况下，可以考虑使用这个，比如我们可以使用-Djava.security.egd=file:/dev/./urandom这个java启动参数，来确保我们生成随机数的过程不被阻塞，这也回答了我们开头那个问题，java.security.egd是org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom的配置。
+我们还可以用一些方法来影响熵池
+1$ cat /proc/sys/kernel/random/poolsize 24096 3$ cat /proc/sys/kernel/random/entropy_avail 42975 使用这两个命令可以查看当前熵池的大小和熵池内有多少熵
+我们可以通过一些方法来将熵池耗尽，比如将将/dev/random 定向到/dev/null中
+1$ cat /dev/random &amp;gt; /dev/null &amp;amp; 这样会快速的将熵池耗尽
+如果我们想填充熵池呢，最好的办法是将处理器的抖动加入熵池中，我们可以安装Haveged来实现这一功能
+1$ sudo pacman -S Hacedged 2$ systemctl enable haveged 3$ systemctl start haveged 我们可以通过pv命令来观察熵池的增长速度
+1# 启用前 2$ pv /dev/random &amp;gt; /dev/null 325.0 B 0:00:03 [0.00 B/s] [ &amp;lt;=&amp;gt; 4 5# 启用后 6$ pv /dev/random &amp;gt; /dev/null 762MiB 0:00:03 [ 564KiB/s] [ &amp;lt;=&amp;gt; 8 可以观察到从几乎为0增长到了564kiB/s
+参考：
+James J - /dev/[u]random：对熵的解释
+chszs - Tomcat 8熵池阻塞变慢详解</description>
     </item>
     
   </channel>
