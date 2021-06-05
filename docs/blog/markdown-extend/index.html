@@ -197,9 +197,16 @@ Hugo Markdown 功能拓展 - 无名博客
         
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#mermaid-图思维导图流程图等">mermaid 图（思维导图，流程图等）</a></li>
+    <li><a href="#mermaid-图">Mermaid 图</a></li>
     <li><a href="#youtube-视频">youtube 视频</a></li>
     <li><a href="#哔哩哔哩视频">哔哩哔哩视频</a></li>
+    <li><a href="#网易云音乐">网易云音乐</a>
+      <ul>
+        <li><a href="#单曲">单曲：</a></li>
+        <li><a href="#歌单">歌单：</a></li>
+      </ul>
+    </li>
+    <li><a href="#latex">Latex</a></li>
     <li><a href="#参考">参考</a></li>
   </ul>
 </nav>
@@ -321,7 +328,7 @@ Hugo Markdown 功能拓展 - 无名博客
     
     <p>本文用于演示本站的对hugo写作功能的拓展以及实现</p>
 
-<h2 id="mermaid-图思维导图流程图等" class="anchor-link"><a href="#mermaid-%e5%9b%be%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b5%81%e7%a8%8b%e5%9b%be%e7%ad%89">mermaid 图（思维导图，流程图等）</a></h2>
+<h2 id="mermaid-图" class="anchor-link"><a href="#mermaid-%e5%9b%be">Mermaid 图</a></h2>
 <div class="mermaid" align=" 
                                 center
                             "> 
@@ -350,14 +357,54 @@ sequenceDiagram
 
 <h2 id="哔哩哔哩视频" class="anchor-link"><a href="#%e5%93%94%e5%93%a9%e5%93%94%e5%93%a9%e8%a7%86%e9%a2%91">哔哩哔哩视频</a></h2>
 
-<iframe class="bilibili" src="//player.bilibili.com/player.html?cid=138878361&bvid=BV1V64y1k7TA&page=1&high_quality=1"
-    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+<iframe class="bilibili" src="//player.bilibili.com/player.html?cid=138878361&bvid=&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+</iframe>
+
+
+<h2 id="网易云音乐" class="anchor-link"><a href="#%e7%bd%91%e6%98%93%e4%ba%91%e9%9f%b3%e4%b9%90">网易云音乐</a></h2>
+
+<h3 id="单曲" class="anchor-link"><a href="#%e5%8d%95%e6%9b%b2">单曲：</a></h3>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+
+
+
+<meting-js auto="https://music.163.com/#/song?id=1499600687" list-folded=true></meting-js>
+
+
+<h3 id="歌单" class="anchor-link"><a href="#%e6%ad%8c%e5%8d%95">歌单：</a></h3>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+
+
+
+
+<meting-js auto="https://music.163.com/#/playlist?id=6764497041" list-folded=true></meting-js>
+
+
+
+<h2 id="latex" class="anchor-link"><a href="#latex">Latex</a></h2>
+<p>行内样式：$x=2$</p>
+<p>代码块：
+$$
+f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi
+$$</p>
 
 <h2 id="参考" class="anchor-link"><a href="#%e5%8f%82%e8%80%83">参考</a></h2>
-<p><a href="https://hongcyu.cn/posts/hexo-bilibili.html">HEXO博客引用B站视频并自动适配</a>
-<a href="https://kentxxq.com/contents/%E6%8B%93%E5%B1%95hugo%E7%9A%84markdown_%E6%B5%81%E7%A8%8B%E5%9B%BEmermaid/">拓展hugo的markdown_流程图mermaid</a></p>
-
+<blockquote>
+<p><a href="https://hongcyu.cn/posts/hexo-bilibili.html">HEXO博客引用B站视频并自动适配</a></p>
+<p>[拓展hugo的markdown_流程图mermaid</p>
+<p><a href="https://yyqx.online/posts/hugo%E5%8D%9A%E5%AE%A2latex%E6%B8%B2%E6%9F%93/">Hugo博客LaTeX渲染)</a></p>
+</blockquote>
 </div>
 
 
@@ -414,6 +461,22 @@ sequenceDiagram
 
 
 <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "$", right: "$", display: false}
+              ]
+          });
+    });
+</script>
 
 
 

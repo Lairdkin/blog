@@ -9,7 +9,10 @@ tag:
 - hexo
 ---
 本文用于演示本站的对hugo写作功能的拓展以及实现
-## mermaid 图（思维导图，流程图等）
+
+<!--more-->
+
+## Mermaid 图
 
 {{< mermaid >}}
 sequenceDiagram
@@ -32,9 +35,34 @@ sequenceDiagram
 
 ## 哔哩哔哩视频
 
-{{<bilibili BV1V64y1k7TA>}}
+{{<bilibili bvid="BV1V64y1k7TA">}}
 
+## 网易云音乐
+
+### 单曲：
+
+{{<netease-music 1499600687>}}
+
+
+
+### 歌单：
+
+{{<netease-music songid="6764497041" type="playlist">}}
+
+## Latex
+
+
+行内样式：$x=2$
+
+代码块：
+$$
+f(x)=\int_{-\infty}^\infty\widehat f\xi\,e^{2\pi i\xi x}\,d\xi
+$$
 
 ## 参考
-[HEXO博客引用B站视频并自动适配](https://hongcyu.cn/posts/hexo-bilibili.html)
-[拓展hugo的markdown_流程图mermaid](https://kentxxq.com/contents/拓展hugo的markdown_流程图mermaid/)
+
+>[HEXO博客引用B站视频并自动适配](https://hongcyu.cn/posts/hexo-bilibili.html)
+>
+>[拓展hugo的markdown_流程图mermaid
+>
+>[Hugo博客LaTeX渲染)](https://yyqx.online/posts/hugo博客latex渲染/)

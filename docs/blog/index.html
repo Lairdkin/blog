@@ -181,8 +181,9 @@
                     </a>
                 </h3>
                 <div class="markdown">
-                    本文用于演示本站的对hugo写作功能的拓展以及实现
-mermaid 图（思维导图，流程图等）sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  youtube 视频  哔哩哔哩视频参考HEXO博客引用B站视频并自动适配 拓展hugo的markdown_流程图mermaid
+                    <p>本文用于演示本站的对hugo写作功能的拓展以及实现</p>
+                    
+                    <a href="https://radish.cloud/blog/markdown-extend/">阅读全文</a>
                     
                 </div>
             </div>
@@ -349,6 +350,22 @@ mermaid 图（思维导图，流程图等）sequenceDiagram participant Alice p
 
 
 <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "$", right: "$", display: false}
+              ]
+          });
+    });
+</script>
 
 
 

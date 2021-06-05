@@ -13,8 +13,7 @@
       <pubDate>Sat, 05 Jun 2021 17:46:20 +0800</pubDate>
       
       <guid>https://radish.cloud/blog/markdown-extend/</guid>
-      <description>本文用于演示本站的对hugo写作功能的拓展以及实现
-mermaid 图（思维导图，流程图等）sequenceDiagram participant Alice participant Bob Alice-John: Hello John, how are you? loop Healthcheck John-John: Fight against hypochondria end Note right of John: Rational thoughts prevail... John--Alice: Great! John-Bob: How about you? Bob--John: Jolly good!  youtube 视频  哔哩哔哩视频参考HEXO博客引用B站视频并自动适配 拓展hugo的markdown_流程图mermaid</description>
+      <description>&lt;p&gt;本文用于演示本站的对hugo写作功能的拓展以及实现&lt;/p&gt;</description>
     </item>
     
     <item>
