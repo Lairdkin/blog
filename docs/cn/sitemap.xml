@@ -15,7 +15,7 @@
                 />
   </url><url>
     <loc>https://radish.cloud/blog/</loc>
-    <lastmod>2021-05-30T13:16:29+08:00</lastmod>
+    <lastmod>2021-06-05T17:46:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -25,6 +25,22 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://radish.cloud/blog/"
+                />
+  </url><url>
+    <loc>https://radish.cloud/blog/markdown-extend/</loc>
+    <lastmod>2021-06-05T17:46:20+08:00</lastmod>
+  </url><url>
+    <loc>https://radish.cloud/</loc>
+    <lastmod>2021-06-05T17:46:20+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://radish.cloud/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://radish.cloud/"
                 />
   </url><url>
     <loc>https://radish.cloud/tags/hugo/</loc>
@@ -48,19 +64,6 @@
   </url><url>
     <loc>https://radish.cloud/blog/blog-rebirth-record/</loc>
     <lastmod>2021-05-30T13:16:29+08:00</lastmod>
-  </url><url>
-    <loc>https://radish.cloud/</loc>
-    <lastmod>2021-05-30T13:16:29+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://radish.cloud/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://radish.cloud/"
-                />
   </url><url>
     <loc>https://radish.cloud/links/</loc>
     <lastmod>2021-05-29T03:13:29+08:00</lastmod>

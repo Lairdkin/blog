@@ -10,16 +10,16 @@
 <meta name="referrer" content="no-referrer">
 <meta name="description" content="站点描述">
 <title>
-一次失败的jdk编译 - 无名博客
+Hugo Markdown 功能拓展 - 无名博客
 </title>
 
 
 
         
-        <meta property="og:title" content="一次失败的jdk编译 - 无名博客" />
+        <meta property="og:title" content="Hugo Markdown 功能拓展 - 无名博客" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="站点描述"/>
-<meta property="og:url" content="https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/"/>
+<meta property="og:url" content="https://radish.cloud/blog/markdown-extend/"/>
 <meta property="og:site_name" content="无名博客"/>
 
 
@@ -197,14 +197,10 @@
         
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#准备工作">准备工作</a>
-      <ul>
-        <li><a href="#系统环境">系统环境</a></li>
-        <li><a href="#软件环境">软件环境</a></li>
-        <li><a href="#下载源码">下载源码</a></li>
-      </ul>
-    </li>
-    <li><a href="#编译">编译</a></li>
+    <li><a href="#mermaid-图思维导图流程图等">mermaid 图（思维导图，流程图等）</a></li>
+    <li><a href="#youtube-视频">youtube 视频</a></li>
+    <li><a href="#哔哩哔哩视频">哔哩哔哩视频</a></li>
+    <li><a href="#参考">参考</a></li>
   </ul>
 </nav>
     </div>
@@ -258,29 +254,29 @@
     
 
     <h2 class="title is-1 top-pad strong-post-title">
-        <a href="https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/">一次失败的jdk编译</a>
+        <a href="https://radish.cloud/blog/markdown-extend/">Hugo Markdown 功能拓展</a>
     </h2>
     <div class="post-data">
-        May 28, 2018 
+        Jun 5, 2021 
         
     </div>
     
     <div class="blog-share">
         分享:
         
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=%e4%b8%80%e6%ac%a1%e5%a4%b1%e8%b4%a5%e7%9a%84jdk%e7%bc%96%e8%af%91%20https%3a%2f%2fradish.cloud%2fblog%2f%25E4%25BB%258E%25E9%259B%25B6%25E5%25BC%2580%25E5%25A7%258B%25E7%25BC%2596%25E8%25AF%2591jdk%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hugo%20Markdown%20%e5%8a%9f%e8%83%bd%e6%8b%93%e5%b1%95%20https%3a%2f%2fradish.cloud%2fblog%2fmarkdown-extend%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fab fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
         
         
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fradish.cloud%2fblog%2f%25E4%25BB%258E%25E9%259B%25B6%25E5%25BC%2580%25E5%25A7%258B%25E7%25BC%2596%25E8%25AF%2591jdk%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fradish.cloud%2fblog%2fmarkdown-extend%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fab fa-facebook-f"></i>
             <span class="hidden">Facebook</span>
         </a>
         
         
-        <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fradish.cloud%2fblog%2f%25E4%25BB%258E%25E9%259B%25B6%25E5%25BC%2580%25E5%25A7%258B%25E7%25BC%2596%25E8%25AF%2591jdk%2f&amp;description=%e4%b8%80%e6%ac%a1%e5%a4%b1%e8%b4%a5%e7%9a%84jdk%e7%bc%96%e8%af%91" onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+        <a class="icon-pinterest" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fradish.cloud%2fblog%2fmarkdown-extend%2f&amp;description=Hugo%20Markdown%20%e5%8a%9f%e8%83%bd%e6%8b%93%e5%b1%95" onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
             <i class="fab fa-pinterest-p"></i>
             <span class="hidden">Pinterest</span>
         </a>
@@ -304,25 +300,6 @@
       
     
       
-      
-     <p>
-         Tags: 
-          
-           <a href="/tags/java">
-             java</a>,
-         
-           <a href="/tags/jdk">
-             jdk</a>,
-         
-           <a href="/tags/jvm">
-             jvm</a>
-         
-        </p>
-
-        
-      
-    
-      
     
     
     <div class="" id="">
@@ -342,51 +319,44 @@
 <div class="container markdown top-pad">
     
     
-    <p>想要深入了解JVM，就必须了解其实现机制。了解JVM实现的最好方法便是自己动手编译JDK。本文中，我将参照《深入理解Java虚拟机》中的教程，编译openjdk1.8</p>
+    <p>本文用于演示本站的对hugo写作功能的拓展以及实现</p>
 
-<h2 id="准备工作" class="anchor-link"><a href="#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c">准备工作</a></h2>
+<h2 id="mermaid-图思维导图流程图等" class="anchor-link"><a href="#mermaid-%e5%9b%be%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be%e6%b5%81%e7%a8%8b%e5%9b%be%e7%ad%89">mermaid 图（思维导图，流程图等）</a></h2>
+<div class="mermaid" align=" 
+                                center
+                            "> 
+    
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
 
-<h3 id="系统环境" class="anchor-link"><a href="#%e7%b3%bb%e7%bb%9f%e7%8e%af%e5%a2%83">系统环境</a></h3>
-<ul>
-<li>编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存)</li>
-<li>操作系统：Manjaro i3wm 18.0</li>
-</ul>
+</div>
+</br>
 
-<h3 id="软件环境" class="anchor-link"><a href="#%e8%bd%af%e4%bb%b6%e7%8e%af%e5%a2%83">软件环境</a></h3>
-<p>java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jdk（嘿嘿，我编译我自己</p>
-<p>所以编译环境需要以下依赖程序：</p>
-<ul>
-<li>bootstrap jdk：jdk1.8或jdk1.7</li>
-<li>gcc，g++ 4.4+ (据官网说gcc版本最高只测试到7.4)</li>
-</ul>
-<p>执行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>sudo pacman -S java-8-openjdk gcc g++
-</code></pre></div>
-<h3 id="下载源码" class="anchor-link"><a href="#%e4%b8%8b%e8%bd%bd%e6%ba%90%e7%a0%81">下载源码</a></h3>
-<p>openjdk团队使用Mercurial工具管理源代码
-安装:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>sudo pacman -S Mercurial  
-</code></pre></div><p>克隆代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/
-</code></pre></div><p>clone完成后，进入源码目录，执行脚本</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>bash get_source.sh
-</code></pre></div><p>会自动获取全部源码</p>
-<blockquote>
-<p>如果下载太慢，可以使用github上的代码镜像
-<a href="https://github.com/unofficial-openjdk/openjdk/">https://github.com/unofficial-openjdk/openjdk/</a>
-注意：直接克隆整个仓库会下载所有版本jdk源码</p>
-</blockquote>
+<h2 id="youtube-视频" class="anchor-link"><a href="#youtube-%e8%a7%86%e9%a2%91">youtube 视频</a></h2>
 
-<h2 id="编译" class="anchor-link"><a href="#%e7%bc%96%e8%af%91">编译</a></h2>
-<p>自动生成编译文件并检查依赖</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>bash ./configure
-</code></pre></div><p>如果中途中断，请检查输出，安装对应的依赖库</p>
-<p>执行编译命令</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>make all
-</code></pre></div><p>如果成功会在所在文件夹下生成一个images的文件夹</p>
-<p>然后我失败了QAQ</p>
-<p>目前知道是遇到了一个已知bug，另外编译环境也炸了hhhh，下篇文章再说吧</p>
-<p>咕咕咕</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/9mR5y5DAVSg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h2 id="哔哩哔哩视频" class="anchor-link"><a href="#%e5%93%94%e5%93%a9%e5%93%94%e5%93%a9%e8%a7%86%e9%a2%91">哔哩哔哩视频</a></h2>
+
+<iframe class="bilibili" src="//player.bilibili.com/player.html?cid=138878361&bvid=BV1V64y1k7TA&page=1&high_quality=1"
+    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
+<h2 id="参考" class="anchor-link"><a href="#%e5%8f%82%e8%80%83">参考</a></h2>
+<p><a href="https://hongcyu.cn/posts/hexo-bilibili.html">HEXO博客引用B站视频并自动适配</a>
+<a href="https://kentxxq.com/contents/%E6%8B%93%E5%B1%95hugo%E7%9A%84markdown_%E6%B5%81%E7%A8%8B%E5%9B%BEmermaid/">拓展hugo的markdown_流程图mermaid</a></p>
 
 </div>
 

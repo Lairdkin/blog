@@ -177,6 +177,11 @@
 
 
                 
+<script
+  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.2/dist/mermaid.min.js"
+  integrity="sha256-KqisLh8jVMBRjpNkOhH5W9VWs+F6x6vQksLqxs7+x9A="
+  crossorigin="anonymous"
+></script>
 
 
 <div class="container">
@@ -204,10 +209,10 @@
       <ul>
         <li><a href="#准备">准备</a></li>
         <li><a href="#安装主题">安装主题</a></li>
+        <li><a href="#新建站点文件">新建站点文件</a></li>
         <li><a href="#编译站点">编译站点</a></li>
       </ul>
     </li>
-    <li><a href="#迁移旧博客文件">迁移旧博客文件</a></li>
     <li><a href="#部署github-pages和cloudflare">部署github pages和cloudflare</a></li>
     <li><a href="#为博客添加评论">为博客添加评论</a></li>
     <li><a href="#私有部署评论服务">私有部署评论服务</a></li>
@@ -347,20 +352,21 @@
 <div class="container markdown top-pad">
     
     
-    <p>2018年的夏天，坚持了仅仅两个月的<a href="/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><strong>博客</strong></a>，因为服务器到期关掉了，当时的我还立下了一天一篇博客的“伟大”目标。然而事实证明，我既高估了自己的毅力，也高估了自己的写作能力了，直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我常常想把博客重新捡起来，最终也因为各种原因一直也没有付诸于实践。
-最近我有了一点宽裕的时间，为了督促自己学习，也为了记录自己学习的过程，我决定复活我的博客。</p>
-<p>幸运的是，虽然博客关停了，但是之前的文章和草稿还存在github的仓库中。为了让博客快速上线，我决定使用<a href="https://Hugo.io"><strong>Hugo</strong></a>用来替换之前使用Hexo。由于Hugo是生成的静态文件，所以我选择了<code>Github Pages</code>进行部署，这样可以大幅度减少维护服务器的时间，更重要的是，他是免费的。但是由于某些原因，github在大陆地区的大部分位置都访问缓慢，用我宿舍所使用的电信宽带，甚至直接无法访问。为改善这一问题，我使用了cloudflare和百度云加速对站点进行加速。方案可行，开始实施。</p>
+    <p>2018年的夏天，我坚持了仅仅两个月的<a href="/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><strong>博客</strong></a>，因为服务器到期关停了。当初的我还设定了一天一篇博客的“伟大”目标。然而直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我时常想把这个博客重新办起来，最终也因为各种原因一直也没有付诸于实践。
+最近我有了一点宽裕的时间，为了督促自己学习，我决定复活我的博客。</p>
+<p>幸运的是，虽然博客关停了，但是之前的文章和草稿还存在<code>Github</code>的仓库中。</p>
+<p>为了更快的让博客上线，我决定使用Hugo来构建博客，可以很好的兼容之前用hexo搭建的博客锁写的文章。由于Hugo是生成的静态站点文件，所以我选择了<code>Github Pages</code>进行部署，这样可以大幅度减少维护服务器的时间，也方便进行自动化部署。但是由于某些原因，<code>Github</code>在大陆地区的大部分位置都访问缓慢，用我宿舍所使用的电信宽带，甚至直接无法访问。为改善这一问题，我使用了<code>cloudflare</code>和百度云加速对站点进行加速。</p>
 
 <h2 id="安装hugo" class="anchor-link"><a href="#%e5%ae%89%e8%a3%85hugo">安装Hugo</a></h2>
 <p>Hugo是一个静态网站生成框架，其官方网站号称是</p>
 <blockquote>
 <p>&ldquo;The world’s fastest framework for building websites&rdquo;</p>
 </blockquote>
-<p>Hugo是使用Go语言实现的,相比使用js的Hexo，生成网站的速度确实要快很多，现在站点大约有70多个静态页面，生成一次只要200ms左右。Hugo生成的网站是纯静态的，无需任何后端，部署和二次开发都很简单，这也是选用Hugo的原因之一。使用Hugo写博客的工作流程很简单：首先使用markdown进行写作，在本地使用Hugo生成静态的网页，然后上传到任何可以访问的web服务器上就完成了，所以现在开始第一步：在本地安装Hugo。</p>
+<p>Hugo是使用Go语言实现的,相比使用javascript的Hexo，生成网站的速度确实要快很多，一次执行只需要几百毫秒。Hugo生成的网站是纯静态的，无需任何后端，部署和二次开发都很简单。使用Hugo写博客的工作流程很简单：首先使用markdown进行写作，在本地使用Hugo生成静态的网页，然后上传到任何可以访问的web服务器上就完成了，所以现在开始第一步：在本地安装Hugo。</p>
 
 <h3 id="使用二进制包进行安装" class="anchor-link"><a href="#%e4%bd%bf%e7%94%a8%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%8c%85%e8%bf%9b%e8%a1%8c%e5%ae%89%e8%a3%85">使用二进制包进行安装</a></h3>
 <p>根据官方提供的快速指南，最直接的安装方式，就是下载二进制包，在Hugo的Github主页中，可以<a href="https://github.com/gohugoio/hugo/releases"><strong>下载</strong></a>到各种平台(Windows,Linux,Mac )的二进制包，只要解压并在操作系统的环境变量中添加进去，就可以直接使用，使用<code>hugo version</code>指令可以查看hugo的安装情况</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>	PS C:\Users\19796&gt; hugo version
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>PS C:\Users\19796&gt; hugo version
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>hugo v0.83.1-5AFE0A57+extended windows/amd64 BuildDate=2021-05-02T14<span style="color:#960050;background-color:#1e0010">:</span>38<span style="color:#960050;background-color:#1e0010">:</span>05Z VendorInfo=gohugoio
 </code></pre></div>
 <h3 id="使用包管理进行安装" class="anchor-link"><a href="#%e4%bd%bf%e7%94%a8%e5%8c%85%e7%ae%a1%e7%90%86%e8%bf%9b%e8%a1%8c%e5%ae%89%e8%a3%85">使用包管理进行安装</a></h3>
@@ -396,7 +402,7 @@
 </code></pre></div><p>如果不需要Sass/SCSS等功能，可以去除&ndash;tags extende语句</p>
 
 <h3 id="新建一个站点" class="anchor-link"><a href="#%e6%96%b0%e5%bb%ba%e4%b8%80%e4%b8%aa%e7%ab%99%e7%82%b9">新建一个站点</a></h3>
-<p>当你安装完成hugo时，问题就解决了一大半，然后需要在任何你愿意的位置新建一个目录，用于存放站点文件，进入该目录，执行指令</p>
+<p>安装完成后，我们就可以新建第一个站点，首先进入你预先设定存放站点文件的目录，执行指令:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hugo new site <span style="color:#f92672">[</span>your site name<span style="color:#f92672">]</span>
 </code></pre></div><p>执行完成后，hugo会新建一个和站点同名的文件夹。进入目录,，文件结构如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>├─archetypes
@@ -447,9 +453,10 @@
 </code></pre></div><p>clone完成后，主题安装在站点目录的themes/introduction里，hugo的主题中均包含一个示例站点，在站点目录执行如下指令查看示例站点：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>cd themes/introduction/exampleSite/
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>hugo serve  --themesDir ../..
-</code></pre></div>
+</code></pre></div><p>展示站点效果可以查看本站首页</p>
+
 <h4 id="配置" class="anchor-link"><a href="#%e9%85%8d%e7%bd%ae">配置</a></h4>
-<p>站点配置文件位于<code>config.toml</code>文件中</p>
+<p>修改站点配置可以使用主题所设置的自定义功能，也可以设置站点的信息等，站点配置文件位于<code>config.toml</code>文件中</p>
 <details><summary>点击查看本站完整的站点配置，关键位置均有注释</summary>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span style="color:#a6e22e">publishdir</span>                       = <span style="color:#e6db74">&#34;docs&#34;</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span style="color:#a6e22e">baseURL</span>                          = <span style="color:#e6db74">&#34;https://radish.cloud/&#34;</span>   <span style="color:#75715e"># Your domain name. Must end with &#34;/&#34;</span>
@@ -577,19 +584,30 @@
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>            <span style="color:#a6e22e">title</span>            = <span style="color:#e6db74">&#34;无名博客&#34;</span>
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>            [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">cn</span>.<span style="color:#a6e22e">params</span>]
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>                <span style="color:#a6e22e">description</span>  = <span style="color:#e6db74">&#34;站点描述&#34;</span>
-</code></pre></div><p>其中language 后面的代码，简体中文应该zh-CN，繁体中文为zh-TW，此处笔者为了方便修改了主题默认的国际化文件名称，国际化文件目录<code>themes\introduction\i18n\</code>。使用DefaultContentLanguage  参数可以选择默认显示的站点语言，使用<code>hugo new page</code>也会默认优先新建该语言文件。</p>
-<p>语言设置中还有一项<code>footerText</code>参数，在该参数中填入的文本会覆盖站点默认的footer内容，由于没有css，效果较差。建议需要修改footer的直接去对应语言的i18n文件中修改。</p>
+</code></pre></div><p>其中language 后面的代码，简体中文应该zh-CN，繁体中文为zh-TW，此处笔者为了方便修改了主题默认的国际化文件名称，国际化文件目录<code>themes\introduction\i18n\</code>。使用DefaultContentLanguage  参数可以选择默认显示的站点语言，使用<code>hugo new page</code>新建文章也会优先在该语言文件夹下新建文件。</p>
+<p>语言设置中还有一项<code>footerText</code>参数，在该参数中填入的文本会覆盖站点默认的底部内容，由于没有css，效果较差。建议需要修改footer的直接去对应语言的i18n文件中修改。</p>
 <p>通过修改<code>markup.highlight</code>中 <code>style</code>属性修改代码高亮的风格，但是该主题默认的代码块区域css和大多数风格有冲突，需要修改主题样式，具体修改参见 <a href="#%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E4%BF%AE%E6%94%B9"><strong>主题功能修改</strong></a> 章节</p>
 <p>其他部分默认配置均根据示例配置文件修改或者保持默认即可</p>
+
+<h3 id="新建站点文件" class="anchor-link"><a href="#%e6%96%b0%e5%bb%ba%e7%ab%99%e7%82%b9%e6%96%87%e4%bb%b6">新建站点文件</a></h3>
+<p>主题的首页，是对应语言文件夹中的<code>/home</code>目录,默认的主页需要新建<code>about.md</code>,<code>contact.md</code>,<code>index.md</code>三个文件，分别对应首页的about，contact两个模块，以及最上面的标题部分。</p>
+<p>index.md的<code>tittle</code>属性，为对应站点的名称，正文部分为站点的附标题，示例如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>---
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>title: &#34;无名博客&#34;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>date: 2021-05-28T01:53:59+08:00
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>---
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span>Anonymous blog &lt;/<span style="color:#f92672">br</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span>
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span>匿名&lt;<span style="color:#f92672">ruby</span>&gt;&lt;<span style="color:#f92672">rb</span>&gt;ブログ&lt;/<span style="color:#f92672">rb</span>&gt;&lt;<span style="color:#f92672">rt</span>&gt;blog&lt;/<span style="color:#f92672">rt</span>&gt;&lt;<span style="color:#f92672">rp</span>&gt;(blog)&lt;/<span style="color:#f92672">rp</span>&gt;&lt;/<span style="color:#f92672">ruby</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span>
+</code></pre></div><p>contact和index的title属性，是对应板块在导航栏的名称，</p>
 
 <h3 id="编译站点" class="anchor-link"><a href="#%e7%bc%96%e8%af%91%e7%ab%99%e7%82%b9">编译站点</a></h3>
 <p>修改完成配置后就可以可以编译静态站点了，首先在配置文件中添加<code>publishdi = &quot;docs&quot;</code>配置，编译生成的文件会默认放在站点根目录的/docs目录中，该目录是github pages的默认目录，方便后面部署。</p>
 <p>保存配置文件后执行</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>hugo
 </code></pre></div><p>即可生成站点文件</p>
-<p>其中docs/</p>
-
-<h2 id="迁移旧博客文件" class="anchor-link"><a href="#%e8%bf%81%e7%a7%bb%e6%97%a7%e5%8d%9a%e5%ae%a2%e6%96%87%e4%bb%b6">迁移旧博客文件</a></h2>
+<p>其中docs/就是hugo生成的静态站点文件</p>
 
 <h2 id="部署github-pages和cloudflare" class="anchor-link"><a href="#%e9%83%a8%e7%bd%b2github-pages%e5%92%8ccloudflare">部署github pages和cloudflare</a></h2>
 
@@ -658,6 +676,7 @@
 <script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
 
 
+<script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
 
 
 
