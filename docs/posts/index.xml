@@ -4,7 +4,14 @@
         <link>https://radish.cloud/posts/</link>
         <description>所有博客 | 萝卜炖鱼丸</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
-            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Sun, 30 May 2021 13:16:29 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Sat, 05 Jun 2021 17:46:20 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo Markdown 功能拓展</title>
+    <link>https://radish.cloud/posts/markdown-extend/</link>
+    <pubDate>Sat, 05 Jun 2021 17:46:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/markdown-extend/</guid>
+    <description><![CDATA[<p>本文用于演示本站的对hugo写作功能的拓展以及实现</p>]]></description>
+</item><item>
     <title>博客重生小记</title>
     <link>https://radish.cloud/posts/blog-rebirth-record/</link>
     <pubDate>Sun, 30 May 2021 13:16:29 &#43;0800</pubDate>

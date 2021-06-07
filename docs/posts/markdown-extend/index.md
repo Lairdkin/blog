@@ -1,13 +1,5 @@
----
-title: "Hugo Markdown 功能拓展"
-date: 2021-06-05T17:46:20+08:00
-draft: false
-tag:
-- markdowm
-- blog
-- hugo
-- hexo
----
+# Hugo Markdown 功能拓展
+
 本文用于演示本站的对hugo写作功能的拓展以及实现
 
 <!--more-->
@@ -171,3 +163,4 @@ $$
 >[拓展hugo的markdown_流程图mermaid
 >
 >[Hugo博客LaTeX渲染)](https://yyqx.online/posts/hugo博客latex渲染/)
+
