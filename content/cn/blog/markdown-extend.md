@@ -65,6 +65,10 @@ $$
 f(x)=\int_{-\infty}^\infty\widehat f\xi\,e^{2\pi i\xi x}\,d\xi
 $$
 
+
+
+{{< admonition tip >}} :(far fa-bookmark fa-fw): 将此页保存为书签，以备将来参考! {{< /admonition >}}
+
 ## 参考
 
 >[HEXO博客引用B站视频并自动适配](https://hongcyu.cn/posts/hexo-bilibili.html)
