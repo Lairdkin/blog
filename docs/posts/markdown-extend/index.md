@@ -129,7 +129,7 @@ series:
 
 ## 哔哩哔哩视频
 
-{{<bilibili id="BV1V64y1k7TA">}}
+{{<bilibili bvid="BV1V64y1k7TA">}}
 
 ## 网易云音乐
 
