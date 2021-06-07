@@ -1,3 +1,25 @@
+console.log("load foo js")
+
+fetch("https://v1.hitokoto.cn/?c=a").then(res => {
+    return res.json()
+}).then(res => {
+    try {
+        if(res.from_who===null){
+            
+            document.getElementById("oneword").innerText = res.hitokoto+"     ————《"+res.from+"》"
+        }else{
+            document.getElementById("oneword").innerText = res.hitokoto+"     ————"+res.from_who+"《"+res.from+"》"
+        }
+        console.log(res.hitokoto)
+      } catch(err) {}
+    try{
+        document.getElementById("busuanzi_container_site_uv").innerText = res.uv
+    }catch(err){}
+    try{
+        document.getElementById("busuanzi_container_site_pv").innerText = res.total
+    }catch(err){}
+})
+
 
 let parm1 = ''
 if (document.cookie.indexOf("uv=false") == -1) {

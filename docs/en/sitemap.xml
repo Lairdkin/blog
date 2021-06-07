@@ -47,15 +47,7 @@
                     hreflang="en"
                     href="https://radish.cloud/en/"
                     /></url><url>
-            <loc>https://radish.cloud/en/home/</loc><lastmod>2021-05-28T01:53:59&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="https://radish.cloud/home/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="https://radish.cloud/en/home/"
-                    /></url><url>
+            <loc>https://radish.cloud/en/home/</loc><lastmod>2021-05-28T01:53:59&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/en/posts/blog/testblog/</loc><lastmod>2018-05-28T01:56:47&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/en/posts/testblog/</loc><lastmod>2018-05-28T01:56:47&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/en/categories/</loc><xhtml:link

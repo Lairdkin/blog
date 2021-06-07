@@ -7,6 +7,12 @@ tag:
 - blog
 - hugo
 - hexo
+
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+
+lightgallery: true
 ---
 本文用于演示本站的对hugo写作功能的拓展以及实现
 
