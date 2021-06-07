@@ -138,13 +138,13 @@ series:
 
 ### 单曲：
 
-{{<netease-music 1499600687>}}
+{{<netease-music netease song 1499600687>}}
 
 
 
 ### 歌单：
 
-{{<netease-music songid="6764497041" type="playlist">}}
+{{<netease-music netease playlist 6764497041>}}
 
 
 
