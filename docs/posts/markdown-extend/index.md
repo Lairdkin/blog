@@ -20,6 +20,11 @@ sequenceDiagram
     Bob-->John: Jolly good!
 {{< /mermaid >}}
 
+## 地图
+
+
+{{< mapbox lng=-122.252 lat=37.453 zoom=10 marked=false light-style="mapbox://styles/mapbox/streets-zh-v1" >}}
+
 
 ## Echarts 
 {{< echarts >}}
@@ -124,25 +129,20 @@ series:
 
 ## 哔哩哔哩视频
 
-{{<bilibili bvid="BV1V64y1k7TA">}}
+{{<bilibili id="BV1V64y1k7TA">}}
 
 ## 网易云音乐
 
 ### 单曲：
 
-{{<netease-music netease song 1499600687>}}
+{{<music netease song 1499600687>}}
 
 
 
 ### 歌单：
 
-{{<netease-music netease playlist 6764497041>}}
+{{<music netease playlist 6764497041>}}
 
-
-
-### HLS流（自适应码率）
-
-{{<hls>}}
 
 ## Latex
 
@@ -154,6 +154,15 @@ $$
 f(x)=\int_{-\infty}^\infty\widehat f\xi\,e^{2\pi i\xi x}\,d\xi
 $$
 
+## 打字段落
+
+{{< typeit code=java >}}
+public class HelloWorld {
+    public static void main(String []args) {
+        System.out.println("Hello World");
+    }
+}
+{{< /typeit >}}
 
 
 ## 参考
