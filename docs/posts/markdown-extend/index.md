@@ -2,7 +2,7 @@
 
 本文用于演示本站的对hugo写作功能的拓展以及实现
 
-<!--more-->
+
 
 ## Mermaid 图
 
@@ -129,7 +129,7 @@ series:
 
 ## 哔哩哔哩视频
 
-{{<bilibili bvid="BV1V64y1k7TA">}}
+{{< bilibili id=BV1V64y1k7TA >}}
 
 ## 网易云音乐
 

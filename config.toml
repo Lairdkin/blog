@@ -33,6 +33,8 @@ theme = "LoveIt"
     dateFormat = "01-02"
     # RSS 文章数目
     rss = 10
+
+        
   
 
   [params.home]
@@ -95,6 +97,10 @@ theme = "LoveIt"
       # LoveIt 新增 | 0.2.4 是否在 RSS 中显示全文内容
       rssFullText = false
       # LoveIt 新增 | 0.2.0 目录配置
+
+      [params.page.library.js]
+        someJavascript = "foo.js"
+  
       [params.page.toc]
         # 是否使用目录
         enable = true
