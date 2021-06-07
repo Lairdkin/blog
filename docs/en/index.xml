@@ -1,66 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Anonymous blog</title>
-    <link>https://radish.cloud/en/</link>
-    <description>Recent content on Anonymous blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 28 May 2021 01:55:54 +0800</lastBuildDate><atom:link href="https://radish.cloud/en/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Online recruitment system</title>
-      <link>https://radish.cloud/en/projects/demoproject/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://radish.cloud/en/projects/demoproject/</guid>
-      <description>The project is a graduate design by blogger，that is open sourced
-Open source Link：click to view code
- Introduction awaiting translation&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Links</title>
-      <link>https://radish.cloud/en/links/</link>
-      <pubDate>Sat, 29 May 2021 03:13:29 +0800</pubDate>
-      
-      <guid>https://radish.cloud/en/links/</guid>
-      <description>Radish Cloud Servicessci-hub service：https://sci.radish.cloud 🎯now is closed
-rsshub service：https://rss.radish.cloud
-github download acceleration;：https://github.radish.cloud
-website online proxy（jsproxy）：https://jsproxy.radish.cloud
-utterances commnent：https://https://utterances.radish.cloud/ （If anyone need this service,please email me open the Github app install privilege）
-Telegram channelDouban shopping discount information channel ：https://t.me/Douban_what2buy
-Arknights Information Channel ：https://t.me/Akunitsu</description>
-    </item>
-    
-    <item>
-      <title>Anonymous blog</title>
-      <link>https://radish.cloud/en/home/</link>
-      <pubDate>Fri, 28 May 2021 01:53:59 +0800</pubDate>
-      
-      <guid>https://radish.cloud/en/home/</guid>
-      <description>无名博客 
-匿名ブログblog(blog)</description>
-    </item>
-    
-    <item>
-      <title>test blog</title>
-      <link>https://radish.cloud/en/blog/blog/testblog/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/en/blog/blog/testblog/</guid>
-      <description>testblog</description>
-    </item>
-    
-    <item>
-      <title>What to eat for lunch</title>
-      <link>https://radish.cloud/en/blog/testblog/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/en/blog/testblog/</guid>
-      <description>Translated by deepl
- This fact means a lot to me, and I believe it means something to the world as well. We have to face a very awkward fact, that is, Da Vinci said in an offhand way that boldness and firm determination can be worth the fineness of weapons. I hope that you will also appreciate this statement. To sum up, personally, what I eat for lunch means a lot to me. I have also been thinking about this issue in every day and night. Generally speaking, we must be sure to consider it carefully. What is the key to the problem? In life, if what is eaten at noon appears, we have to consider the fact that it appears. How does the occurrence of what is eaten at noon need to be done, and how does the occurrence of what is not eaten at noon arise. What is the key to the problem. Now, it is very, very important to solve the problem of what to eat at noon. So, Shakespeare said philosophically, &amp;ldquo;A man&amp;rsquo;s life is short, but it is too long if he lives it vilely.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>RadishKin Blog</title>
+        <link>https://radish.cloud/en/</link>
+        <description>RadishKin Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 28 May 2021 01:55:54 &#43;0800</lastBuildDate>
+            <atom:link href="https://radish.cloud/en/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>test blog</title>
+    <link>https://radish.cloud/en/posts/blog/testblog/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://radish.cloud/en/posts/blog/testblog/</guid>
+    <description><![CDATA[testblog]]></description>
+</item><item>
+    <title>What to eat for lunch</title>
+    <link>https://radish.cloud/en/posts/testblog/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://radish.cloud/en/posts/testblog/</guid>
+    <description><![CDATA[Translated by deepl
+ This fact means a lot to me, and I believe it means something to the world as well. We have to face a very awkward fact, that is, Da Vinci said in an offhand way that boldness and firm determination can be worth the fineness of weapons. I hope that you will also appreciate this statement. To sum up, personally, what I eat for lunch means a lot to me. I have also been thinking about this issue in every day and night. Generally speaking, we must be sure to consider it carefully. What is the key to the problem? In life, if what is eaten at noon appears, we have to consider the fact that it appears. How does the occurrence of what is eaten at noon need to be done, and how does the occurrence of what is not eaten at noon arise. What is the key to the problem. Now, it is very, very important to solve the problem of what to eat at noon. So, Shakespeare said philosophically, &ldquo;A man&rsquo;s life is short, but it is too long if he lives it vilely.]]></description>
+</item></channel>
 </rss>

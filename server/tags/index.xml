@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - 无名博客</title>
+        <link>http://example.org/tags/</link>
+        <description>Tags - 标签 - 无名博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 30 May 2021 13:16:29 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>hugo</title>
+    <link>http://example.org/tags/hugo/</link>
+    <pubDate>Sun, 30 May 2021 13:16:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>前端技术</title>
+    <link>http://example.org/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
+    <pubDate>Sun, 30 May 2021 13:16:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>docker</title>
+    <link>http://example.org/tags/docker/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/docker/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Hexo</title>
+    <link>http://example.org/tags/hexo/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/hexo/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>java</title>
+    <link>http://example.org/tags/java/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/java/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>JavaEE</title>
+    <link>http://example.org/tags/javaee/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/javaee/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>JDBC</title>
+    <link>http://example.org/tags/jdbc/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/jdbc/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>jdk</title>
+    <link>http://example.org/tags/jdk/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/jdk/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>jvm</title>
+    <link>http://example.org/tags/jvm/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/jvm/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Linux</title>
+    <link>http://example.org/tags/linux/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

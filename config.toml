@@ -1,129 +1,321 @@
+baseURL = "https://radish.cloud/"
 publishdir                       = "docs"
-baseURL                          = "https://radish.cloud/"   # Your domain name. Must end with "/"
-theme                            = "introduction"
-DefaultContentLanguage           = "cn"                    # Default language for multilingual sites
-# disqusshortname                 = ""                     # https://gohugo.io/content-management/comments
-# googleAnalytics                 = ""                     # https://gohugo.io/templates/internal/#google-analytics
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
 summaryLength = 180
 
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "LoveIt"
+
+# 网站标题
+
+
 [params]
-    themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
-    favicon                      = "/img/fav.ico"          # Path to favicon file
-    showRSSButton                = true             # Show rss button in navigation
-    fadeIn                       = true                    # Turn on/off the fade-in effect
-    fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
-    dateFormat                   = "Jan 2, 2006"
-    email                        = "mx@radish.cloud"   # E-mail address for contact section
-    customCSS                  = ["foo.css"]             # Include custom css files placed under assets/
-     customJS                   = ["foo.js"]              # Include custom JavaScript files placed under assets/
-    # plausible                  = true                    # Use Plausible analytics (requires an account at Plausible.io)
-    toc = true
-    # autoCollapseToc = true
+  # LoveIt 主题版本
+  version = "0.2.X"
+  [params.app]
+    # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+    title = "RadishCloud"
+    # 是否隐藏网站图标资源链接
+    noFavicon = false
+    # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+    svgFavicon = ""
+    # Android 浏览器主题色
+    themeColor = "#ffffff"
+    # Safari 图标颜色
+    iconColor = "#5bbad5"
+    # Windows v8-10磁贴颜色
+    tileColor = "#da532c"
+  [params.section]
+    # section 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+    # RSS 文章数目
+    rss = 10
+  
+
+  [params.home]
+    # LoveIt 新增 | 0.2.0 RSS 文章数目
+    rss = 20
+    # 主页个人信息
+    [params.home.profile]
+      enable = true
+      # Gravatar 邮箱，用于优先在主页显示的头像
+      gravatarEmail = "1979646055@qq.com"
+      # 主页显示头像的 URL
+      avatarURL = "/images/avatar.png"
+      # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
+      title = ""
+      # 主页显示的网站副标题
+      subtitle = "这是我的全新 Hugo 网站"
+      # 是否为副标题显示打字机动画
+      typeit = true
+      # 是否显示社交账号
+      social = true
+      # LoveIt 新增 | 0.2.0 免责声明 (支持 HTML 格式)
+      disclaimer = "这是一份免责声明"
+    # 主页文章列表
+    [params.home.posts]
+      enable = true
+      # 主页每页显示文章数量
+      paginate = 6
+      # LoveIt 删除 | 0.2.0 被 params.page 中的 hiddenFromHomePage 替代
+      # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
+      defaultHiddenFromHomePage = false
     
+    [params.social]
+    GitHub = "RadishKin"
+    Telegram = "radishcloud"
+    Bitbucket = ""
+    Weibo = "1910759497"
+    Spotify = ""
+    Steam = ""
+    Bilibili = "5710210"
+    Email = "1979646055@qq.com"
+    RSS = true # LoveIt 新增 | 0.2.0
 
-    [params.utteranc]
+    [params.page]
+      # LoveIt 新增 | 0.2.0 是否在主页隐藏一篇文章
+      hiddenFromHomePage = false
+      # LoveIt 新增 | 0.2.0 是否在搜索结果中隐藏一篇文章
+      hiddenFromSearch = false
+      # LoveIt 新增 | 0.2.0 是否使用 twemoji
+      twemoji = false
+      # 是否使用 lightgallery
+      lightgallery = false
+      # LoveIt 新增 | 0.2.0 是否使用 ruby 扩展语法
+      ruby = true
+      # LoveIt 新增 | 0.2.0 是否使用 fraction 扩展语法
+      fraction = true
+      # LoveIt 新增 | 0.2.0 是否使用 fontawesome 扩展语法
+      fontawesome = true
+      # 是否在文章页面显示原始 Markdown 文档链接
+      linkToMarkdown = true
+      # LoveIt 新增 | 0.2.4 是否在 RSS 中显示全文内容
+      rssFullText = false
+      # LoveIt 新增 | 0.2.0 目录配置
+      [params.page.toc]
+        # 是否使用目录
         enable = true
-        repo = "Lairdkin/blog"    # 存储评论的Repo，格式为 owner/repo
-        issueTerm = "pathname"           # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的pathname。
-        theme = "preferred-color-scheme" 
+        # LoveIt 新增 | 0.2.9 是否保持使用文章前面的静态目录
+        keepStatic = false
+        # 是否使侧边目录自动折叠展开
+        auto = true
+      # LoveIt 新增 | 0.2.0 代码配置
+      [params.page.code]
+        # 是否显示代码块的复制按钮
+        copy = true
+        # 默认展开显示的代码行数
+        maxShownLines = 10
+      # LoveIt 更改 | 0.2.0 KaTeX 数学公式
+      [params.page.math]
+        enable = true
+        # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
+        blockLeftDelimiter = ""
+        blockRightDelimiter = ""
+        # 默认行内定界符是 $ ... $ 和 \\( ... \\)
+        inlineLeftDelimiter = ""
+        inlineRightDelimiter = ""
+        # KaTeX 插件 copy_tex
+        copyTex = true
+        # KaTeX 插件 mhchem
+        mhchem = true
+      # LoveIt 新增 | 0.2.0 Mapbox GL JS 配置
 
-    # Configure the home page
-    [params.home]
-        introHeight              = "fullheight"            # Input either "medium" or "large" or "fullheight"
-        showLatest               = true                    # Show latest blog post summary
-        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
-        allPostsArchiveFormat    = true                   # show all posts in an archive format
-        numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
-        localTime                = true                    # Show your current local time in contact section
-        timeZone                 = "Asia/Shanghai"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-        timeFormat               = "zh-CN"                 # Language specific format to use
-    [params.projects]
-        useTwoColumns            = false                   # Use a layout with two columns instead of three
-
-    # Share buttons on blog post pages
-    [params.share]
-        twitter                  = true
-        facebook                 = true
-        pinterest                = true
-
-    # Social icons appear in introduction and contact section. Add as many more as you like.
-    # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
-    # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
-    [[params.social]]
-        url   = "https://twitter.com/menxin74"
-        icon  = "twitter" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://t.me/radishcloud"
-        icon  = "telegram" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://github.com/RadishKin"
-        icon  = "github" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url = "https://weibo.com/1910759497"  # For a direct email link, use "mailto:test@example.org".
-        icon = "weibo" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://discord.gg/z3nEreaJvk"
-        icon  = "discord" # icon name without the 'fa-'
-        icon_pack = "fab"
-        html_attributes = "rel=\"me\"" # Add rel attribute for Mastodon profile link verification
+      [params.page.share]
+        enable = true
+        Twitter = true
+        Line = true
+        Weibo = true
+        Baidu = true
+        Evernote = true
+      
+      [params.page.comment]
+        enable = true
+        [params.page.comment.utterances]
+        enable = true
+        # owner/repo
+        repo = "Lairdkin/blog"
+        issueTerm = "pathname"
+        label = "blog_comment"
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      
+      
 
 
-# If you don't want to use the default menu, you can define one by yourself
-# [[menu.main]]
-#     name    = "Home"
-#     url     = "/"
-#     weight  = 0
-# [[menu.main]]
-#     name    = "Blog"
-#     url     = "/blog/"
-#     weight  = 1
+  [params.header]
+    # 桌面端导航栏模式 ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # 移动端导航栏模式 ("fixed", "normal", "auto")
+    mobileMode = "auto"
+    # LoveIt 新增 | 0.2.0 页面头部导航栏标题配置
+    [params.header.title]
+      # LOGO 的 URL
+      logo = ""
+      # 标题名称
+      name = "萝卜炖鱼丸"
+      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+      pre = ""
+      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+      post = ""
+      # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
+      typeit = false
 
-# We only use tag as a taxonomies
-# You can add more by yourself
-[taxonomies]
-  tag = "tags"
-  series = "series"
+  
 
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Hugo 解析文档的配置
 [markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-  [markup.goldmark.renderer]
-    unsafe = true
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = false
-    noClasses = true
-    # For styles, see https://xyproto.github.io/splash/docs/longer/all.html
-    style = "monokai"
-    tabWidth = 4
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
 
 [languages]
-    [languages.en]
-        languageName     = "English"
-        languageCode     = "en-us"
-        contentDir       = "content/en"
-        weight           = 1
-        title            = "Anonymous blog"
-        [languages.en.params]
-            description  = "Website Description"   # Max 160 characters show in search results
-            # footerText   = ""                      # Text to override default footer text (markdown allowed)
+  [languages.en]
+    weight = 1
+    title = "RadishKin Blog"
+    languageCode = "en"
+    contentDir  = "content/en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "links"
+      pre = ""
+      post = ""
+      name = "Links"
+      url = "/links/"
+      title = ""
+      weight = 4
+    [languages.en.params.footer]
 
-    [languages.cn]
-        languageName     = "简体中文"
-        languageCode     = "zh-CN"
-        contentDir       = "content/cn"
-        weight           = 0
-        title            = "无名博客"
-        [languages.cn.params]
-            description  = "站点描述"
-            # footerText   = "  © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可"
+      enable = true
+      # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
+      custom = 'Deployed on <b><a href="//pages.github.com">GIthub Pages</a></b>，Network Turbo powered by <b><a href="//cloudflare.com">Cloudflare</b></b>'
+      # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
+      hugo = true
+      # LoveIt 新增 | 0.2.0 是否显示版权信息
+      copyright = true
+      # LoveIt 新增 | 0.2.0 是否显示作者
+      author = true
+      # 网站创立年份
+      since = 2018
+      # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
+      icp = ""
+      # 许可协议信息 (支持 HTML 格式)
+      license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  
 
-    
+  [languages.zh-cn]
+    weight = 2
+    title = "萝卜炖鱼丸"
+    # 网站语言, 仅在这里 CN 大写
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+     contentDir = "content/cn"
+    [[languages.zh-cn.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "文章"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "标签"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "分类"
+      url = "/categories/"
+      title = ""
+      weight = 3
+    [[languages.zh-cn.menu.main]]
+      identifier = "links"
+      pre = ""
+      post = ""
+      name = "友情链接"
+      url = "/links/"
+      title = ""
+      weight = 4
+    [languages.zh-cn.params.footer]
+      enable = true
+      # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
+      custom = '站点部署于<b><a href="//pages.github.com">GIthub Pages</a></b>，由<b><a href="//cloudflare.com">Cloudflare</b></b>提供加速'
+      # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
+      hugo = true
+      # LoveIt 新增 | 0.2.0 是否显示版权信息
+      copyright = true
+      # LoveIt 新增 | 0.2.0 是否显示作者
+      author = true
+      # 网站创立年份
+      since = 2018
+      # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
+      icp = "<a href='https://beian.miit.gov.cn/'>蒙ICP备14003205号</a>"
+      # 许可协议信息 (支持 HTML 格式)
+      license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  

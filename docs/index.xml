@@ -1,262 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>无名博客</title>
-    <link>https://radish.cloud/</link>
-    <description>Recent content on 无名博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 05 Jun 2021 17:46:20 +0800</lastBuildDate><atom:link href="https://radish.cloud/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>在线招聘系统</title>
-      <link>https://radish.cloud/projects/demoproject/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://radish.cloud/projects/demoproject/</guid>
-      <description>该项目为博主毕业设计项目，项目已开源
-代码开源于：点击查看代码
-该系统设计了一个面向 IT 领域的线上招聘网站，目标客户为企业所定义的校招生群体。系统使用业界成熟的分布式微服务架构，将庞大臃肿的单实例项目以能为模块进行拆分，拆分后模块耦合度低，复用性好，对单个模块可以灵活的进行拓展。架构还支持了服务治理，持续集成等技术，提高了系统的稳定性。
-系统包括了常见的岗位管理，简历管理，职位投递等功能，还提供了模拟笔试，供应聘者学习的专栏模块，为求职者提高招聘备考效率，为求职者和企业提供双向的招聘解决方案</description>
-    </item>
-    
-    <item>
-      <title>Hugo Markdown 功能拓展</title>
-      <link>https://radish.cloud/blog/markdown-extend/</link>
-      <pubDate>Sat, 05 Jun 2021 17:46:20 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/markdown-extend/</guid>
-      <description>&lt;p&gt;本文用于演示本站的对hugo写作功能的拓展以及实现&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>博客重生小记</title>
-      <link>https://radish.cloud/blog/blog-rebirth-record/</link>
-      <pubDate>Sun, 30 May 2021 13:16:29 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/blog-rebirth-record/</guid>
-      <description>&lt;p&gt;2018年的夏天，我坚持了仅仅两个月的&lt;a href=&#34;https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/&#34;&gt;&lt;strong&gt;博客&lt;/strong&gt;&lt;/a&gt;，因为服务器到期关停了。当初的我还设定了一天一篇博客的“伟大”目标。然而直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我时常想把这个博客重新办起来，最终也因为各种原因一直也没有付诸于实践。
-最近我有了一点宽裕的时间，为了督促自己学习，我决定复活我的博客。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>友情链接</title>
-      <link>https://radish.cloud/links/</link>
-      <pubDate>Sat, 29 May 2021 03:13:29 +0800</pubDate>
-      
-      <guid>https://radish.cloud/links/</guid>
-      <description>萝卜云服务sci-hub服务：https://sci.radish.cloud 🎯该服务暂不可用
-rsshub服务：https://rss.radish.cloud 部分接口限速
-github加速服务：https://github.radish.cloud
-网页代理服务（jsproxy）：https://jsproxy.radish.cloud
-utterances评论：https://https://utterances.radish.cloud/  （本站使用的评论服务 如需使用可以联系博主开通github app 安装权限）
-Telegram频道豆瓣购物优惠推送频道：https://t.me/Douban_what2buy
-明日方舟咨讯频道：https://t.me/Akunitsu</description>
-    </item>
-    
-    <item>
-      <title>无名博客</title>
-      <link>https://radish.cloud/home/</link>
-      <pubDate>Fri, 28 May 2021 01:53:59 +0800</pubDate>
-      
-      <guid>https://radish.cloud/home/</guid>
-      <description>Anonymous blog 
-匿名ブログblog(blog)</description>
-    </item>
-    
-    <item>
-      <title>[转载]POJO,JAVABEAN,Entity区别</title>
-      <link>https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/</guid>
-      <description>转载自 ： {% blockquote 哎呦AU的博客 https://www.cnblogs.com/aurum324/p/8167996.html POJO,JAVABEAN,Entity区别 %} {% endblockquote %}
-1、javaBeanjavaBean是一种Java语言写成的可重用组件。为写成JavaBean，类必须是具体和公共的，并且具有无参数的构造器。JavaBean通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。更多的是一种规范，即包含一组set和get方法的java对象。javaBean可以使应用程序更加面向对象，可以把数据封装起来，把应用的业务逻辑和显示逻辑分离开，降低了开发的复杂程度和维护成本。
-2、ejb即EnterpriseBean，也就是Enterprise JavaBean（EJB）。 ejb是JavaEE的一部分，定义了一个用于开发基于组件的企业多重应用程序标准。它被称为Java企业Bean，是java的核心代码，分别是回话Bean（Session Bean）、实体Bean（Entity Bean）、和消息驱动Bean（MessageDriven Bean）。
-3、pojo（Plain Ordinary Java Object）简单的Java对象，实际就是普通JavaBeans，是为了避免和EJB混淆所创造的简称。 其中有一些属性及其getter、setter方法的类，没有业务逻辑，有时可以作为VO（value-object）或DTO（Data Transfer Object）来使用。不允许有业务方法，也不能携带connection之类的方法。 与javaBean相比，javaBean则复杂很多，JavaBean是可复用的组件，对JavaBean并没有严格的规范，理论上讲，任何一个Java类都可以是一个Bean。但通常情况下，由于JavaBean是被容器创建的，所以JavaBean应具有一个无参的构造器。另外，通常JavaBean还要实现Serializable接口用于实现Bean的持久性。一般在web应用程序中建立一个数据库的映射对象时，我们只能称他为POJO。用来强调它是一个普通的对象，而不是一个特殊的对象，其主要用来指代哪些没有遵从特定的java对象模型、约定或框架（如EJB）的java对象。理想的将，一个POJO是一个不受任何限制的java对象
-4、entity实体bean，一般是用于ORM对象关系映射，一个实体映射成一张表，一般无业务逻辑代码。 负责将数据库中的表记录映射为内存中的Entity对象，事实上，创建一个EntityBean对象相当于创建一条记录，删除一个EntityBean对象会同时从数据库中删除对应记录，修改一个Entity Bean时，容器会自动将Entity Bean的状态和数据库同步。
-5 、DTO数据传输对象（Data Transfer Object）。是一种设计模式之间传输数据的软件应用系统。数据传输目标往往是数据访问对象从数据库中检索数据</description>
-    </item>
-    
-    <item>
-      <title>[转载]常用jdb_curl格式</title>
-      <link>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
-      <description>转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %}
-一 常用数据库 JDBC URL 格式1 sqLite驱动程序包名：sqlitejdbc-v056.jar
-驱动程序类名: org.sqlite.JDBC
-JDBC URL: jdbc:sqlite:c:\*.db
-默认端口 无
-2 Microsoft SQL ServerMicrosoft SQL Server JDBC Driver
-驱动程序包名：msbase.jar mssqlserver.jar msutil.jar
-驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver
-JDBC URL: jdbc:microsoft:sqlserver://&amp;lt;server_name&amp;gt;:&amp;lt;port&amp;gt;
-默认端口1433，如果服务器使用默认端口则port可以省略
-3 OracleOracle Thin JDBC Driver
-驱动程序包名：ojdbc14.jar
-驱动程序类名: oracle.jdbc.driver.OracleDriver
-JDBC URL:
-jdbc:oracle:thin:@//&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/ServiceName 或
-jdbc:oracle:thin:@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;:&amp;lt;SID&amp;gt;
-4 IBM DB2IBM DB2 Universal Driver Type 4
-驱动程序包名：db2jcc.jar db2jcc_license_cu.jar
-驱动程序类名: com.ibm.db2.jcc.DB2Driver
-JDBC URL: jdbc:db2://&amp;lt;host&amp;gt;[:&amp;lt;port&amp;gt;]/&amp;lt;database_name&amp;gt;
-5 MySQLMySQL Connector/J Driver
-驱动程序包名：mysql-connector-java-x.x.xx-bin.jar
-驱动程序类名: com.mysql.jdbc.Driver
-JDBC URL: jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;
-默认端口3306，如果服务器使用默认端口则port可以省略
- MySQL Connector/J Driver 允许在URL中添加额外的连接属性
- 1jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;?property1=value1&amp;amp;property2=value2  注意： 需要操作记录为了避免乱码应该加上属性 useUnicode=true&amp;amp;characterEncoding=utf8 ，比如
- 1jdbc:mysql://192.168.177.129:3306/report?useUnicode=true&amp;amp;characterEncoding=utf8 二 Hibernate 中数据库的方言1 Oracle 方言1org.hibernate.dialect.OracleDialect 2 MySQL方言1org.hibernate.dialect.MySQLDialect 3 SQLServer方言
-1org.hibernate.dialect.SQLServerDialect </description>
-    </item>
-    
-    <item>
-      <title>Docker入门笔记（一）</title>
-      <link>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
-      <description>如今，如果你作为一个开发者而不知道容器化技术，那你可能要反思一下自己了，作为计算机领域发展最快最热门的技术之一，容器成为了现代互联网服务架构的基石。
-2013年DotCloud发布了容器服务Docker，并在2015年发布了其第一个正式版本，同年国内的Daocloud和灵雀云等公司开始提供基于docker的云服务业务，正是在此机会下我有幸接触了当时还非常先进的容器化技术（其实我当时对容器化还没有任何概念）。Docker在当时给我留下了最大的印象就是启动快，部署非常快，并且我当时参照daocloud官方提供的教程构建了一些镜像，不过当时的我，只是把Docker作为了一种新奇好玩的玩具，而没有深入的了解和使用。
-时间转到今天，随着微服务的兴起，容器化技术已经成为了微服务架构中的重要基石，docker对我来说不再是一个玩具，而是重要的开发部署工具，从今天起，我将重新开始学习docker,并用一系列文章来记录我学习过程。
-Docker 概述什么是Docker虽然Docker及其背后代表的容器化技术已经非常热门了，但是容器化并不是什么新技术，于1979年出现的Chroot Jailb被认为是Dcoker技术的起源，也就是现代Linux系统中的chroot环境，下面列出的一些都是早期的容器服务：
- Chroot Jail FreeBSD Jails Linux VServer Solaris Containers OpenVZ Process Containers LXC Warden LMCTFY Docker RKT  正如我们所看到的，docker 并不是第一个容器化技术，但它的确是最知名的一个。Docker 诞生于 2013 年，并获得了快速的发展。
-所以到底什么是Docker呢？
-我们看看书本上的说法：
- Docker使用Google公司推出的Go语言进行开发实现，基于 Linux内核的cgroup，namespace，以及AUFS类的Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于LXC，从0.7以后开始去除LXC，转而使用自行开发的libcontainer，从1.11开始，则进一步演进为使用runC和containerd。
-Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。
- 实际上docker本质上就是一种虚拟化技术，与传统的虚拟化技术不同的是，他没有在虚拟化环境中虚拟出一个完整的操作系统内核，而是将虚拟化环境中的进程放在物理机内核中执行,这就是docker容器化的核心。这种方式使docker具有了很多传统虚拟化方式没有的优势。
-为什么选择docker更高效的利用系统资源由前文我们知道，dcoker容器内的程序本质上就是宿主机上运行的进程，这样就极大减小了性能的损耗，由于不需要模拟内核和周边硬件，也节省了这部分的性能损耗
-更快的启动时间docker容器本质就是一个个宿主机内核程序，所以启动较快
-运行环境一致性Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性
-持续交付和部署使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合持续部署(Continuous Delivery/Deployment) 系统进行自动部署。
-更轻松的维护和拓展Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易
-Docekr的镜像与容器首先我们了解三个Docker的基本概念
- 镜像（Image） 容器（Container） 仓库（Repository）  这三个概念组成了Docker的完整生命周期，我们将在下面的过程中详细介绍
-环境如今，Docker可以运行在所有的主流操作系统上，包括Linux，Windows，MacOSX，因为我平时喜欢使用Linux，本文将在Linux上部署和使用，我将使用我的笔记本电脑和一台Daocloud胶囊主机来完成本文的内容
- 本地环境：Manjaro Linux18.0+Docker18.09.0-ce, 远程主机环境：Ubuntu14.04+(因为写作到这的时候断网了就放弃远程环境了)  在Manjaro安装Docker非常简单，在终端输入：
-1sudo Pacman -S docker-ce 即可安装，并无需额外配置
-启动Docker服务
-1systemctl start docker 检查Docker版本
-1$ docker --version 2Docker version 18.09.0-ce, build 4d60db472b Docker就安装好了
-镜像首先我们将了解Docker最核心的概念之一：镜像。镜像是Docker特殊的文件存储形式，其中储存了Linux运行时的用户空间，根据Linux的设计，Linux分为内核和用户空间，宿主机为Docker容器运行提供了内核支持，而Linux镜像为Docker运行提供了用户空间的支持。除了Linux的用户空间外，Docker镜像还储存了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等），Docker镜像不包含任何动态数据，构建完成后不会被改变。
-由于docker使用了UnionFS技术，所以Docker实现了分层储存的特性，镜像并非是一个完整的“镜像”文件，而是一种抽象概念，在存储中，Docker镜像根据构建顺序依次完成储存，不同的镜像可以共享其中的中间层，大大减小了Docker镜像的体积。
-获取镜像Docker运行前需要对应的镜像，所以我们可以从镜像仓库拉取镜像，Docker默认的镜像仓库是DockerHub，其中内置了大量高质量的Dokcer基础镜像，我们也可以将自己的镜像发布至DockerHub
- 前文我们提到了仓库（Repository）的概念，仓库是一个集中存储和分发镜像的服务，一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。我们可以部署只自己仓库，也可以使用公共的仓库服务。
- 获取镜像使用docker pull命令：
-1docker pull [选项] [Docker Registry地址]&amp;lt;仓库名&amp;gt;:&amp;lt;标签&amp;gt; 如没有仓库地址名，将使用默认的仓库。 例如：
-1$ sudo docker pull node:latest 2latest: Pulling from library/node 354f7e8ac135a: Already exists 4d6341e30912f: Already exists 5087a57faf949: Already exists 65d71636fb824: Pull complete 70c1db9598990: Pull complete 889669bc2deb2: Pull complete 9647616206038: Pull complete 1064f67f03205b: Pull complete 11Digest: sha256:fed3f48ec9e97a57c17977ff120c3e7bf7d2d4e930ef650bba3f2ada5ac4a33a 12Status: Downloaded newer image for node:latest 这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像
-列出镜像我们可以使用docker images列出所有本地的镜像
-1$ docker images 2REPOSITORY TAG IMAGE ID CREATED SIZE 3docker-test 0.0.1 ce25b22437c5 9 days ago 443MB 4node latest 37f455de4837 9 days ago 894MB 5tomcat latest 48dd385504b1 9 days ago 475MB 6ubuntu latest 93fd78260bd1 3 weeks ago 86.</description>
-    </item>
-    
-    <item>
-      <title>Hexo博客搭建</title>
-      <link>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
-      <description>最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333
-fetch(&#34;https://demo.radishkin.workers.dev/api/set?url=&#34;+window.btoa(location.href)).then(res={console.log(res)})环境  服务器：阿里云学生机 轻量级应用服务器
-  服务器系统：Ubuntu16.04
-阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂
-  本地系统：Manjaro 18.0 Illyria
-  部署Hexo生成的是纯静态页面，所以部署只需将hexo生成的public目录放置在 nginx 站点目录下就可以
-Hexo 安装安装Hexo 前确保系统有以下软件：
- Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
-1# Using Ubuntu 2curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - 3sudo apt-get install -y nodejs 4 5# Using Debian, as root 6curl -sL https://deb.nodesource.com/setup_11.x | bash - 7apt-get install -y nodejs 这个脚本会自动识别系统版本并添加ppa源
-然后
-1# 安装git 2sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以
-1# manjaro 安装git 2sudo pacman -S git 3# 也可以在本地安装nodejs，方便调试 4sudo pacman -S nodejs 然后安装hexo
-1 npm install -g hexo-cli 测试一下
-1hexo -v 输出
-1hexo-cli: 1.1.0 2os: Linux 4.19.1-1-MANJARO linux x64 3http_parser: 2.8.1 4node: 11.1.0 5v8: 7.0.276.32-node.7 6uv: 1.23.2 7zlib: 1.2.11 8ares: 1.15.0 9modules: 67 10nghttp2: 1.34.0 11napi: 3 12openssl: 1.1.1 13icu: 63.1 14unicode: 11.0 15cldr: 34.0 16tz: 2018e 17 Hexo 安装完毕
-Hexo新建站点和基本配置选择一个存放站点文件的目录，执行
-1hexo init “站点名” hexo会在当前目录下新建一个站点文件夹，cd进站点文件夹，执行
-1npm install 执行完成后，生成目录如下
-1$ tree blog 2blog 3├── _config.yml 4├── db.json 5├── node_modules 6├── package.json 7├── package-lock.json 8├── scaffolds 9├── source 10└── themes 其中_config.yml是整个站点的配置文件，source是存放文章来源的md文件的，package.json存放了站点的依赖，theme是主题文件
-在站点文件夹内，使用
-1hexo g 生成静态文件，静态文件存放在该目录的public/下
-然后编辑_config.yml
-1 2# 站点基本信息 3title: #站点名称 4subtitle: #子标题 5description: 6keywords: 7author: 8language: zh-cn #语言设置为简体中文 9timezone: 10 11# 站点链接配置 12url: http://ljmx.</description>
-    </item>
-    
-    <item>
-      <title>Springboot快速上手</title>
-      <link>https://radish.cloud/blog/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
-      <description>Springboot是由spring开发团队Pivotal推出的全新框架，他设计目的简化繁琐的Spring配置,专注于应用的开发。SpringBoot采用了&amp;quot;约定优先于配置（COC，Convnetion Over Configuration）&amp;ldquo;的设计思想，通过为企业开发应用环境设计出了很多自动配置的依赖模块,这些模块几乎不需要配置，开箱即用，极大的简化了开发周期和代码量。
-环境本文开发环境以写作时的最新版本2.1.0.RELEASE为基准
- JDK1.8及以上 Maven 3.2 Tomcat 8及以上 hibernate 5.2以上  使用最新版idea可以快速创建一个springboot项目并初始化一些模块，如果不使用idea，可以新建Maven项目并从官网下载并定制所需组件
-项目Maven依赖我们使用Maven作为项目的的依赖管理，有关Maven的内容可以查看网上的其他相关信息，下面列出了项目所有使用的模块
-继承Springboot的核心依赖
-1&amp;lt;parent&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; 5	&amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; 6&amp;lt;/parent&amp;gt; jpa
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; web核心组件
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt; 4&amp;lt;/dependency&amp;gt; mysql ,如果mysql-server版本是8.0需要指明connector版本8.0+
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; lmbok，减少代码量
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt; 4	&amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; 5&amp;lt;/dependency&amp;gt; Springboot 测试模块，默认使用junit
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt; 4	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt; 5&amp;lt;/dependency&amp;gt; swagger
-1&amp;lt;dependency&amp;gt; 2	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 3	&amp;lt;artifactId&amp;gt;springfox-swagger2&amp;lt;/artifactId&amp;gt; 4	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 5&amp;lt;/dependency&amp;gt; 6 7&amp;lt;dependency&amp;gt; 8	&amp;lt;groupId&amp;gt;io.springfox&amp;lt;/groupId&amp;gt; 9	&amp;lt;artifactId&amp;gt;springfox-swagger-ui&amp;lt;/artifactId&amp;gt; 10	&amp;lt;version&amp;gt;2.2.2&amp;lt;/version&amp;gt; 11&amp;lt;/dependency&amp;gt; 工程目录结构然后我们查看下项目生成的默认文件结构
-1$ tree 2. 3├── mvnw 4├── mvnw.cmd 5├── pom.xml 6├── src 7│ ├── main 8│ │ ├── java 9│ │ │ └── top/ljmx/springboot/demo/demo 10│ │ │ └── DemoApplication.java 11│ │ └── resources 12│ │ ├── application.properties 13│ │ ├── static 14│ │ └── templates 15│ └── test 16│ └── java 17│ └── top/ljmx/springboot/demo/demo 18│ └── DemoApplicationTests.java 19└── srpingboot-sdemo.iml 20 2118 directories, 7 files src是项目的主文件夹，其中main是主要代码，test是测试代码，这是一个典型的Maven工程的文件结构，pom.xml是Maven的依赖文件。main先分为java和resources，java存放代码，resources存放静态资源，目录中的application.properties是工程的配置文件
-Springboot遵循springMVC的分层结构结构，所以我们先在包top.ljmx.springboot.demo.demo下新建以下几个子包
- controller 存放所有的控制器代码 model 存放所有的数据模型 repository 存放所有的数据操作 service 业务代码  其他可选包
- config 存放配置代码，如swagger util 存放工具类 expection 统一异常处理  一个简单的Springboot入门实例 本实例参照库米云微王华杰老师课程代码</description>
-    </item>
-    
-    <item>
-      <title>一次失败的jdk编译</title>
-      <link>https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</guid>
-      <description>想要深入了解JVM，就必须了解其实现机制。了解JVM实现的最好方法便是自己动手编译JDK。本文中，我将参照《深入理解Java虚拟机》中的教程，编译openjdk1.8
-准备工作系统环境 编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存) 操作系统：Manjaro i3wm 18.0  软件环境java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jdk（嘿嘿，我编译我自己
-所以编译环境需要以下依赖程序：
- bootstrap jdk：jdk1.8或jdk1.7 gcc，g++ 4.4+ (据官网说gcc版本最高只测试到7.4)  执行
-1sudo pacman -S java-8-openjdk gcc g++ 下载源码openjdk团队使用Mercurial工具管理源代码 安装:
-1sudo pacman -S Mercurial 克隆代码
-1hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ clone完成后，进入源码目录，执行脚本
-1bash get_source.sh 会自动获取全部源码
- 如果下载太慢，可以使用github上的代码镜像 https://github.com/unofficial-openjdk/openjdk/ 注意：直接克隆整个仓库会下载所有版本jdk源码
- 编译自动生成编译文件并检查依赖
-1bash ./configure 如果中途中断，请检查输出，安装对应的依赖库
-执行编译命令
-1make all 如果成功会在所在文件夹下生成一个images的文件夹
-然后我失败了QAQ
-目前知道是遇到了一个已知bug，另外编译环境也炸了hhhh，下篇文章再说吧
-咕咕咕</description>
-    </item>
-    
-    <item>
-      <title>熵与随机数</title>
-      <link>https://radish.cloud/blog/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</guid>
-      <description>昨天写Dockerfile那篇文章的时候，发下我的镜像中java有一个启动参数-Djava.security.egd=file:/dev/./urandom，我查了察相关资料，发现了些有趣的事情
-随机数关于这个参数，我们从随机数来说起 学过编程的同学应该都接触过随机数这个概念，虽然叫随机，但是大多数随机数生成实质上是通过一定的预先设定的算法计算出来的，根据密码学的原理，随机数的随机性检验有三个标准：
- 统计学伪随机性:统计学伪随机性指的是在给定的随机比特流样本中，1的数量大致等于0的数量，同理，“10”“01”“00”“11”四者数量大致相等。类似的标准被称为统计学随机性。满足这类要求的数字在人类“一眼看上去”是随机的。 密码学安全伪随机性: 其定义为，给定随机样本的一部分和随机算法，不能有效的演算出随机样本的剩余部分。 真随机性：其定义为随机样本不可重现。实际上只要给定边界条件，真随机数并不存在，可是如果产生一个真随机数样本的边界条件十分复杂且难以捕捉（比如计算机当地的本底辐射波动值），可以认为用这个方法演算出来了真随机数  相应的，随机数也分为三类：
- 伪随机数：满足第一个条件的随机数。 密码学安全的伪随机数：同时满足前两个条件的随机数。可以通过密码学安全伪随机数生成器计算得出。 真随机数：同时满足三个条件的随机数。  我们平时使用的大多数编程语言中所生成的随机数都是伪随机数，例如java中的Random类，可以使用时间戳作为随机种子，这种随机数足以满足我们大多数对随机数生成的需求，但是在一些特殊场合，例如在线交易中的id（这是区块链安全性中的重要一环，据我所知，有多起区块链攻击行为与区块链生成算法有缺陷有关），对随机数的安全性要求较高时，就要求达到密码学安全的伪随机数甚至真随机数，在java中，有一些提供安全随机数生成算法的类，例如org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom，在Tomcat7/8中，就使用了这个类用来产生seesion id，这个类中有一个种子生成器，他会根据配置来获取随机种子，在Tomcat中，会默认使用/dev/random返回的字符来作为种子，这个/dev/random 就是我们今天的主角。
-Linux中的熵池/dev/random是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：
-1We need to generate a lot of random bytes. It is a good idea to perform 2some other action (type on the keyboard, move the mouse, utilize the 3disks) during the prime generation; this gives the random number 4generator a better chance to gain enough entropy. 5++++++++++..+++++.+++++++++++++++.++++++++++...+++++++++++++++...++++++ 6+++++++++++++++++++++++++++++.+++++..+++++.+++++.+++++++++++++++++++++++++&amp;gt;. 7++++++++++&amp;gt;+++++...........................................................+++++ 8Not enough random bytes available. Please do some other work to give 9the OS a chance to collect more entropy! (Need 290 more bytes) 但是假如我们的系统是一个服务器，我们没有鼠标和键盘输入。这意味着唯一的因素是你的磁盘IO。如果它是一个单独的、几乎不使用的磁盘，你将拥有较低的熵。另外一个问题是/dev/random是阻塞的，当你频繁生成随机数的时候，你可能会耗光你的熵池，/dev/random 会等待熵池收集到足够的环境噪声的时候才会继续生成随机数，这可能导致你的进程被长时间的挂起。在java 开发中，常常会遇到一些应用启动时间过长的问题，就可能是熵池空了导致线程阻塞了。
-幸好Linux给我们提供了另外一个随机数生成器来解决这个问题。/dev/unrandom,这是一个伪随机数生成器，在缺乏熵的时候，他会复用熵池中的内容而不会导致阻塞，但是复用熵池会导致安全性下降，但是在安全性不强的情况下，可以考虑使用这个，比如我们可以使用-Djava.security.egd=file:/dev/./urandom这个java启动参数，来确保我们生成随机数的过程不被阻塞，这也回答了我们开头那个问题，java.security.egd是org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom的配置。
-我们还可以用一些方法来影响熵池
-1$ cat /proc/sys/kernel/random/poolsize 24096 3$ cat /proc/sys/kernel/random/entropy_avail 42975 使用这两个命令可以查看当前熵池的大小和熵池内有多少熵
-我们可以通过一些方法来将熵池耗尽，比如将将/dev/random 定向到/dev/null中
-1$ cat /dev/random &amp;gt; /dev/null &amp;amp; 这样会快速的将熵池耗尽
-如果我们想填充熵池呢，最好的办法是将处理器的抖动加入熵池中，我们可以安装Haveged来实现这一功能
-1$ sudo pacman -S Hacedged 2$ systemctl enable haveged 3$ systemctl start haveged 我们可以通过pv命令来观察熵池的增长速度
-1# 启用前 2$ pv /dev/random &amp;gt; /dev/null 325.0 B 0:00:03 [0.00 B/s] [ &amp;lt;=&amp;gt; 4 5# 启用后 6$ pv /dev/random &amp;gt; /dev/null 762MiB 0:00:03 [ 564KiB/s] [ &amp;lt;=&amp;gt; 8 可以观察到从几乎为0增长到了564kiB/s
-参考：
-James J - /dev/[u]random：对熵的解释
-chszs - Tomcat 8熵池阻塞变慢详解</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>萝卜炖鱼丸</title>
+        <link>https://radish.cloud/</link>
+        <description>萝卜炖鱼丸</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 30 May 2021 13:16:29 &#43;0800</lastBuildDate>
+            <atom:link href="https://radish.cloud/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>博客重生小记</title>
+    <link>https://radish.cloud/posts/blog-rebirth-record/</link>
+    <pubDate>Sun, 30 May 2021 13:16:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/blog-rebirth-record/</guid>
+    <description><![CDATA[<p>2018年的夏天，我坚持了仅仅两个月的<a href="/blog/%e5%8d%9a%e5%ae%a2%e6%90%ad%e5%bb%ba/" rel=""><strong>博客</strong></a>，因为服务器到期关停了。当初的我还设定了一天一篇博客的“伟大”目标。然而直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我时常想把这个博客重新办起来，最终也因为各种原因一直也没有付诸于实践。
+最近我有了一点宽裕的时间，为了督促自己学习，我决定复活我的博客。</p>]]></description>
+</item><item>
+    <title>[转载]POJO,JAVABEAN,Entity区别</title>
+    <link>https://radish.cloud/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/</guid>
+    <description><![CDATA[转载自 ： {% blockquote 哎呦AU的博客 https://www.cnblogs.com/aurum324/p/8167996.html POJO,JAVABEAN,Entity区别 %} {% endblockquote %} 1、javaBean javaBean是一种Java语言写成的可重用组件。为写成JavaBean，类必须是具体和公共的，并且具有无参数的构造器。JavaBean通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。更多的是一种规范，即包含一组set和get方法的java对象。j]]></description>
+</item><item>
+    <title>[转载]常用jdb_curl格式</title>
+    <link>https://radish.cloud/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
+    <description><![CDATA[转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %} 一 常用数据库 JDBC URL 格式 1 sqLite 驱动程序包名：sqlitejdbc-v056.jar 驱动程序类名: org.sqlite.JDBC JDBC URL: jdbc:sqlite:c:\*.db 默认端口 无 2 Microsoft SQL Server Microsoft SQL Server JDBC Driver 驱动程序包名：msbase.jar mssqlserver.jar msutil.jar 驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver JDBC URL: jdbc:microsoft:sqlserver://&lt;server_name&gt;:&lt;port&gt; 默认端口1433，如果服务器使用默认端口则port可以省略 3 Oracle Oracle Thin JDBC Driver 驱动程序包名：ojdbc14.jar 驱动程序类名:]]></description>
+</item><item>
+    <title>Docker入门笔记（一）</title>
+    <link>https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+    <description><![CDATA[如今，如果你作为一个开发者而不知道容器化技术，那你可能要反思一下自己了，作为计算机领域发展最快最热门的技术之一，容器成为了现代互联网服务架构的基石。 2013年DotCloud发布了容器服务Docker，并在2015年发布了其第一个正式版本，同年国内的Daocloud和灵雀云等公司开始提供基于docker的云服务业务，正是在此机会下我有幸接触了当时还非常先进的]]></description>
+</item><item>
+    <title>Hexo博客搭建</title>
+    <link>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+    <description><![CDATA[最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地系统：]]></description>
+</item><item>
+    <title>Springboot快速上手</title>
+    <link>https://radish.cloud/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
+    <description><![CDATA[Springboot是由spring开发团队Pivotal推出的全新框架，他设计目的简化繁琐的Spring配置,专注于应用的开发。SpringBoot采用了&quot;约定优先于配置（COC，Convnetion Over Configuration）&ldquo;的设计思想，通过为企业开发应用环境设计出了很多自动配置的依赖模块,这些模块几乎不需要配置，开箱即用，极大]]></description>
+</item><item>
+    <title>一次失败的jdk编译</title>
+    <link>https://radish.cloud/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</guid>
+    <description><![CDATA[想要深入了解JVM，就必须了解其实现机制。了解JVM实现的最好方法便是自己动手编译JDK。本文中，我将参照《深入理解Java虚拟机》中的教程，编译openjdk1.8 准备工作 系统环境 编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存) 操作系统：Manjaro i3wm 18.0 软件环境 java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jd]]></description>
+</item><item>
+    <title>熵与随机数</title>
+    <link>https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</guid>
+    <description><![CDATA[昨天写Dockerfile那篇文章的时候，发下我的镜像中java有一个启动参数-Djava.security.egd=file:/dev/./urandom，我查了察相关资料，发现了些有趣的事情 随机数 关于这个参数，我们从随机数来说起 学过编程的同学应该都接触过随机数这个概念，虽然叫随机，但是大多数随机数生成实质上是通过一定的预先设定的算法计算出来的，根据密码学]]></description>
+</item></channel>
 </rss>

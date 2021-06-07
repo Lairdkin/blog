@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JDBC - 标签 - 无名博客</title>
+        <link>http://example.org/tags/jdbc/</link>
+        <description>JDBC - 标签 - 无名博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 28 May 2018 01:56:47 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/jdbc/" rel="self" type="application/rss+xml" /><item>
+    <title>[转载]常用jdb_curl格式</title>
+    <link>http://example.org/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
+    <description><![CDATA[转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %} 一 常用数据库 JDBC URL 格式 1 sqLite 驱动程序包名：sqlitejdbc-v056.jar 驱动程序类]]></description>
+</item></channel>
+</rss>

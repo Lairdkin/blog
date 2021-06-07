@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>[转载]常用jdb_curl格式 - 无名博客</title><meta name="Description" content=""><meta property="og:title" content="[转载]常用jdb_curl格式" />
+<meta property="og:description" content="转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %} 一 常用数据库 JDBC URL 格式 1 sqLite 驱动程序包名：sqlitejdbc-v056.jar 驱动程序类" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-05-28T01:56:47&#43;08:00" />
+<meta property="article:modified_time" content="2018-05-28T01:56:47&#43;08:00" /><meta property="og:site_name" content="无名博客" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[转载]常用jdb_curl格式"/>
+<meta name="twitter:description" content="转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %} 一 常用数据库 JDBC URL 格式 1 sqLite 驱动程序包名：sqlitejdbc-v056.jar 驱动程序类"/>
+<meta name="application-name" content="无名博客">
+<meta name="apple-mobile-web-app-title" content="无名博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/" /><link rel="prev" href="http://example.org/blog/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" /><link rel="next" href="http://example.org/blog/pojo-javabean-entity%E5%8C%BA%E5%88%AB/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[转载]常用jdb_curl格式",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/blog\/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F\/"
+        },"genre": "blog","keywords": "java, JDBC","wordcount":  393 ,
+        "url": "http:\/\/example.org\/blog\/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F\/","datePublished": "2018-05-28T01:56:47+08:00","dateModified": "2018-05-28T01:56:47+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="无名博客">无名博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/" selected>简体中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="无名博客">无名博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">[转载]常用jdb_curl格式</h1><div class="content" id="content"><p>转载自  ：
+{% blockquote 落落无伤的博客 <a href="https://www.cnblogs.com/qianqian528/p/8032098.html">https://www.cnblogs.com/qianqian528/p/8032098.html</a> 常用数据库 JDBC URL 格式 %}
+{% endblockquote %}</p>
+<h2 id="一-常用数据库-jdbc-url-格式">一 常用数据库 JDBC URL 格式</h2>
+<h3 id="1-sqlite">1 sqLite</h3>
+<p>驱动程序包名：<code>sqlitejdbc-v056.jar</code><br>
+驱动程序类名: <code>org.sqlite.JDBC</code><br>
+JDBC URL: <code>jdbc:sqlite:c:\*.db</code><br>
+默认端口 无</p>
+<h3 id="2-microsoft-sql-server">2 Microsoft SQL Server</h3>
+<p>Microsoft SQL Server JDBC Driver</p>
+<p>驱动程序包名：<code>msbase.jar mssqlserver.jar msutil.jar</code><br>
+驱动程序类名: <code>com.microsoft.jdbc.sqlserver.SQLServerDriver</code><br>
+JDBC URL: <code>jdbc:microsoft:sqlserver://&lt;server_name&gt;:&lt;port&gt;</code><br>
+默认端口1433，如果服务器使用默认端口则port可以省略</p>
+<h3 id="3-oracle">3 Oracle</h3>
+<p>Oracle Thin JDBC Driver</p>
+<p>驱动程序包名：<code>ojdbc14.jar</code><br>
+驱动程序类名: <code>oracle.jdbc.driver.OracleDriver</code><br>
+JDBC URL:<br>
+<code>jdbc:oracle:thin:@//&lt;host&gt;:&lt;port&gt;/ServiceName</code>  或<br>
+<code>jdbc:oracle:thin:@&lt;host&gt;:&lt;port&gt;:&lt;SID&gt;</code></p>
+<h3 id="4-ibm-db2">4 IBM DB2</h3>
+<p>IBM DB2 Universal Driver Type 4</p>
+<p>驱动程序包名：<code>db2jcc.jar db2jcc_license_cu.jar</code><br>
+驱动程序类名: <code>com.ibm.db2.jcc.DB2Driver</code><br>
+JDBC URL:<code> jdbc:db2://&lt;host&gt;[:&lt;port&gt;]/&lt;database_name&gt;</code></p>
+<h3 id="5-mysql">5 MySQL</h3>
+<p>MySQL Connector/J Driver</p>
+<p>驱动程序包名：<code>mysql-connector-java-x.x.xx-bin.jar</code><br>
+驱动程序类名: <code>com.mysql.jdbc.Driver</code><br>
+JDBC URL:<code> jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database_name&gt;</code><br>
+默认端口3306，如果服务器使用默认端口则port可以省略</p>
+<blockquote>
+<p>MySQL Connector/J Driver 允许在URL中添加额外的连接属性</p>
+</blockquote>
+<pre><code>jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database_name&gt;?property1=value1&amp;property2=value2
+</code></pre><blockquote>
+<p>注意： 需要操作记录为了避免乱码应该加上属性 useUnicode=true&amp;characterEncoding=utf8 ，比如</p>
+</blockquote>
+<pre><code>jdbc:mysql://192.168.177.129:3306/report?useUnicode=true&amp;characterEncoding=utf8
+</code></pre><h2 id="二-hibernate-中数据库的方言">二 Hibernate 中数据库的方言</h2>
+<h3 id="1-oracle-方言">1 Oracle 方言</h3>
+<pre><code>org.hibernate.dialect.OracleDialect
+</code></pre><h3 id="2-mysql方言">2 MySQL方言</h3>
+<pre><code>org.hibernate.dialect.MySQLDialect
+</code></pre><p>3 SQLServer方言</p>
+<pre><code>org.hibernate.dialect.SQLServerDialect
+</code></pre></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

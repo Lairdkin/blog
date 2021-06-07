@@ -1,666 +1,103 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-<head>
+<html lang="en">
+    <head>
 	<meta name="generator" content="Hugo 0.83.1" />
-    <script>
-
-        if (navigator.userAgent.indexOf("Google") == -1 || navigator.userAgent.indexOf("Baidu") == -1) {
-            if (document.cookie.indexOf("history=1") == -1) {
-                console.log("是第一次访问捏，我记下了捏")
-                currentLang = navigator.language;
-                if (!currentLang) {
-                    currentLang = navigator.browserLanguage;
-                }
-                if (currentLang.indexOf("zh") == -1) {
-                    console.log("说英文捏，给你看这个")
-                    if (window.location.href.indexOf("en") == -1) {
-                        window.location.href = "/en";
-                    }
-
-                } else {
-                    console.log("说中文捏，给你看这个")
-                }
-                var t = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-                document.cookie = "history=1; expires=" + t.toGMTString() + ";path=/";
-            }
-        }
-
-
-    </script>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<meta name="description" content="Website Description">
-<title>
-Anonymous Blog
-</title>
-
-<link href="/en/index.xml" rel="alternate" type="application/rss+xml" title="Anonymous blog" />
-
-    
-    <meta property="og:title" content="Anonymous blog" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>RadishKin Blog</title><meta name="Description" content=""><meta property="og:title" content="RadishKin Blog" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="Website Description"/>
-<meta property="og:url" content="https://radish.cloud/en/"/>
-<meta property="og:site_name" content="Anonymous blog"/>
+<meta property="og:url" content="https://radish.cloud/en/" /><meta property="og:site_name" content="RadishKin Blog" />
 
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="RadishKin Blog"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="RadishCloud">
+<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/en/" /><link rel="alternate" href="/en/index.xml" type="application/rss+xml" title="RadishKin Blog">
+    <link rel="feed" href="/en/index.xml" type="application/rss+xml" title="RadishKin Blog"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https:\/\/radish.cloud\/en\/","inLanguage": "en","name": "RadishKin Blog"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-
-
-<meta property="og:image" content="https://radish.cloud/en/home/mx.jpg"/>
-
-
-
-
-    
-<link rel="shortcut icon" href="/img/fav.ico">
-
-
-    
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.20f701138a49cf7971fe80b1829416789fa588f156b3a6c8c1a09fa03d89a991.css" integrity="sha256-IPcBE4pJz3lx/oCxgpQWeJ&#43;liPFWs6bIwaCfoD2JqZE="
-    crossorigin="anonymous" media="screen">
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/foo.css" integrity="" crossorigin="anonymous"
-    media="screen">
-    
-
-
-<link rel="stylesheet" href="https://radish.cloud/styles/owlCarousel.min.fb3b2db7ac73c4ba8d021450bcf5556ff7385dfd0c1ee5fb4a69c75f41f2fd29.css" integrity="" crossorigin="anonymous" media="screen">
-
-
-
-</head>
-
-<body>
-    
-    <section id="top" class="hero is-fullheight">
-        
-        <div class="hero-head"></div>
-
-        
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                
-                <h1
-                    class="bold-title fade-in one">
-                    Anonymous blog
-                </h1>
-                <div
-                    class="subtitle is-3 fade-in two">
-                    <p>无名博客 </br></p>
-<p>匿名<ruby><rb>ブログ</rb><rt>blog</rt><rp>(blog)</rp></ruby></p>
-
-                </div>
-                
-                
-                <div
-                    class="fade-in three">
-                    <div class="social-icons">
-    
-    <a href="https://twitter.com/menxin74" >
-        <i class="fab fab fa-twitter"></i>
-    </a>
-    
-    <a href="https://t.me/radishcloud" >
-        <i class="fab fab fa-telegram"></i>
-    </a>
-    
-    <a href="https://github.com/RadishKin" >
-        <i class="fab fab fa-github"></i>
-    </a>
-    
-    <a href="https://weibo.com/1910759497" >
-        <i class="fab fab fa-weibo"></i>
-    </a>
-    
-    <a href="https://discord.gg/z3nEreaJvk" rel="me">
-        <i class="fab fab fa-discord"></i>
-    </a>
-    
-</div>
-
-                </div>
-                
-            </div>
-        </div> 
-        
-
-        <div
-            class="hero-foot fade-in three">
-            
-            
-<div class="container">
-    <hr>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <div class="navbar-menu has-content-centered" id="navMenu">
-            
-            
-            
-            
-
-            
-            
-
-            
-                
-            
-
-            
-                
-            
-
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#about">About</a>
-            
-            
-            
-            
-            
-                
-                
-                <a class="navbar-item" href="/en/#projects">Projects</a>
-                
-            
-            
-            
-            
-            
-                
-                
-                <a class="navbar-item" href="/en/#blog">Blog</a>
-                
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#links">Links</a>
-            
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="#contact">contact</a>
-            
-            
-
-            
-            
-            <a class="navbar-item" href="https://radish.cloud/">简体中文</a>
-            
-            
-            
-            
-
-            
-            <a class="navbar-item" href="https://radish.cloud/index.xml"><i class="fas fa-rss"></i></a>
-            
-            
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/en/" title="RadishKin Blog">萝卜炖鱼丸</a>
         </div>
-    </nav>
-    <hr>
-</div>
-
-
-        </div>
-    </section> 
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    <div class="section" id="about">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">About</h2>
-            
-            <div class="columns">
-                <div class="column is-one-third has-text-centered">
-                    
-                    
-                    <img class="img-responsive avatar" src="https://radish.cloud/en/home/mx_huc546f8f16f355bf52265970939deabd1_22173_320x0_resize_q75_box.jpg" alt="mx.jpg">
-                    
-                    
-                </div>
-                <div class="markdown column">
-                    
-<h3 id="radishkin" class="anchor-link"><a href="#radishkin">RadishKin</a></h3>
-<p>Undergraduate student，major is Management Information System，direction of the research：Java back-end development</p>
-<ul>
-<li>
-<p>Former ACMer ，but no award is worth mentioning</p>
-</li>
-<li>
-<p>Development languages ：Java，Python，JavaScript</p>
-</li>
-<li>
-<p>Games：I alyways play the following two games</p>
-<ul>
-<li>Final fantasy xiv</li>
-<li>Arknights</li>
-</ul>
-<p>You can only play with me in China Server</p>
-</li>
-</ul>
-
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-    </div>
-    <div class="container">
-        <hr>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-<div class="section" id="projects">
-    
-    <div class="container">
-        <h2 class="title is-2 has-text-centered">
-            Projects
-        </h2>
-        <div class="section">
-            <div class="columns is-multiline">
-                
-                
-                
-                
-                
-                
-                <div class="column is-one-third">
-                    <div class="card" data-target="#project-0">
-                        
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <a >
-                                    
-                                    
-                                    
-                                    <img class="card-thumbnail" src="https://radish.cloud/en/projects/demoproject/jobs1_hu7f259f17f6cc9200c51579989ecc213c_136681_302x0_resize_box_2.png" alt ="jobs1.png">
-                                    
-                                    
-                                </a>
-                            </figure>
-                        </div>
-                        
-                        <div class="card-content has-text-centered top-pad">
-                            <h1><a >
-                                Online recruitment system
-                            </a></h1>
-                            
-                        </div>
-                    </div>
-                </div>
-                
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/en/posts/"> Posts </a><a class="menu-item" href="/en/tags/"> Tags </a><a class="menu-item" href="/en/categories/"> Categories </a><a class="menu-item" href="/en/links/"> Links </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/" selected>English</option><option value="/">简体中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
             </div>
         </div>
-        
     </div>
-    
-    
-    
-    
-    <div class="modal" id="project-0">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            
-            <header class="modal-card-header bottom-pad">
-                <h1 class="modal-card-title has-text-centered">Online recruitment system</h1>
-            </header>
-            
-            
-            
-            
-            
-            <div class="owl-carousel owl-theme">
-            
-                
-                    
-                    
-                    <div class="item owl-height">
-                    
-                        <img src="https://radish.cloud/en/projects/demoproject/jobs1_hu7f259f17f6cc9200c51579989ecc213c_136681_640x0_resize_box_2.png" class="img-responsive" alt="jobs1.png">
-                    
-                    </div>
-                    
-                
-                    
-                    
-                    <div class="item owl-height">
-                    
-                        <img src="https://radish.cloud/en/projects/demoproject/jobs2_hu37d8b599cc526db90373ba59ff37f894_89033_640x0_resize_box_2.png" class="img-responsive" alt="jobs2.png">
-                    
-                    </div>
-                    
-                
-            
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/en/" title="RadishKin Blog">萝卜炖鱼丸</a>
             </div>
-            
-            
-
-            
-            <section class="modal-card-body markdown">
-                <p>The project is a graduate design by blogger，that is open sourced</p>
-<p>Open source Link：<a href="https://gitee.com/anhlaidh/prs"><strong>click to view code</strong></a></p>
-<hr>
-<p>Introduction awaiting translation&hellip;</p>
-
-            </section>
-            
-        </div>
-        <button class="modal-close is-large" aria-label="close" data-target="#project-0"></button>
-    </div>
-    
-    
-    <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-</div>
-
-<div class="container"><hr></div>
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-<div class="section" id="blog">
-    
-    <div class="container">
-        
-        <h2 class="title is-2 has-text-centered">Latest Post</h2>
-            
-            <div class="summary">May 28, 2018
-                <h3 class="title is-3 latest-post-title"><a href="https://radish.cloud/en/blog/testblog/">What to eat for lunch</a></h3>
-                    <div class="markdown">
-                    Translated by deepl
- This fact means a lot to me, and I believe it means something to the world as well. We have to face a very awkward fact, that is, Da Vinci said in an offhand way that boldness and firm determination can be worth the fineness of weapons. I hope that you will also appreciate this statement. To sum up, personally, what I eat for lunch means a lot to me. I have also been thinking about this issue in every day and night. Generally speaking, we must be sure to consider it carefully. What is the key to the problem? In life, if what is eaten at noon appears, we have to consider the fact that it appears. How does the occurrence of what is eaten at noon need to be done, and how does the occurrence of what is not eaten at noon arise. What is the key to the problem. Now, it is very, very important to solve the problem of what to eat at noon. So, Shakespeare said philosophically, &ldquo;A man&rsquo;s life is short, but it is too long if he lives it vilely.
-                    
-                    <a href="https://radish.cloud/en/blog/testblog/">Read more</a>
-                    
-                    </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
             </div>
-            
-        
-    </div>
-</div>
-    
-        <div class="container has-text-centered top-pad">
-            <a href="https://radish.cloud/en/blog/">All Posts</a>
         </div>
-    
-
-
-<div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/en/posts/" title="">Posts</a><a class="menu-item" href="/en/tags/" title="">Tags</a><a class="menu-item" href="/en/categories/" title="">Categories</a><a class="menu-item" href="/en/links/" title="">Links</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/" selected>English</option><option value="/">简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
 </div>
-
-
-
-<div class="container"><hr></div>
-
-
-    
-    
-    
-    
-    
-    
-    
-
-    
-    <div class="section" id="links">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">Links</h2>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/en/posts/" title="Posts"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp"
+        data-srcset="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp, https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp 2x"
+        data-sizes="auto"
+        alt="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp"
+        title="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/RadishKin" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://t.me/radishcloud" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="https://weibo.com/1910759497" title="微博" target="_blank" rel="noopener noreffer me"><i class="fab fa-weibo fa-fw"></i></a><a href="https://space.bilibili.com/5710210" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/bilibili.min.svg"></i></a><a href="mailto:1979646055@qq.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/en/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div><h3 class="home-disclaimer">这是一份免责声明</h3></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/en/posts/blog/testblog/">test blog</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/en/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Author</a></span>&nbsp;<span class="post-publish">published on <time datetime="2018-05-28">2018-05-28</time></span></div><div class="content">testblog</div><div class="post-footer">
+        <a href="/en/posts/blog/testblog/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/en/posts/testblog/">What to eat for lunch</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/en/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Author</a></span>&nbsp;<span class="post-publish">published on <time datetime="2018-05-28">2018-05-28</time></span></div><div class="content">Translated by deepl
+ This fact means a lot to me, and I believe it means something to the world as well. We have to face a very awkward fact, that is, Da Vinci said in an offhand way that boldness and firm determination can be worth the fineness of weapons. I hope that you will also appreciate this statement. To sum up, personally, what I eat for lunch means a lot to me. I have also been thinking about this issue in every day and night. Generally speaking, we must be sure to consider it carefully. What is the key to the problem? In life, if what is eaten at noon appears, we have to consider the fact that it appears. How does the occurrence of what is eaten at noon need to be done, and how does the occurrence of what is not eaten at noon arise. What is the key to the problem. Now, it is very, very important to solve the problem of what to eat at noon. So, Shakespeare said philosophically, &ldquo;A man&rsquo;s life is short, but it is too long if he lives it vilely.</div><div class="post-footer">
+        <a href="/en/posts/testblog/">Read More</a></div>
+</article></div></div>
+            </main><footer class="footer">
+        <div class="footer-container">
             
-            <div class="markdown has-text-centered">
-                
-<h3 id="radish-cloud-services" class="anchor-link"><a href="#radish-cloud-services">Radish Cloud Services</a></h3>
-<p>sci-hub service：<a href="https://sci.radish.cloud"><strong>https://sci.radish.cloud</strong></a> 🎯now is closed</p>
-<p>rsshub service：<a href="https://rss.radish.cloud"><strong>https://rss.radish.cloud</strong></a></p>
-<p>github download acceleration;：<a href="https://github.radish.cloud"><strong>https://github.radish.cloud</strong></a></p>
-<p>website online proxy（jsproxy）：<a href="https://jsproxy.radish.cloud"><strong>https://jsproxy.radish.cloud</strong></a></p>
-<p>utterances commnent：<a href="https://https://utterances.radish.cloud/"><strong>https://https://utterances.radish.cloud/</strong></a></br>
-（If anyone need this service,please email me open the Github app install privilege）</p>
-<p><a href="/en/links/"><strong>view more</strong></a></p>
 
-            </div>
             
+
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/en/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line">Deployed on <b><a href="//pages.github.com">GIthub Pages</a></b>，Network Turbo powered by <b><a href="//cloudflare.com">Cloudflare</b></b></div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div></br>
         </div>
-        
-        <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
+    </footer></div>
 
-    </div>
-    <div class="container">
-        <hr>
-    </div>
-    
-    
-    
-    
-    
-    
-    <div class="section" id="contact">
-        <div class="container has-text-centered">
-            <h2 class="title is-2">contact</h2>
-            <div class="markdown">
-                <p>if you wanna reach me,please use the <a href="https://t.me/radishcloud"><strong>telegram messages</strong></a> or email me</p>
-
-            </div>
-            
-            <p>My current local time is <span id="time"></span>.</p>
-            
-            
-            <h3 class="subtitle is-3 has-text-centered top-pad">
-                <a href="mailto:mx@radish.cloud">mx@radish.cloud</a>
-            </h3>
-            
-            <div class="social-icons">
-    
-    <a href="https://twitter.com/menxin74" >
-        <i class="fab fab fa-twitter"></i>
-    </a>
-    
-    <a href="https://t.me/radishcloud" >
-        <i class="fab fab fa-telegram"></i>
-    </a>
-    
-    <a href="https://github.com/RadishKin" >
-        <i class="fab fab fa-github"></i>
-    </a>
-    
-    <a href="https://weibo.com/1910759497" >
-        <i class="fab fab fa-weibo"></i>
-    </a>
-    
-    <a href="https://discord.gg/z3nEreaJvk" rel="me">
-        <i class="fab fab fa-discord"></i>
-    </a>
-    
-</div>
-
-        </div>
-        
-        <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-    </div>
-    <div class="container">
-        <hr>
-    </div>
-    
-    
-    
-
-    <div class="section" id="footer">
-    <div class="container has-text-centered">
-    
-        <span class="footer-text">
-            © 2017-2021 RadishKin | Inner Mongolia-ICP prepared No.14003205-2 |licensed by <a href="https://creativecommons.org/licenses/by-sa/4.0/"><strong>CC BY-SA 4.0</strong></a> </br>Deployed on <a href="https://pages.github.com/"><strong>GIthub Pages</strong></a>，Network Turbo powered by <a href="cloudflare.com"><strong>Cloudflare</strong></a></br><a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
-        </span>
-    
-    </div>
-</div>
-
-
-    
-    
-
-
-<script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
-
-
-<script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-
-<script>
-    const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    audio: [{
-        name: 'Hopeful Dreamer (合唱版)',
-        artist: '嘉然Diana,中国绊爱',
-        url: 'https://outin-e38e2ec2c6d211ebb0a800163e1a625e.oss-cn-shanghai.aliyuncs.com/916cc8a9a53347f196f7161546549555/324e461e91614a1db040e5608df78716.m3u8?Expires=1622993793&OSSAccessKeyId=LTAI4FfD63zoqnm6ckiBFfXZ&Signature=bjXSX6%2Bu7acw94Tkt%2B00bRTSCk0%3D',
-        cover: 'cover.jpg',
-        type: 'hls'
-    }]
-});
-</script>
-
-<meting-js 
-	server="netease" 
-	type="playlist" 
-	id="148590607"
-	fixed="true" 
-	autoplay="false"
-	loop="all"
-	order="random"
-	list-folded="ture"
-	mutex="true">
-</meting-js>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body, {
-              delimiters: [
-                  {left: "$$", right: "$$", display: true},
-                  {left: "$", right: "$", display: false}
-              ]
-          });
-    });
-</script>
-
-
-
-
-
-
-    <script src="https://radish.cloud/foo.min.js" integrity=""></script>
-
-    
-
-
-<script src="https://radish.cloud/js/bundleOwlCarousel.a1da0d27fc716aeae4fd93be0fc0e4d1f34d3404b8e05b75727466e54f69493e.js" integrity=""></script>
-
-
-    
-    <script>
-
-        function update_localtime() {
-            const time = new Date().toLocaleTimeString('zh-CN', { timeZone: 'Asia\/Shanghai', timeStyle: 'short' });
-            document.getElementById('time').innerHTML = time;
-        }
-        update_localtime();
-        
-        setInterval(update_localtime, 1000);
-    </script>
-    
-</body>
-
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-1":"这是我的全新 Hugo 网站"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"id-1":["id-1"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

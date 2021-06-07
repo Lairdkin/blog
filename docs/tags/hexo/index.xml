@@ -1,42 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hexo on 无名博客</title>
-    <link>https://radish.cloud/tags/hexo/</link>
-    <description>Recent content in Hexo on 无名博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hexo博客搭建</title>
-      <link>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
-      <description>最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333
-fetch(&#34;https://demo.radishkin.workers.dev/api/set?url=&#34;+window.btoa(location.href)).then(res={console.log(res)})环境  服务器：阿里云学生机 轻量级应用服务器
-  服务器系统：Ubuntu16.04
-阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂
-  本地系统：Manjaro 18.0 Illyria
-  部署Hexo生成的是纯静态页面，所以部署只需将hexo生成的public目录放置在 nginx 站点目录下就可以
-Hexo 安装安装Hexo 前确保系统有以下软件：
- Node.js Git  因为Ubuntu源中提供的nodejs版本非常老，所以我们使用官网提供的一个安装方式来安装nodejs
-1# Using Ubuntu 2curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash - 3sudo apt-get install -y nodejs 4 5# Using Debian, as root 6curl -sL https://deb.nodesource.com/setup_11.x | bash - 7apt-get install -y nodejs 这个脚本会自动识别系统版本并添加ppa源
-然后
-1# 安装git 2sudo apt install git 因为我们是在服务器端调用hexo生成静态页面，所以本地只需要安装git就可以
-1# manjaro 安装git 2sudo pacman -S git 3# 也可以在本地安装nodejs，方便调试 4sudo pacman -S nodejs 然后安装hexo
-1 npm install -g hexo-cli 测试一下
-1hexo -v 输出
-1hexo-cli: 1.1.0 2os: Linux 4.19.1-1-MANJARO linux x64 3http_parser: 2.8.1 4node: 11.1.0 5v8: 7.0.276.32-node.7 6uv: 1.23.2 7zlib: 1.2.11 8ares: 1.15.0 9modules: 67 10nghttp2: 1.34.0 11napi: 3 12openssl: 1.1.1 13icu: 63.1 14unicode: 11.0 15cldr: 34.0 16tz: 2018e 17 Hexo 安装完毕
-Hexo新建站点和基本配置选择一个存放站点文件的目录，执行
-1hexo init “站点名” hexo会在当前目录下新建一个站点文件夹，cd进站点文件夹，执行
-1npm install 执行完成后，生成目录如下
-1$ tree blog 2blog 3├── _config.yml 4├── db.json 5├── node_modules 6├── package.json 7├── package-lock.json 8├── scaffolds 9├── source 10└── themes 其中_config.yml是整个站点的配置文件，source是存放文章来源的md文件的，package.json存放了站点的依赖，theme是主题文件
-在站点文件夹内，使用
-1hexo g 生成静态文件，静态文件存放在该目录的public/下
-然后编辑_config.yml
-1 2# 站点基本信息 3title: #站点名称 4subtitle: #子标题 5description: 6keywords: 7author: 8language: zh-cn #语言设置为简体中文 9timezone: 10 11# 站点链接配置 12url: http://ljmx.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hexo - 标签 - 萝卜炖鱼丸</title>
+        <link>https://radish.cloud/tags/hexo/</link>
+        <description>Hexo - 标签 - 萝卜炖鱼丸</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 28 May 2018 01:56:47 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/tags/hexo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hexo博客搭建</title>
+    <link>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+    <description><![CDATA[最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地系统：]]></description>
+</item></channel>
 </rss>

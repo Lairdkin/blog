@@ -1,669 +1,134 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
+    <head>
 	<meta name="generator" content="Hugo 0.83.1" />
-    <script>
-
-        if (navigator.userAgent.indexOf("Google") == -1 || navigator.userAgent.indexOf("Baidu") == -1) {
-            if (document.cookie.indexOf("history=1") == -1) {
-                console.log("是第一次访问捏，我记下了捏")
-                currentLang = navigator.language;
-                if (!currentLang) {
-                    currentLang = navigator.browserLanguage;
-                }
-                if (currentLang.indexOf("zh") == -1) {
-                    console.log("说英文捏，给你看这个")
-                    if (window.location.href.indexOf("en") == -1) {
-                        window.location.href = "/en";
-                    }
-
-                } else {
-                    console.log("说中文捏，给你看这个")
-                }
-                var t = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
-                document.cookie = "history=1; expires=" + t.toGMTString() + ";path=/";
-            }
-        }
-
-
-    </script>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<meta name="description" content="站点描述">
-<title>
-无名博客
-</title>
-
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="无名博客" />
-
-    
-    <meta property="og:title" content="无名博客" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>萝卜炖鱼丸</title><meta name="Description" content=""><meta property="og:title" content="萝卜炖鱼丸" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:description" content="站点描述"/>
-<meta property="og:url" content="https://radish.cloud/"/>
-<meta property="og:site_name" content="无名博客"/>
+<meta property="og:url" content="https://radish.cloud/" /><meta property="og:site_name" content="萝卜炖鱼丸" />
 
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="萝卜炖鱼丸"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="RadishCloud">
+<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="萝卜炖鱼丸">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="萝卜炖鱼丸"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https:\/\/radish.cloud\/","inLanguage": "zh-CN","name": "萝卜炖鱼丸"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-
-
-<meta property="og:image" content="https://radish.cloud/home/mx.jpg"/>
-
-
-
-
-    
-<link rel="shortcut icon" href="/img/fav.ico">
-
-
-    
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.20f701138a49cf7971fe80b1829416789fa588f156b3a6c8c1a09fa03d89a991.css" integrity="sha256-IPcBE4pJz3lx/oCxgpQWeJ&#43;liPFWs6bIwaCfoD2JqZE="
-    crossorigin="anonymous" media="screen">
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/foo.css" integrity="" crossorigin="anonymous"
-    media="screen">
-    
-
-
-<link rel="stylesheet" href="https://radish.cloud/styles/owlCarousel.min.fb3b2db7ac73c4ba8d021450bcf5556ff7385dfd0c1ee5fb4a69c75f41f2fd29.css" integrity="" crossorigin="anonymous" media="screen">
-
-
-
-</head>
-
-<body>
-    
-    <section id="top" class="hero is-fullheight">
-        
-        <div class="hero-head"></div>
-
-        
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                
-                <h1
-                    class="bold-title fade-in one">
-                    无名博客
-                </h1>
-                <div
-                    class="subtitle is-3 fade-in two">
-                    <p>Anonymous blog </br></p>
-<p>匿名<ruby><rb>ブログ</rb><rt>blog</rt><rp>(blog)</rp></ruby></p>
-
-                </div>
-                
-                
-                <div
-                    class="fade-in three">
-                    <div class="social-icons">
-    
-    <a href="https://twitter.com/menxin74" >
-        <i class="fab fab fa-twitter"></i>
-    </a>
-    
-    <a href="https://t.me/radishcloud" >
-        <i class="fab fab fa-telegram"></i>
-    </a>
-    
-    <a href="https://github.com/RadishKin" >
-        <i class="fab fab fa-github"></i>
-    </a>
-    
-    <a href="https://weibo.com/1910759497" >
-        <i class="fab fab fa-weibo"></i>
-    </a>
-    
-    <a href="https://discord.gg/z3nEreaJvk" rel="me">
-        <i class="fab fab fa-discord"></i>
-    </a>
-    
-</div>
-
-                </div>
-                
-            </div>
-        </div> 
-        
-
-        <div
-            class="hero-foot fade-in three">
-            
-            
-<div class="container">
-    <hr>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <div class="navbar-menu has-content-centered" id="navMenu">
-            
-            
-            
-            
-
-            
-            
-
-            
-                
-            
-
-            
-                
-            
-
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#about">关于我</a>
-            
-            
-            
-            
-            
-                
-                
-                <a class="navbar-item" href="/#%E9%A1%B9%E7%9B%AE">项目</a>
-                
-            
-            
-            
-            
-            
-                
-                
-                <a class="navbar-item" href="/#%E5%8D%9A%E5%AE%A2">博客</a>
-                
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#links">友情链接</a>
-            
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="#contact">联系我</a>
-            
-            
-
-            
-            
-            
-            
-            <a class="navbar-item" href="https://radish.cloud/en/">English</a>
-            
-            
-
-            
-            <a class="navbar-item" href="https://radish.cloud/index.xml"><i class="fas fa-rss"></i></a>
-            
-            
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="萝卜炖鱼丸">萝卜炖鱼丸</a>
         </div>
-    </nav>
-    <hr>
-</div>
-
-
-        </div>
-    </section> 
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-    <div class="section" id="about">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">关于我</h2>
-            
-            <div class="columns">
-                <div class="column is-one-third has-text-centered">
-                    
-                    
-                    <img class="img-responsive avatar" src="https://radish.cloud/home/mx_huc546f8f16f355bf52265970939deabd1_22173_320x0_resize_q75_box.jpg" alt="mx.jpg">
-                    
-                    
-                </div>
-                <div class="markdown column">
-                    
-<h3 id="萝卜炖鱼丸" class="anchor-link"><a href="#%e8%90%9d%e5%8d%9c%e7%82%96%e9%b1%bc%e4%b8%b8">萝卜炖鱼丸</a></h3>
-<p>本科生，专业信息管理与信息系统，目前方向：Java后端开发</p>
-<ul>
-<li>
-<p>常用名：心灵炼金师，萝卜炖鱼丸，menxin 都是我</p>
-</li>
-<li>
-<p>代码写的还行选手，前ACM队员，但是没什么拿得出手的奖</p>
-</li>
-<li>
-<p>常用语言：Java，Python，JavaScript</p>
-</li>
-<li>
-<p>常驻以下两个游戏</p>
-<ul>
-<li>最终幻想14 国服-海猫茶屋-猫小胖 id：萝卜炖鱼丸</li>
-<li>明日方舟 官服 id：萝卜炖鱼丸</li>
-</ul>
-</li>
-</ul>
-
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-    </div>
-    <div class="container">
-        <hr>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-<div class="section" id="%E9%A1%B9%E7%9B%AE">
-    
-    <div class="container">
-        <h2 class="title is-2 has-text-centered">
-            项目
-        </h2>
-        <div class="section">
-            <div class="columns is-multiline">
-                
-                
-                
-                
-                
-                
-                <div class="column is-one-third">
-                    <div class="card" data-target="#project-0">
-                        
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <a >
-                                    
-                                    
-                                    
-                                    <img class="card-thumbnail" src="https://radish.cloud/projects/demoproject/jobs1_hu7f259f17f6cc9200c51579989ecc213c_136681_302x0_resize_box_2.png" alt ="jobs1.png">
-                                    
-                                    
-                                </a>
-                            </figure>
-                        </div>
-                        
-                        <div class="card-content has-text-centered top-pad">
-                            <h1><a >
-                                在线招聘系统
-                            </a></h1>
-                            
-                        </div>
-                    </div>
-                </div>
-                
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/links/"> 友情链接 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected>简体中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
             </div>
         </div>
-        
     </div>
-    
-    
-    
-    
-    <div class="modal" id="project-0">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            
-            <header class="modal-card-header bottom-pad">
-                <h1 class="modal-card-title has-text-centered">在线招聘系统</h1>
-            </header>
-            
-            
-            
-            
-            
-            <div class="owl-carousel owl-theme">
-            
-                
-                    
-                    
-                    <div class="item owl-height">
-                    
-                        <img src="https://radish.cloud/projects/demoproject/jobs1_hu7f259f17f6cc9200c51579989ecc213c_136681_640x0_resize_box_2.png" class="img-responsive" alt="jobs1.png">
-                    
-                    </div>
-                    
-                
-                    
-                    
-                    <div class="item owl-height">
-                    
-                        <img src="https://radish.cloud/projects/demoproject/jobs2_hu37d8b599cc526db90373ba59ff37f894_89033_640x0_resize_box_2.png" class="img-responsive" alt="jobs2.png">
-                    
-                    </div>
-                    
-                
-            
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="萝卜炖鱼丸">萝卜炖鱼丸</a>
             </div>
-            
-            
-
-            
-            <section class="modal-card-body markdown">
-                <p>该项目为博主毕业设计项目，项目已开源</p>
-<p>代码开源于：<a href="https://gitee.com/anhlaidh/prs"><strong>点击查看代码</strong></a></p>
-<p>该系统设计了一个面向 IT 领域的线上招聘网站，目标客户为企业所定义的校招生群体。系统使用业界成熟的分布式微服务架构，将庞大臃肿的单实例项目以能为模块进行拆分，拆分后模块耦合度低，复用性好，对单个模块可以灵活的进行拓展。架构还支持了服务治理，持续集成等技术，提高了系统的稳定性。</p>
-<p>系统包括了常见的岗位管理，简历管理，职位投递等功能，还提供了模拟笔试，供应聘者学习的专栏模块，为求职者提高招聘备考效率，为求职者和企业提供双向的招聘解决方案</p>
-
-            </section>
-            
-        </div>
-        <button class="modal-close is-large" aria-label="close" data-target="#project-0"></button>
-    </div>
-    
-    
-    <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-</div>
-
-<div class="container"><hr></div>
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-<div class="section" id="%E5%8D%9A%E5%AE%A2">
-    
-    <div class="container">
-        
-        <h2 class="title is-2 has-text-centered">最新文章</h2>
-            
-            <div class="summary">Jun 5, 2021
-                <h3 class="title is-3 latest-post-title"><a href="https://radish.cloud/blog/markdown-extend/">Hugo Markdown 功能拓展</a></h3>
-                    <div class="markdown">
-                    <p>本文用于演示本站的对hugo写作功能的拓展以及实现</p>
-                    
-                    <a href="https://radish.cloud/blog/markdown-extend/">阅读全文</a>
-                    
-                    </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
             </div>
-            
-        
-    </div>
-</div>
-    
-        <div class="container has-text-centered top-pad">
-            <a href="https://radish.cloud/blog/">所有文章</a>
         </div>
-    
-
-
-<div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
 </div>
-
-
-
-<div class="container"><hr></div>
-
-
-    
-    
-    
-    
-    
-    
-    
-
-    
-    <div class="section" id="links">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">友情链接</h2>
-            
-            <div class="markdown has-text-centered">
-                
-<h3 id="萝卜云服务" class="anchor-link"><a href="#%e8%90%9d%e5%8d%9c%e4%ba%91%e6%9c%8d%e5%8a%a1">萝卜云服务</a></h3>
-<p>sci-hub服务：<a href="https://sci.radish.cloud"><strong>https://sci.radish.cloud</strong></a> 🎯该服务暂不可用</p>
-<p>rsshub服务：<a href="https://rss.radish.cloud"><strong>https://rss.radish.cloud</strong></a> 部分接口限速</p>
-<p>github下载加速服务：<a href="https://github.radish.cloud"><strong>https://github.radish.cloud</strong></a></p>
-<p>网页代理服务（jsproxy）：<a href="https://jsproxy.radish.cloud"><strong>https://jsproxy.radish.cloud</strong></a></p>
-<p>utterances评论：<a href="https://https://utterances.radish.cloud/"><strong>https://https://utterances.radish.cloud/</strong></a></br>
-（本站使用的评论服务 如需使用可以联系博主开通github app 安装权限）</p>
-<div class="container has-text-centered top-pad">
-    <a href="/links/">查看更多友情链接</a>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
 </div>
-
-            </div>
+<main class="main">
+                <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp"
+        data-srcset="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp, https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp 2x"
+        data-sizes="auto"
+        alt="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp"
+        title="https://www.gravatar.com/avatar/a197ee9af986201f1482413a5f37f54a?s=240&amp;d=mp" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/RadishKin" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://t.me/radishcloud" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="https://weibo.com/1910759497" title="微博" target="_blank" rel="noopener noreffer me"><i class="fab fa-weibo fa-fw"></i></a><a href="https://space.bilibili.com/5710210" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="/svg/icons/bilibili.min.svg"></i></a><a href="mailto:1979646055@qq.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div><h3 class="home-disclaimer">这是一份免责声明</h3></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/blog-rebirth-record/">博客重生小记</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2021-05-30">2021-05-30</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%BF%97/"><i class="far fa-folder fa-fw"></i>日志</a></span></div><div class="content"><p>2018年的夏天，我坚持了仅仅两个月的<a href="/blog/%e5%8d%9a%e5%ae%a2%e6%90%ad%e5%bb%ba/" rel=""><strong>博客</strong></a>，因为服务器到期关停了。当初的我还设定了一天一篇博客的“伟大”目标。然而直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我时常想把这个博客重新办起来，最终也因为各种原因一直也没有付诸于实践。
+最近我有了一点宽裕的时间，为了督促自己学习，我决定复活我的博客。</p></div><div class="post-footer">
+        <a href="/posts/blog-rebirth-record/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/">前端技术</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/">[转载]POJO,JAVABEAN,Entity区别</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-28">2018-05-28</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div><div class="content">转载自 ： {% blockquote 哎呦AU的博客 https://www.cnblogs.com/aurum324/p/8167996.html POJO,JAVABEAN,Entity区别 %} {% endblockquote %} 1、javaBean javaBean是一种Java语言写成的可重用组件。为写成JavaBean，类必须是具体和公共的，并且具有无参数的构造器。JavaBean通过提供符合一致性设计模式的公共方法将内部域暴露成员属性。更多的是一种规范，即包含一组set和get方法的java对象。j</div><div class="post-footer">
+        <a href="/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/javaee/">JavaEE</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/">[转载]常用jdb_curl格式</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-28">2018-05-28</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div><div class="content">转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %} 一 常用数据库 JDBC URL 格式 1 sqLite 驱动程序包名：sqlitejdbc-v056.jar 驱动程序类名: org.sqlite.JDBC JDBC URL: jdbc:sqlite:c:\*.db 默认端口 无 2 Microsoft SQL Server Microsoft SQL Server JDBC Driver 驱动程序包名：msbase.jar mssqlserver.jar msutil.jar 驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver JDBC URL: jdbc:microsoft:sqlserver://&lt;server_name&gt;:&lt;port&gt; 默认端口1433，如果服务器使用默认端口则port可以省略 3 Oracle Oracle Thin JDBC Driver 驱动程序包名：ojdbc14.jar 驱动程序类名:</div><div class="post-footer">
+        <a href="/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/jdbc/">JDBC</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">Docker入门笔记（一）</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-28">2018-05-28</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div><div class="content">如今，如果你作为一个开发者而不知道容器化技术，那你可能要反思一下自己了，作为计算机领域发展最快最热门的技术之一，容器成为了现代互联网服务架构的基石。 2013年DotCloud发布了容器服务Docker，并在2015年发布了其第一个正式版本，同年国内的Daocloud和灵雀云等公司开始提供基于docker的云服务业务，正是在此机会下我有幸接触了当时还非常先进的</div><div class="post-footer">
+        <a href="/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">docker</a>,&nbsp;<a href="/tags/java/">java</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hexo博客搭建</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-28">2018-05-28</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div><div class="content">最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地系统：</div><div class="post-footer">
+        <a href="/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hexo/">Hexo</a>,&nbsp;<a href="/tags/nodejs/">nodejs</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">Springboot快速上手</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2018-05-28">2018-05-28</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div><div class="content">Springboot是由spring开发团队Pivotal推出的全新框架，他设计目的简化繁琐的Spring配置,专注于应用的开发。SpringBoot采用了&quot;约定优先于配置（COC，Convnetion Over Configuration）&ldquo;的设计思想，通过为企业开发应用环境设计出了很多自动配置的依赖模块,这些模块几乎不需要配置，开箱即用，极大</div><div class="post-footer">
+        <a href="/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">阅读全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/springboot/">Springboot</a></div></div>
+</article><ul class="pagination"><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/2/">2</a>
+                    </span>
+                </li></ul></div></div>
+            </main><footer class="footer">
+        <div class="footer-container">
             
+
+            
+
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://beian.miit.gov.cn/'>蒙ICP备14003205号</a></span></div><div class="footer-line">站点部署于<b><a href="//pages.github.com">GIthub Pages</a></b>，由<b><a href="//cloudflare.com">Cloudflare</b></b>提供加速</div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div></br>
         </div>
-        
-        <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
+    </footer></div>
 
-    </div>
-    <div class="container">
-        <hr>
-    </div>
-    
-    
-    
-    
-    
-    
-    <div class="section" id="contact">
-        <div class="container has-text-centered">
-            <h2 class="title is-2">联系我</h2>
-            <div class="markdown">
-                <p>联络请优先通过<a href="https://t.me/radishcloud"><strong>Telegram</strong></a> 或者 邮箱联系，其他途径随缘</p>
-
-            </div>
-            
-            <p>我的本地时间是 <span id="time"></span>.</p>
-            
-            
-            <h3 class="subtitle is-3 has-text-centered top-pad">
-                <a href="mailto:mx@radish.cloud">mx@radish.cloud</a>
-            </h3>
-            
-            <div class="social-icons">
-    
-    <a href="https://twitter.com/menxin74" >
-        <i class="fab fab fa-twitter"></i>
-    </a>
-    
-    <a href="https://t.me/radishcloud" >
-        <i class="fab fab fa-telegram"></i>
-    </a>
-    
-    <a href="https://github.com/RadishKin" >
-        <i class="fab fab fa-github"></i>
-    </a>
-    
-    <a href="https://weibo.com/1910759497" >
-        <i class="fab fab fa-weibo"></i>
-    </a>
-    
-    <a href="https://discord.gg/z3nEreaJvk" rel="me">
-        <i class="fab fab fa-discord"></i>
-    </a>
-    
-</div>
-
-        </div>
-        
-        <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-    </div>
-    <div class="container">
-        <hr>
-    </div>
-    
-    
-    
-
-    <div class="section" id="footer">
-    <div class="container has-text-centered">
-    
-        <span class="footer-text">
-            © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh"><strong>CC BY-SA 4.0</strong></a> 许可</br> 站点部署于<a href="https://pages.github.com/"><strong>GIthub Pages</strong></a>，由<a href="cloudflare.com"><strong>Cloudflare</strong></a>提供加速</br> <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> 主题为 <a href="http://gohugo.io/">Hugo</a> 而设。由开源社群贡献者以 <a href="https://victoria.dev"><i class="fa fa-heart"></i> 和 <i class="fa fa-coffee"></i></a> 创造。
-        </span>
-    
-    </div>
-</div>
-
-
-    
-    
-
-
-<script src="https://radish.cloud/js/bundle.f6c977229f84ae8df89c8647befcf3a170b8157f180a3f0afa4620b19a336994.js" integrity=""></script>
-
-
-<script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-
-<script>
-    const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    audio: [{
-        name: 'Hopeful Dreamer (合唱版)',
-        artist: '嘉然Diana,中国绊爱',
-        url: 'https://outin-e38e2ec2c6d211ebb0a800163e1a625e.oss-cn-shanghai.aliyuncs.com/916cc8a9a53347f196f7161546549555/324e461e91614a1db040e5608df78716.m3u8?Expires=1622993793&OSSAccessKeyId=LTAI4FfD63zoqnm6ckiBFfXZ&Signature=bjXSX6%2Bu7acw94Tkt%2B00bRTSCk0%3D',
-        cover: 'cover.jpg',
-        type: 'hls'
-    }]
-});
-</script>
-
-<meting-js 
-	server="netease" 
-	type="playlist" 
-	id="148590607"
-	fixed="true" 
-	autoplay="false"
-	loop="all"
-	order="random"
-	list-folded="ture"
-	mutex="true">
-</meting-js>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      renderMathInElement(document.body, {
-              delimiters: [
-                  {left: "$$", right: "$$", display: true},
-                  {left: "$", right: "$", display: false}
-              ]
-          });
-    });
-</script>
-
-
-
-
-
-
-    <script src="https://radish.cloud/foo.min.js" integrity=""></script>
-
-    
-
-
-<script src="https://radish.cloud/js/bundleOwlCarousel.a1da0d27fc716aeae4fd93be0fc0e4d1f34d3404b8e05b75727466e54f69493e.js" integrity=""></script>
-
-
-    
-    <script>
-
-        function update_localtime() {
-            const time = new Date().toLocaleTimeString('zh-CN', { timeZone: 'Asia\/Shanghai', timeStyle: 'short' });
-            document.getElementById('time').innerHTML = time;
-        }
-        update_localtime();
-        
-        setInterval(update_localtime, 1000);
-    </script>
-    
-</body>
-
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"data":{"id-1":"这是我的全新 Hugo 网站"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"id-1":["id-1"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -1,48 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>JDBC on 无名博客</title>
-    <link>https://radish.cloud/tags/jdbc/</link>
-    <description>Recent content in JDBC on 无名博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 28 May 2018 01:56:47 +0800</lastBuildDate><atom:link href="https://radish.cloud/tags/jdbc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[转载]常用jdb_curl格式</title>
-      <link>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
-      <pubDate>Mon, 28 May 2018 01:56:47 +0800</pubDate>
-      
-      <guid>https://radish.cloud/blog/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
-      <description>转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %}
-一 常用数据库 JDBC URL 格式1 sqLite驱动程序包名：sqlitejdbc-v056.jar
-驱动程序类名: org.sqlite.JDBC
-JDBC URL: jdbc:sqlite:c:\*.db
-默认端口 无
-2 Microsoft SQL ServerMicrosoft SQL Server JDBC Driver
-驱动程序包名：msbase.jar mssqlserver.jar msutil.jar
-驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver
-JDBC URL: jdbc:microsoft:sqlserver://&amp;lt;server_name&amp;gt;:&amp;lt;port&amp;gt;
-默认端口1433，如果服务器使用默认端口则port可以省略
-3 OracleOracle Thin JDBC Driver
-驱动程序包名：ojdbc14.jar
-驱动程序类名: oracle.jdbc.driver.OracleDriver
-JDBC URL:
-jdbc:oracle:thin:@//&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/ServiceName 或
-jdbc:oracle:thin:@&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;:&amp;lt;SID&amp;gt;
-4 IBM DB2IBM DB2 Universal Driver Type 4
-驱动程序包名：db2jcc.jar db2jcc_license_cu.jar
-驱动程序类名: com.ibm.db2.jcc.DB2Driver
-JDBC URL: jdbc:db2://&amp;lt;host&amp;gt;[:&amp;lt;port&amp;gt;]/&amp;lt;database_name&amp;gt;
-5 MySQLMySQL Connector/J Driver
-驱动程序包名：mysql-connector-java-x.x.xx-bin.jar
-驱动程序类名: com.mysql.jdbc.Driver
-JDBC URL: jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;
-默认端口3306，如果服务器使用默认端口则port可以省略
- MySQL Connector/J Driver 允许在URL中添加额外的连接属性
- 1jdbc:mysql://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database_name&amp;gt;?property1=value1&amp;amp;property2=value2  注意： 需要操作记录为了避免乱码应该加上属性 useUnicode=true&amp;amp;characterEncoding=utf8 ，比如
- 1jdbc:mysql://192.168.177.129:3306/report?useUnicode=true&amp;amp;characterEncoding=utf8 二 Hibernate 中数据库的方言1 Oracle 方言1org.hibernate.dialect.OracleDialect 2 MySQL方言1org.hibernate.dialect.MySQLDialect 3 SQLServer方言
-1org.hibernate.dialect.SQLServerDialect </description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JDBC - 标签 - 萝卜炖鱼丸</title>
+        <link>https://radish.cloud/tags/jdbc/</link>
+        <description>JDBC - 标签 - 萝卜炖鱼丸</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 28 May 2018 01:56:47 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/tags/jdbc/" rel="self" type="application/rss+xml" /><item>
+    <title>[转载]常用jdb_curl格式</title>
+    <link>https://radish.cloud/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</link>
+    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/</guid>
+    <description><![CDATA[转载自 ： {% blockquote 落落无伤的博客 https://www.cnblogs.com/qianqian528/p/8032098.html 常用数据库 JDBC URL 格式 %} {% endblockquote %} 一 常用数据库 JDBC URL 格式 1 sqLite 驱动程序包名：sqlitejdbc-v056.jar 驱动程序类名: org.sqlite.JDBC JDBC URL: jdbc:sqlite:c:\*.db 默认端口 无 2 Microsoft SQL Server Microsoft SQL Server JDBC Driver 驱动程序包名：msbase.jar mssqlserver.jar msutil.jar 驱动程序类名: com.microsoft.jdbc.sqlserver.SQLServerDriver JDBC URL: jdbc:microsoft:sqlserver://&lt;server_name&gt;:&lt;port&gt; 默认端口1433，如果服务器使用默认端口则port可以省略 3 Oracle Oracle Thin JDBC Driver 驱动程序包名：ojdbc14.jar 驱动程序类名:]]></description>
+</item></channel>
 </rss>
