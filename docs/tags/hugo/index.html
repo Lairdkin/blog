@@ -233,6 +233,22 @@ Hugo - 无名博客
 
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+<script>
+    const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [{
+        name: 'Hopeful Dreamer (合唱版)',
+        artist: '嘉然Diana,中国绊爱',
+        url: 'https://outin-e38e2ec2c6d211ebb0a800163e1a625e.oss-cn-shanghai.aliyuncs.com/916cc8a9a53347f196f7161546549555/324e461e91614a1db040e5608df78716.m3u8?Expires=1622993793&OSSAccessKeyId=LTAI4FfD63zoqnm6ckiBFfXZ&Signature=bjXSX6%2Bu7acw94Tkt%2B00bRTSCk0%3D',
+        cover: 'cover.jpg',
+        type: 'hls'
+    }]
+});
+</script>
+
 <meting-js 
 	server="netease" 
 	type="playlist" 

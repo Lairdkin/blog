@@ -204,7 +204,7 @@ Hugo Markdown 功能拓展 - 无名博客
       <ul>
         <li><a href="#单曲">单曲：</a></li>
         <li><a href="#歌单">歌单：</a></li>
-        <li><a href="#spotify">Spotify</a></li>
+        <li><a href="#hls流自适应码率">HLS流（自适应码率）</a></li>
       </ul>
     </li>
     <li><a href="#latex">Latex</a></li>
@@ -386,7 +386,10 @@ sequenceDiagram
 
 
 
-<h3 id="spotify" class="anchor-link"><a href="#spotify">Spotify</a></h3>
+<h3 id="hls流自适应码率" class="anchor-link"><a href="#hls%e6%b5%81%e8%87%aa%e9%80%82%e5%ba%94%e7%a0%81%e7%8e%87">HLS流（自适应码率）</a></h3>
+
+<div id="aplayer"></div>
+
 
 <h2 id="latex" class="anchor-link"><a href="#latex">Latex</a></h2>
 <p>行内样式：$x=2$</p>
@@ -469,6 +472,22 @@ $$</p>
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+<script>
+    const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    audio: [{
+        name: 'Hopeful Dreamer (合唱版)',
+        artist: '嘉然Diana,中国绊爱',
+        url: 'https://outin-e38e2ec2c6d211ebb0a800163e1a625e.oss-cn-shanghai.aliyuncs.com/916cc8a9a53347f196f7161546549555/324e461e91614a1db040e5608df78716.m3u8?Expires=1622993793&OSSAccessKeyId=LTAI4FfD63zoqnm6ckiBFfXZ&Signature=bjXSX6%2Bu7acw94Tkt%2B00bRTSCk0%3D',
+        cover: 'cover.jpg',
+        type: 'hls'
+    }]
+});
+</script>
 
 <meting-js 
 	server="netease" 

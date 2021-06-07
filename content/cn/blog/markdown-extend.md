@@ -51,9 +51,9 @@ sequenceDiagram
 
 
 
-### Spotify
+### HLS流（自适应码率）
 
-
+{{<hls>}}
 
 ## Latex
 
