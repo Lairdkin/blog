@@ -194,7 +194,7 @@ theme = "LoveIt"
   [params.cdn]
     # CDN 数据文件名称, 默认不启用
     # ("jsdelivr.yml")
-    data = "jsdelivr.yml"
+    #data = "jsdelivr.yml"
       
       
 
