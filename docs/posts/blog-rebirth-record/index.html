@@ -20,7 +20,7 @@
 <meta name="application-name" content="RadishCloud">
 <meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/posts/blog-rebirth-record/" /><link rel="prev" href="https://radish.cloud/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/posts/blog-rebirth-record/" /><link rel="prev" href="https://radish.cloud/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -29,12 +29,12 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/radish.cloud\/posts\/blog-rebirth-record\/"
-        },"genre": "posts","keywords": "hugo, 前端技术","wordcount":  3977 ,
+        },"genre": "posts","keywords": "hugo, 前端技术","wordcount":  4160 ,
         "url": "https:\/\/radish.cloud\/posts\/blog-rebirth-record\/","datePublished": "2021-05-30T13:16:29+08:00","dateModified": "2021-05-30T13:16:29+08:00","publisher": {
             "@type": "Organization",
-            "name": "作者"},"author": {
+            "name": "萝卜炖鱼丸"},"author": {
                 "@type": "Person",
-                "name": "作者"
+                "name": "萝卜炖鱼丸"
             },"description": ""
     }
     </script></head>
@@ -48,7 +48,18 @@
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/links/"> 友情链接 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/blog-rebirth-record/" selected>简体中文</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -64,7 +75,23 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
                     <select class="language-select" onchange="location = this.value;"><option value="/posts/blog-rebirth-record/" selected>简体中文</option></select>
@@ -82,9 +109,9 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">博客重生小记</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%BF%97/"><i class="far fa-folder fa-fw"></i>日志</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-30">2021-05-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3977 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>萝卜炖鱼丸</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%BF%97/"><i class="far fa-folder fa-fw"></i>日志</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-05-30">2021-05-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4160 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 9 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -95,7 +122,13 @@
     <li><a href="#安装hugo">安装Hugo</a>
       <ul>
         <li><a href="#使用二进制包进行安装">使用二进制包进行安装</a></li>
-        <li><a href="#使用包管理进行安装">使用包管理进行安装</a></li>
+        <li><a href="#使用包管理进行安装">使用包管理进行安装</a>
+          <ul>
+            <li><a href="#mac">Mac</a></li>
+            <li><a href="#linux">Linux</a></li>
+            <li><a href="#windows">Windows</a></li>
+          </ul>
+        </li>
         <li><a href="#使用源代码进行安装">使用源代码进行安装</a></li>
         <li><a href="#新建一个站点">新建一个站点</a></li>
       </ul>
@@ -103,7 +136,11 @@
     <li><a href="#安装introdution主题">安装Introdution主题</a>
       <ul>
         <li><a href="#准备">准备</a></li>
-        <li><a href="#安装主题">安装主题</a></li>
+        <li><a href="#安装主题">安装主题</a>
+          <ul>
+            <li><a href="#配置">配置</a></li>
+          </ul>
+        </li>
         <li><a href="#新建站点文件">新建站点文件</a></li>
         <li><a href="#编译站点">编译站点</a></li>
       </ul>
@@ -127,46 +164,111 @@
 <p>Hugo是使用Go语言实现的,相比使用javascript的Hexo，生成网站的速度确实要快很多，一次执行只需要几百毫秒。Hugo生成的网站是纯静态的，无需任何后端，部署和二次开发都很简单。使用Hugo写博客的工作流程很简单：首先使用markdown进行写作，在本地使用Hugo生成静态的网页，然后上传到任何可以访问的web服务器上就完成了，所以现在开始第一步：在本地安装Hugo。</p>
 <h3 id="使用二进制包进行安装">使用二进制包进行安装</h3>
 <p>根据官方提供的快速指南，最直接的安装方式，就是下载二进制包，在Hugo的Github主页中，可以<a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer"><strong>下载</strong></a>到各种平台(Windows,Linux,Mac )的二进制包，只要解压并在操作系统的环境变量中添加进去，就可以直接使用，使用<code>hugo version</code>指令可以查看hugo的安装情况</p>
-<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">PS </span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">19796</span><span class="p">&gt;</span> <span class="n">hugo</span> <span class="n">version</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">PS </span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">19796</span><span class="p">&gt;</span> <span class="n">hugo</span> <span class="n">version</span>
 <span class="n">hugo</span> <span class="n">v0</span><span class="p">.</span><span class="n">83</span><span class="p">.</span><span class="n">1</span><span class="p">-</span><span class="n">5AFE0A57</span><span class="p">+</span><span class="n">extended</span> <span class="n">windows</span><span class="p">/</span><span class="n">amd64</span> <span class="n">BuildDate</span><span class="p">=</span><span class="n">2021</span><span class="p">-</span><span class="n">05</span><span class="p">-</span><span class="n">02T14</span><span class="err">:</span><span class="n">38</span><span class="err">:</span><span class="n">05Z</span> <span class="n">VendorInfo</span><span class="p">=</span><span class="n">gohugoio</span>
-</code></pre></div><h3 id="使用包管理进行安装">使用包管理进行安装</h3>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="使用包管理进行安装">使用包管理进行安装</h3>
 <p>不过显然，使用包管理工具才是更加优雅便捷的安装方式，下面提供三种系统的安装方式</p>
 <h4 id="mac">Mac</h4>
 <p>Mac的用户直接使用<code>Homebrew</code>或者<code>MacPorts</code>就可以快速进行安装：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">brew install Hugo
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">brew install Hugo
 <span class="c1"># 或者</span>
 port install Hugo
-</code></pre></div><h4 id="linux">Linux</h4>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="linux">Linux</h4>
 <p>Linux用户也可以直接使用Homebrew进行安装，另外部分发行版，如Ubuntu中的软件源，提供hugo 的包，但是版本较老，不推荐使用，并且由于大多数现代主题使用了scss等技术，可能需要安装hugo-extend版本，镜像源中亦没有提供，所以推荐Linux用户使用二进制包或者Homebrew进行安装。</p>
 <h4 id="windows">Windows</h4>
 <p>笔者使用的系统是Windows10，在Windows上也有一些流行的包管理工具中提供了hugo的安装，在这里我们推荐使用<code>scoop</code>进行安装</p>
-<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">scoop</span> <span class="n">install</span> <span class="n">hugo</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">scoop</span> <span class="n">install</span> <span class="n">hugo</span>
 <span class="c"># 或者安装hugo-extend </span>
 <span class="n">scoop</span> <span class="n">install</span> <span class="nb">hugo-extend</span>
-</code></pre></div><p>也可以使用Chocolatey进行安装</p>
-<pre><code class="language-poweshell" data-lang="poweshell">choco install hugo -confirm
+</code></pre></td></tr></table>
+</div>
+</div><p>也可以使用Chocolatey进行安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">choco install hugo -confirm
 # or
 choco install hugo-extend -confirm
-</code></pre><p>最近windows 中自带的包管理winget 终于转正，迎来了1.0版本，不过首批提供的1400个软件中并没有hugo，还是挺遗憾的。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>最近windows 中自带的包管理winget 终于转正，迎来了1.0版本，不过首批提供的1400个软件中并没有hugo，还是挺遗憾的。</p>
 <h3 id="使用源代码进行安装">使用源代码进行安装</h3>
 <p>使用源代码构建需要<a href="https://git-scm.com/" target="_blank" rel="noopener noreffer">Git</a>和 <a href="https://golang.org/dl/" target="_blank" rel="noopener noreffer">Go (版本不低于 Go 1.11)</a>，，然后执行如下脚本就可以进行安装：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">mkdir <span class="nv">$HOME</span>/src
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">mkdir <span class="nv">$HOME</span>/src
 <span class="nb">cd</span> <span class="nv">$HOME</span>/src
 git clone https://github.com/gohugoio/hugo.git
 <span class="nb">cd</span> hugo
 go install --tags extended
-</code></pre></div><p>如果不需要Sass/SCSS等功能，可以去除&ndash;tags extende语句</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果不需要Sass/SCSS等功能，可以去除&ndash;tags extende语句</p>
 <h3 id="新建一个站点">新建一个站点</h3>
 <p>安装完成后，我们就可以新建第一个站点，首先进入你预先设定存放站点文件的目录，执行指令:</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">hugo new site <span class="o">[</span>your site name<span class="o">]</span>
-</code></pre></div><p>执行完成后，hugo会新建一个和站点同名的文件夹。进入目录,，文件结构如下：</p>
-<pre><code>├─archetypes
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">hugo new site <span class="o">[</span>your site name<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>执行完成后，hugo会新建一个和站点同名的文件夹。进入目录,，文件结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">├─archetypes
 ├─content
 ├─data
 ├─layouts
 ├─static
 └─themes
-</code></pre><p>其中<code>content</code>是存放我们写作的文件的地方，<code>static</code>是存放站点相关静态文件的地方，例如图片，样式表等，themes是存放主题的地方，任何一个hugo站点，没有主题是无法完成构建，也就是无法看到效果的，所以我们首先需要安装一个主题。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>其中<code>content</code>是存放我们写作的文件的地方，<code>static</code>是存放站点相关静态文件的地方，例如图片，样式表等，themes是存放主题的地方，任何一个hugo站点，没有主题是无法完成构建，也就是无法看到效果的，所以我们首先需要安装一个主题。</p>
 <h2 id="安装introdution主题">安装Introdution主题</h2>
 <p>进入<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer"> Hugo Themes (gohugo.io)</a>可以查看所有的Hugo主题，选择一个即可。大部分的主题都实现了开箱即用，并且有着完善的教程，经过挑选，我选中了<a href="https://themes.gohugo.io/hugo-theme-introduction/" target="_blank" rel="noopener noreffer">Hugo Theme Introduction )</a>这一款主题，引用主题主页的介绍，该主题有如下优点：</p>
 <ul>
@@ -195,21 +297,170 @@ go install --tags extended
 <p>其中的项目展示功能，优秀的动画系统让，我选择了这个主题，另外该主题还自动适配了黑暗模式，体验很好</p>
 <h3 id="准备">准备</h3>
 <p>安装本主题需要<code>hugo-extend</code>版本，另外需要在系统上全局安装一些npm包用于编译scss</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">npm i -g postcss postcss-cli autoprefixer
-</code></pre></div><p>📌安装完成后，如果执行hugo server运行正常，但是执行构建报如下错误：</p>
-<pre><code>Error: Error building site: POSTCSS: failed to transform &quot;css/main.css&quot; (text/css): resource &quot;sass/sass/style...&quot; not found in file cache
-</code></pre><p>可以参考：<a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483" target="_blank" rel="noopener noreffer">CSS build issues · Issue #210 · victoriadrake/hugo-theme-introduction </a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">npm i -g postcss postcss-cli autoprefixer
+</code></pre></td></tr></table>
+</div>
+</div><p>📌安装完成后，如果执行hugo server运行正常，但是执行构建报如下错误：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Error: Error building site: POSTCSS: failed to transform &#34;css/main.css&#34; (text/css): resource &#34;sass/sass/style...&#34; not found in file cache
+</code></pre></td></tr></table>
+</div>
+</div><p>可以参考：<a href="https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483" target="_blank" rel="noopener noreffer">CSS build issues · Issue #210 · victoriadrake/hugo-theme-introduction </a></p>
 <h3 id="安装主题">安装主题</h3>
 <p>安装完成后可以进入你站点的根目录，安装主题</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction
-</code></pre></div><p>clone完成后，主题安装在站点目录的themes/introduction里，hugo的主题中均包含一个示例站点，在站点目录执行如下指令查看示例站点：</p>
-<pre><code>cd themes/introduction/exampleSite/
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/victoriadrake/hugo-theme-introduction.git themes/introduction
+</code></pre></td></tr></table>
+</div>
+</div><p>clone完成后，主题安装在站点目录的themes/introduction里，hugo的主题中均包含一个示例站点，在站点目录执行如下指令查看示例站点：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd themes/introduction/exampleSite/
 hugo serve  --themesDir ../..
-</code></pre><p>展示站点效果可以查看本站首页</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>展示站点效果可以查看本站首页</p>
 <h4 id="配置">配置</h4>
 <p>修改站点配置可以使用主题所设置的自定义功能，也可以设置站点的信息等，站点配置文件位于<code>config.toml</code>文件中</p>
-<!-- raw HTML omitted -->
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">publishdir</span>                       <span class="p">=</span> <span class="s2">&#34;docs&#34;</span>
+<details><summary>点击查看本站完整的站点配置，关键位置均有注释</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">publishdir</span>                       <span class="p">=</span> <span class="s2">&#34;docs&#34;</span>
 <span class="nx">baseURL</span>                          <span class="p">=</span> <span class="s2">&#34;https://radish.cloud/&#34;</span>   <span class="c"># Your domain name. Must end with &#34;/&#34;</span>
 <span class="nx">theme</span>                            <span class="p">=</span> <span class="s2">&#34;introduction&#34;</span>
 <span class="nx">DefaultContentLanguage</span>           <span class="p">=</span> <span class="s2">&#34;cn&#34;</span>                    <span class="c"># Default language for multilingual sites</span>
@@ -325,9 +576,23 @@ hugo serve  --themesDir ../..
                 <span class="c"># footerText   = &#34;  © 2017-2021 萝卜炖鱼丸 | 蒙ICP备14003205号-2 | CC BY-SA 4.0 许可&#34;</span>
 
     
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></td></tr></table>
+</div>
+</div></details>
 <p>首先应该修改languages，示例站点的默认配置是英语，德语，首先删除不需要的语言，按如下格式配置语言：</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">cn</span><span class="p">]</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">cn</span><span class="p">]</span>
             <span class="nx">languageName</span>     <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
             <span class="nx">languageCode</span>     <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
             <span class="nx">contentDir</span>       <span class="p">=</span> <span class="s2">&#34;content/cn&#34;</span>
@@ -335,14 +600,28 @@ hugo serve  --themesDir ../..
             <span class="nx">title</span>            <span class="p">=</span> <span class="s2">&#34;无名博客&#34;</span>
             <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">cn</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
                 <span class="nx">description</span>  <span class="p">=</span> <span class="s2">&#34;站点描述&#34;</span>
-</code></pre></div><p>其中language 后面的代码，简体中文应该zh-CN，繁体中文为zh-TW，此处笔者为了方便修改了主题默认的国际化文件名称，国际化文件目录<code>themes\introduction\i18n\</code>。使用DefaultContentLanguage  参数可以选择默认显示的站点语言，使用<code>hugo new page</code>新建文章也会优先在该语言文件夹下新建文件。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>其中language 后面的代码，简体中文应该zh-CN，繁体中文为zh-TW，此处笔者为了方便修改了主题默认的国际化文件名称，国际化文件目录<code>themes\introduction\i18n\</code>。使用DefaultContentLanguage  参数可以选择默认显示的站点语言，使用<code>hugo new page</code>新建文章也会优先在该语言文件夹下新建文件。</p>
 <p>语言设置中还有一项<code>footerText</code>参数，在该参数中填入的文本会覆盖站点默认的底部内容，由于没有css，效果较差。建议需要修改footer的直接去对应语言的i18n文件中修改。</p>
 <p>通过修改<code>markup.highlight</code>中 <code>style</code>属性修改代码高亮的风格，但是该主题默认的代码块区域css和大多数风格有冲突，需要修改主题样式，具体修改参见 <a href="#%e4%b8%bb%e9%a2%98%e5%8a%9f%e8%83%bd%e4%bf%ae%e6%94%b9" rel=""><strong>主题功能修改</strong></a> 章节</p>
 <p>其他部分默认配置均根据示例配置文件修改或者保持默认即可</p>
 <h3 id="新建站点文件">新建站点文件</h3>
 <p>主题的首页，是对应语言文件夹中的<code>/home</code>目录,默认的主页需要新建<code>about.md</code>,<code>contact.md</code>,<code>index.md</code>三个文件，分别对应首页的about，contact两个模块，以及最上面的标题部分。</p>
 <p>index.md的<code>tittle</code>属性，为对应站点的名称，正文部分为站点的附标题，示例如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">---
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">---
 title: &#34;无名博客&#34;
 date: 2021-05-28T01:53:59+08:00
 ---
@@ -350,12 +629,21 @@ Anonymous blog <span class="p">&lt;/</span><span class="nt">br</span><span class
 
 匿名<span class="p">&lt;</span><span class="nt">ruby</span><span class="p">&gt;&lt;</span><span class="nt">rb</span><span class="p">&gt;</span>ブログ<span class="p">&lt;/</span><span class="nt">rb</span><span class="p">&gt;&lt;</span><span class="nt">rt</span><span class="p">&gt;</span>blog<span class="p">&lt;/</span><span class="nt">rt</span><span class="p">&gt;&lt;</span><span class="nt">rp</span><span class="p">&gt;</span>(blog)<span class="p">&lt;/</span><span class="nt">rp</span><span class="p">&gt;&lt;/</span><span class="nt">ruby</span><span class="p">&gt;</span>
 
-</code></pre></div><p>contact和index的title属性，是对应板块在导航栏的名称，</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>contact和index的title属性，是对应板块在导航栏的名称，</p>
 <h3 id="编译站点">编译站点</h3>
 <p>修改完成配置后就可以可以编译静态站点了，首先在配置文件中添加<code>publishdi = &quot;docs&quot;</code>配置，编译生成的文件会默认放在站点根目录的/docs目录中，该目录是github pages的默认目录，方便后面部署。</p>
 <p>保存配置文件后执行</p>
-<pre><code>hugo
-</code></pre><p>即可生成站点文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo
+</code></pre></td></tr></table>
+</div>
+</div><p>即可生成站点文件</p>
 <p>其中docs/就是hugo生成的静态站点文件</p>
 <h2 id="部署github-pages和cloudflare">部署github pages和cloudflare</h2>
 <h2 id="为博客添加评论">为博客添加评论</h2>
@@ -373,9 +661,11 @@ Anonymous blog <span class="p">&lt;/</span><span class="nt">br</span><span class
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
-            <div class="post-info-md"></div>
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/blog-rebirth-record/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记" data-hashtags="hugo,前端技术"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记" data-ralateuid="1910759497"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记" data-hashtags="hugo,前端技术"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记" data-ralateuid="1910759497"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://radish.cloud/posts/blog-rebirth-record/" data-title="博客重生小记"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -398,7 +688,7 @@ Anonymous blog <span class="p">&lt;/</span><span class="nt">br</span><span class
 
             
 
-            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">萝卜炖鱼丸</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"><a href='https://beian.miit.gov.cn/'>蒙ICP备14003205号</a></span></div><div class="footer-line">站点部署于<b><a href="//pages.github.com">GIthub Pages</a></b>，由<b><a href="//cloudflare.com">Cloudflare</b></b>提供加速</div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div></br>
         </div>
@@ -409,5 +699,5 @@ Anonymous blog <span class="p">&lt;/</span><span class="nt">br</span><span class
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"blog_comment","lightTheme":"github-light","repo":"Lairdkin/blog"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"blog_comment","lightTheme":"github-light","repo":"Lairdkin/blog"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

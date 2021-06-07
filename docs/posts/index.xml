@@ -3,7 +3,8 @@
         <title>所有博客 - 萝卜炖鱼丸</title>
         <link>https://radish.cloud/posts/</link>
         <description>所有博客 | 萝卜炖鱼丸</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 30 May 2021 13:16:29 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
+            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Sun, 30 May 2021 13:16:29 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
     <title>博客重生小记</title>
     <link>https://radish.cloud/posts/blog-rebirth-record/</link>
     <pubDate>Sun, 30 May 2021 13:16:29 &#43;0800</pubDate>
@@ -38,7 +39,7 @@
     <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
-    <description><![CDATA[最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地系统：]]></description>
+    <description><![CDATA[最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 fetch("https://demo.radishkin.workers.dev/api/set?url="+window.btoa(location.href)).then(res={ console.log(res) }) 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地]]></description>
 </item><item>
     <title>Springboot快速上手</title>
     <link>https://radish.cloud/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>

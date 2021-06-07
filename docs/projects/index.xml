@@ -6,12 +6,14 @@
     <description>Recent content in 项目 on 萝卜炖鱼丸</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
+    <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster>
     <lastBuildDate>Fri, 28 May 2021 01:55:54 +0800</lastBuildDate><atom:link href="https://radish.cloud/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在线招聘系统</title>
       <link>https://radish.cloud/projects/demoproject/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <author>1979646055@qq.com (萝卜炖鱼丸)</author>
       <guid>https://radish.cloud/projects/demoproject/</guid>
       <description>该项目为博主毕业设计项目，项目已开源 代码开源于：点击查看代码 该系统设计了一个面向 IT 领域的线上招聘网站，目标客户为企业所定义的校招生群体。系统使用业界成熟的分布式微服务架构，将庞大臃肿的单实例项目以能为模块进行拆分，拆分后模块耦合度低，复用性好，对单个模块可以灵活的进行拓展。架构还支持了服务治理，持续集成等技术，提高了系统的稳定性。 系统包括了常见的岗位管理，简</description>
     </item>

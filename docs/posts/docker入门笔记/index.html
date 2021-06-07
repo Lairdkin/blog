@@ -18,7 +18,7 @@
 <meta name="application-name" content="RadishCloud">
 <meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" /><link rel="prev" href="https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" /><link rel="next" href="https://radish.cloud/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" /><link rel="prev" href="https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" /><link rel="next" href="https://radish.cloud/posts/%E5%B8%B8%E7%94%A8jdbcurl%E6%A0%BC%E5%BC%8F/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,12 +27,12 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/radish.cloud\/posts\/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0\/"
-        },"genre": "posts","keywords": "docker, java","wordcount":  3929 ,
+        },"genre": "posts","keywords": "docker, java","wordcount":  3996 ,
         "url": "https:\/\/radish.cloud\/posts\/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0\/","datePublished": "2018-05-28T01:56:47+08:00","dateModified": "2018-05-28T01:56:47+08:00","publisher": {
             "@type": "Organization",
-            "name": "作者"},"author": {
+            "name": "萝卜炖鱼丸"},"author": {
                 "@type": "Person",
-                "name": "作者"
+                "name": "萝卜炖鱼丸"
             },"description": ""
     }
     </script></head>
@@ -46,7 +46,18 @@
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/links/"> 友情链接 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" selected>简体中文</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -62,7 +73,23 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
                     <select class="language-select" onchange="location = this.value;"><option value="/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" selected>简体中文</option></select>
@@ -80,8 +107,8 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker入门笔记（一）</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-28">2018-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3929 字&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>萝卜炖鱼丸</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-28">2018-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3996 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -93,14 +120,41 @@
     <li><a href="#docker-概述">Docker 概述</a>
       <ul>
         <li><a href="#什么是docker">什么是Docker</a></li>
-        <li><a href="#为什么选择docker">为什么选择docker</a></li>
+        <li><a href="#为什么选择docker">为什么选择docker</a>
+          <ul>
+            <li><a href="#更高效的利用系统资源">更高效的利用系统资源</a></li>
+            <li><a href="#更快的启动时间">更快的启动时间</a></li>
+            <li><a href="#运行环境一致性">运行环境一致性</a></li>
+            <li><a href="#持续交付和部署">持续交付和部署</a></li>
+            <li><a href="#更轻松的维护和拓展">更轻松的维护和拓展</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#docekr的镜像与容器">Docekr的镜像与容器</a>
       <ul>
         <li><a href="#环境">环境</a></li>
-        <li><a href="#镜像">镜像</a></li>
-        <li><a href="#容器">容器</a></li>
+        <li><a href="#镜像">镜像</a>
+          <ul>
+            <li><a href="#获取镜像">获取镜像</a></li>
+            <li><a href="#列出镜像">列出镜像</a></li>
+            <li><a href="#删除镜像">删除镜像</a></li>
+            <li><a href="#构建镜像">构建镜像</a></li>
+          </ul>
+        </li>
+        <li><a href="#容器">容器</a>
+          <ul>
+            <li><a href="#运行">运行</a></li>
+            <li><a href="#终止容器">终止容器</a></li>
+            <li><a href="#删除容器">删除容器</a></li>
+            <li><a href="#其他操作">其他操作</a>
+              <ul>
+                <li><a href="#导出容器">导出容器</a></li>
+              </ul>
+            </li>
+            <li><a href="#导入容器">导入容器</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -158,14 +212,36 @@ Docker在容器的基础上，进行了进一步的封装，从文件系统、�
 <li><del>远程主机环境：Ubuntu14.04+(因为写作到这的时候断网了就放弃远程环境了)</del></li>
 </ul>
 <p>在Manjaro安装Docker非常简单，在终端输入：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo Pacman -S docker-ce
-</code></pre></div><p><del>即可安装，并无需额外配置</del><br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo Pacman -S docker-ce
+</code></pre></td></tr></table>
+</div>
+</div><p><del>即可安装，并无需额外配置</del><br>
 启动Docker服务</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">systemctl start docker 
-</code></pre></div><p>检查Docker版本</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker --version
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">systemctl start docker 
+</code></pre></td></tr></table>
+</div>
+</div><p>检查Docker版本</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ docker --version
 Docker version 18.09.0-ce, build 4d60db472b
-</code></pre></div><p>Docker就安装好了</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>Docker就安装好了</p>
 <h3 id="镜像">镜像</h3>
 <p>首先我们将了解Docker最核心的概念之一：镜像。镜像是Docker特殊的文件存储形式，其中储存了Linux运行时的用户空间，根据Linux的设计，Linux分为内核和用户空间，宿主机为Docker容器运行提供了内核支持，而Linux镜像为Docker运行提供了用户空间的支持。除了Linux的用户空间外，Docker镜像还储存了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等），Docker镜像不包含任何动态数据，构建完成后不会被改变。</p>
 <p>由于docker使用了UnionFS技术，所以Docker实现了分层储存的特性，镜像并非是一个完整的“镜像”文件，而是一种抽象概念，在存储中，Docker镜像根据构建顺序依次完成储存，不同的镜像可以共享其中的中间层，大大减小了Docker镜像的体积。</p>
@@ -175,10 +251,33 @@ Docker version 18.09.0-ce, build 4d60db472b
 <p>前文我们提到了仓库（Repository）的概念，仓库是一个集中存储和分发镜像的服务，一个 Docker Registry 中可以包含多个仓库（Repository）；每个仓库可以包含多个标签（Tag）；每个标签对应一个镜像。我们可以部署只自己仓库，也可以使用公共的仓库服务。</p>
 </blockquote>
 <p>获取镜像使用<code>docker pull</code>命令：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker pull <span class="o">[</span>选项<span class="o">]</span> <span class="o">[</span>Docker Registry地址<span class="o">]</span>&lt;仓库名&gt;:&lt;标签&gt;
-</code></pre></div><p>如没有仓库地址名，将使用默认的仓库。
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker pull <span class="o">[</span>选项<span class="o">]</span> <span class="o">[</span>Docker Registry地址<span class="o">]</span>&lt;仓库名&gt;:&lt;标签&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>如没有仓库地址名，将使用默认的仓库。
 例如：</p>
-<pre><code>$ sudo docker pull node:latest
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo docker pull node:latest
 latest: Pulling from library/node
 54f7e8ac135a: Already exists 
 d6341e30912f: Already exists 
@@ -190,21 +289,62 @@ d6341e30912f: Already exists
 64f67f03205b: Pull complete 
 Digest: sha256:fed3f48ec9e97a57c17977ff120c3e7bf7d2d4e930ef650bba3f2ada5ac4a33a
 Status: Downloaded newer image for node:latest
-</code></pre><p>这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>这个命令将在Docker的中央仓库下载一个最新版本的Nodejs镜像</p>
 <h4 id="列出镜像">列出镜像</h4>
 <p>我们可以使用<code>docker images</code>列出所有本地的镜像</p>
-<pre><code>$ docker images
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ docker images
 REPOSITORY                        TAG                 IMAGE ID            CREATED             SIZE
 docker-test                       0.0.1               ce25b22437c5        9 days ago          443MB
 node                              latest              37f455de4837        9 days ago          894MB
 tomcat                            latest              48dd385504b1        9 days ago          475MB
 ubuntu                            latest              93fd78260bd1        3 weeks ago         86.2MB
 fabric8/java-jboss-openjdk8-jdk   1.2.3               7a2a8001c977        23 months ago       422MB
-</code></pre><p>列表包含了仓库名、标签、镜像 ID、创建时间以及所占用的空间。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>列表包含了仓库名、标签、镜像 ID、创建时间以及所占用的空间。</p>
 <p>docker分层构建的方式产生了大量的中间层镜像，docker默认只显示最外层的镜像，我们可以通过以下命令查看</p>
-<pre><code>$ docker images -a 
-</code></pre><p>此外<code>docker images</code>还可以通过一些条件来查看镜像：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 查看特定仓库名的镜像</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ docker images -a 
+</code></pre></td></tr></table>
+</div>
+</div><p>此外<code>docker images</code>还可以通过一些条件来查看镜像：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 查看特定仓库名的镜像</span>
 $ sudo docker images ubuntu 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              latest              93fd78260bd1        <span class="m">3</span> weeks ago         86.2MB
@@ -219,17 +359,47 @@ docker images -f <span class="nv">label</span><span class="o">=</span>com.exampl
 $ docker images --format <span class="s2">&#34;table {{.ID}}\t{{.Repository}}\t{{.Tag
 </span><span class="s2">}}&#34;</span>
 
-</code></pre></div><h4 id="删除镜像">删除镜像</h4>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="删除镜像">删除镜像</h4>
 <p>当我们不需要某个镜像的时候，我们可以选择删除镜像，使用<code>docker rmi</code>命令即可删除镜像
 例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo docker rmi tomcat:latest
-</code></pre></div><h4 id="构建镜像">构建镜像</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo docker rmi tomcat:latest
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="构建镜像">构建镜像</h4>
 <p>使用DockerFile构建镜像将在下一篇文章中详细展开</p>
 <h3 id="容器">容器</h3>
 <p>如果你熟悉面向对象的开发的话，你可能更容易理解镜像与容器之间的关系。镜像就是面向对象中的类，而容器就是实例，容器就是实例化的镜像，容器是动态的。如前文所述，容器的实质是宿主机中的进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的命名空间,容器内的进程是隔离与宿主机环境的。</p>
 <h4 id="运行">运行</h4>
 <p>当我们有了镜像之后，我们就可以运行我们的镜像并建立新的容器（实例）,docker使用<code>docker run</code> 命令来运行容器</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">
 $ sudo docker run -it --rm ubuntu /bin/bash    
 root@d332f4d5aecb:/# cat /etc/os-release 
 <span class="nv">NAME</span><span class="o">=</span><span class="s2">&#34;Ubuntu&#34;</span>
@@ -246,7 +416,9 @@ root@d332f4d5aecb:/# cat /etc/os-release
 <span class="nv">UBUNTU_CODENAME</span><span class="o">=</span>bionic
 root@d332f4d5aecb:/# <span class="nb">exit</span>
 <span class="nb">exit</span>
-</code></pre></div><ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>&ndash;it ：这是两个参数，一个是 -i ：交互式操作，一个是 -t 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终获取镜像终端。</li>
 <li>&ndash;rm ：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm 。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 &ndash;rm 可以避免浪费空间。</li>
 <li>ubuntu:14.04 ：这是指用 ubuntu:14.04 镜像为基础来启动容器。
@@ -264,30 +436,81 @@ root@d332f4d5aecb:/# <span class="nb">exit</span>
 <li>执行完毕后容器被终止</li>
 </ul>
 <p>我们可以使用<code>-d</code>参数使容器在后台运行，例如：</p>
-<pre><code>$ sudo docker run -d ubuntu /bin/sh -c &quot;while true; do echo hello world; sleep 1; done&quot;
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo docker run -d ubuntu /bin/sh -c &#34;while true; do echo hello world; sleep 1; done&#34;
 77b2dc01fe0f3f1265df143181e7b9af5e05279a884f4776ee75350ea9d8017a
-</code></pre><p>使用<code>docker ps</code> 可以查看docker容器运行状态</p>
-<pre><code>$ sudo docker ps
-</code></pre><p>希望获取docker日志信息</p>
-<pre><code>docker logs 77b2dc01
-</code></pre><h4 id="终止容器">终止容器</h4>
+</code></pre></td></tr></table>
+</div>
+</div><p>使用<code>docker ps</code> 可以查看docker容器运行状态</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo docker ps
+</code></pre></td></tr></table>
+</div>
+</div><p>希望获取docker日志信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker logs 77b2dc01
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="终止容器">终止容器</h4>
 <p>当我们需要终止容器时可以使用<code>docker stop</code> 命令,当容器z中的应用终止时，容器也会自动终止，可以使用<code>docker ps -a </code>查看中止的容器，终止的容器可以用<code>docker start</code>来重新启动,同理，<code>docker restart</code> 将会将容器重启</p>
 <h4 id="删除容器">删除容器</h4>
 <p>可以使用 <code>docker rm</code> 来删除一个处于终止状态的容器。 例如</p>
-<pre><code>$sudo docker rm trusting_newton
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$sudo docker rm trusting_newton
 trusting_newton
-</code></pre><p>如果要删除一个运行中的容器，可以添加<code>-f</code>参数。Docker 会发送 <code>SIGKILL</code>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果要删除一个运行中的容器，可以添加<code>-f</code>参数。Docker 会发送 <code>SIGKILL</code>
 信号给容器。</p>
 <p>使用如下命令可以终结全部处于终止状态的容器</p>
-<pre><code>docker rm $(docker ps -a -q)
-</code></pre><h4 id="其他操作">其他操作</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker rm $(docker ps -a -q)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="其他操作">其他操作</h4>
 <h5 id="导出容器">导出容器</h5>
 <p>如果要导出本地某个容器，可以使用 <code>docker export </code> 命令。</p>
-<pre><code>$ sudo docker export 3f6&gt;java.tar
-</code></pre><h4 id="导入容器">导入容器</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo docker export 3f6&gt;java.tar
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="导入容器">导入容器</h4>
 <p>导出的本地镜像可以用<code>docker import</code>命令来导入</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cat ubuntu.tar <span class="p">|</span> sudo docker import - test/ubuntu:v1.0
-</code></pre></div><p>下一篇文章，我们讲讲解docker构建镜像的常见方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">cat ubuntu.tar <span class="p">|</span> sudo docker import - test/ubuntu:v1.0
+</code></pre></td></tr></table>
+</div>
+</div><p>下一篇文章，我们讲讲解docker构建镜像的常见方式</p>
 <blockquote>
 <p>参考<br>
 <a href="https://d.ljmx.top/Docker%e6%8a%80%e6%9c%af%e5%85%a5%e9%97%a8%e4%b8%8e%e5%ae%9e%e6%88%98%2B%e7%ac%ac2%e7%89%88.pdf" target="_blank" rel="noopener noreffer">杨保华,戴王剑，曹亚伦-Docker技术入门与实战第二版</a><br>
@@ -302,9 +525,11 @@ trusting_newton
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
-            <div class="post-info-md"></div>
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）" data-hashtags="docker,java"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）" data-ralateuid="1910759497"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）" data-hashtags="docker,java"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）" data-ralateuid="1910759497"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" data-title="Docker入门笔记（一）"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -328,7 +553,7 @@ trusting_newton
 
             
 
-            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">萝卜炖鱼丸</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"><a href='https://beian.miit.gov.cn/'>蒙ICP备14003205号</a></span></div><div class="footer-line">站点部署于<b><a href="//pages.github.com">GIthub Pages</a></b>，由<b><a href="//cloudflare.com">Cloudflare</b></b>提供加速</div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div></br>
         </div>
@@ -339,5 +564,5 @@ trusting_newton
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"blog_comment","lightTheme":"github-light","repo":"Lairdkin/blog"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"blog_comment","lightTheme":"github-light","repo":"Lairdkin/blog"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

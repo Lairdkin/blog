@@ -18,7 +18,7 @@
 <meta name="application-name" content="RadishCloud">
 <meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" /><link rel="next" href="https://radish.cloud/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" /><link rel="next" href="https://radish.cloud/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,12 +27,12 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/radish.cloud\/posts\/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0\/"
-        },"genre": "posts","keywords": "Linux, 密码学","wordcount":  1983 ,
+        },"genre": "posts","keywords": "Linux, 密码学","wordcount":  2008 ,
         "url": "https:\/\/radish.cloud\/posts\/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0\/","datePublished": "2018-05-28T01:56:47+08:00","dateModified": "2018-05-28T01:56:47+08:00","publisher": {
             "@type": "Organization",
-            "name": "作者"},"author": {
+            "name": "萝卜炖鱼丸"},"author": {
                 "@type": "Person",
-                "name": "作者"
+                "name": "萝卜炖鱼丸"
             },"description": ""
     }
     </script></head>
@@ -46,7 +46,18 @@
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/links/"> 友情链接 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" selected>简体中文</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -62,7 +73,23 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/links/" title="">友情链接</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
                     <select class="language-select" onchange="location = this.value;"><option value="/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" selected>简体中文</option></select>
@@ -80,9 +107,9 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">熵与随机数</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%9D%82%E8%B0%88/"><i class="far fa-folder fa-fw"></i>杂谈</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-28">2018-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1983 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>萝卜炖鱼丸</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%9D%82%E8%B0%88/"><i class="far fa-folder fa-fw"></i>杂谈</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-05-28">2018-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2008 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -112,7 +139,20 @@
 <p>我们平时使用的大多数编程语言中所生成的随机数都是伪随机数，例如java中的<code>Random</code>类，可以使用时间戳作为随机种子，这种随机数足以满足我们大多数对随机数生成的需求，但是在一些特殊场合，例如在线交易中的id（这是区块链安全性中的重要一环，据我所知，有多起区块链攻击行为与区块链生成算法有缺陷有关），对随机数的安全性要求较高时，就要求达到密码学安全的伪随机数甚至真随机数，在java中，有一些提供安全随机数生成算法的类，例如<code>org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom</code>，在Tomcat7/8中，就使用了这个类用来产生seesion id，这个类中有一个种子生成器，他会根据配置来获取随机种子，在Tomcat中，会默认使用<code>/dev/random</code>返回的字符来作为种子，这个<code>/dev/random </code>就是我们今天的主角。</p>
 <h2 id="linux中的熵池">Linux中的熵池</h2>
 <p><code>/dev/random</code>是Linux中的一个真随机数生成器，这个生成器维护了一个熵池，Random方法会从熵池中取出字符串作为种子来产生随机数，我们的熵的大部分来于键盘、鼠标和磁盘 IO 数据这样的环境噪声，这些计算机活动所产生的熵会帮助随机数生成，在生成GPG秘钥的过程中，你可能会遇到如下提示：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">We need to generate a lot of random bytes. It is a good idea to perform
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">We need to generate a lot of random bytes. It is a good idea to perform
 some other action <span class="o">(</span><span class="nb">type</span> on the keyboard, move the mouse, utilize the
 disks<span class="o">)</span> during the prime generation<span class="p">;</span> this gives the random number
 generator a better chance to gain enough entropy.
@@ -121,23 +161,63 @@ generator a better chance to gain enough entropy.
 ++++++++++&gt;+++++...........................................................+++++
 Not enough random bytes available. Please <span class="k">do</span> some other work to give
 the OS a chance to collect more entropy! <span class="o">(</span>Need <span class="m">290</span> more bytes<span class="o">)</span>
-</code></pre></div><p>但是假如我们的系统是一个服务器，我们没有鼠标和键盘输入。这意味着唯一的因素是你的磁盘IO。如果它是一个单独的、几乎不使用的磁盘，你将拥有较低的熵。另外一个问题是<code>/dev/random</code>是阻塞的，当你频繁生成随机数的时候，你可能会耗光你的熵池，<code>/dev/random</code> 会等待熵池收集到足够的环境噪声的时候才会继续生成随机数，这可能导致你的进程被长时间的挂起。在java 开发中，常常会遇到一些应用启动时间过长的问题，就可能是熵池空了导致线程阻塞了。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>但是假如我们的系统是一个服务器，我们没有鼠标和键盘输入。这意味着唯一的因素是你的磁盘IO。如果它是一个单独的、几乎不使用的磁盘，你将拥有较低的熵。另外一个问题是<code>/dev/random</code>是阻塞的，当你频繁生成随机数的时候，你可能会耗光你的熵池，<code>/dev/random</code> 会等待熵池收集到足够的环境噪声的时候才会继续生成随机数，这可能导致你的进程被长时间的挂起。在java 开发中，常常会遇到一些应用启动时间过长的问题，就可能是熵池空了导致线程阻塞了。</p>
 <p>幸好Linux给我们提供了另外一个随机数生成器来解决这个问题。<code>/dev/unrandom</code>,这是一个伪随机数生成器，在缺乏熵的时候，他会复用熵池中的内容而不会导致阻塞，但是复用熵池会导致安全性下降，但是在安全性不强的情况下，可以考虑使用这个，比如我们可以使用<code>-Djava.security.egd=file:/dev/./urandom</code>这个java启动参数，来确保我们生成随机数的过程不被阻塞，这也回答了我们开头那个问题，<code>java.security.egd</code>是<code>org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom</code>的配置。</p>
 <p>我们还可以用一些方法来影响熵池</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ cat /proc/sys/kernel/random/poolsize
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat /proc/sys/kernel/random/poolsize
 <span class="m">4096</span>
 $ cat /proc/sys/kernel/random/entropy_avail
 <span class="m">2975</span>
-</code></pre></div><p>使用这两个命令可以查看当前熵池的大小和熵池内有多少熵</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>使用这两个命令可以查看当前熵池的大小和熵池内有多少熵</p>
 <p>我们可以通过一些方法来将熵池耗尽，比如将将/dev/random 定向到/dev/null中</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ cat /dev/random &gt; /dev/null <span class="p">&amp;</span>
-</code></pre></div><p>这样会快速的将熵池耗尽</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat /dev/random &gt; /dev/null <span class="p">&amp;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这样会快速的将熵池耗尽</p>
 <p>如果我们想填充熵池呢，最好的办法是将处理器的抖动加入熵池中，我们可以安装<code>Haveged</code>来实现这一功能</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo pacman -S Hacedged
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo pacman -S Hacedged
 $ systemctl <span class="nb">enable</span> haveged
 $ systemctl start haveged
-</code></pre></div><p>我们可以通过<code>pv</code>命令来观察熵池的增长速度</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 启用前</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>我们可以通过<code>pv</code>命令来观察熵池的增长速度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 启用前</span>
 $ pv /dev/random &gt; /dev/null 
 25.0 B 0:00:03 <span class="o">[</span>0.00 B/s<span class="o">]</span> <span class="o">[</span> &lt;<span class="o">=</span>&gt;
 
@@ -145,7 +225,9 @@ $ pv /dev/random &gt; /dev/null
 $ pv /dev/random &gt; /dev/null               
 62MiB 0:00:03 <span class="o">[</span> 564KiB/s<span class="o">]</span> <span class="o">[</span>  &lt;<span class="o">=</span>&gt;  
 
-</code></pre></div><p>可以观察到从几乎为0增长到了564kiB/s</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>可以观察到从几乎为0增长到了564kiB/s</p>
 <p>参考：<br>
 <a href="https://linux.cn/article-9697-1.html" target="_blank" rel="noopener noreffer">James J - /dev/[u]random：对熵的解释</a><br>
 <a href="https://blog.csdn.net/chszs/article/details/49494701" target="_blank" rel="noopener noreffer">chszs - Tomcat 8熵池阻塞变慢详解</a></p>
@@ -158,9 +240,11 @@ $ pv /dev/random &gt; /dev/null
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
-            <div class="post-info-md"></div>
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数" data-hashtags="Linux,密码学"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数" data-ralateuid="1910759497"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数" data-hashtags="Linux,密码学"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数" data-ralateuid="1910759497"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" data-title="熵与随机数"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -184,7 +268,7 @@ $ pv /dev/random &gt; /dev/null
 
             
 
-            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">萝卜炖鱼丸</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
                     <span class="icp"><a href='https://beian.miit.gov.cn/'>蒙ICP备14003205号</a></span></div><div class="footer-line">站点部署于<b><a href="//pages.github.com">GIthub Pages</a></b>，由<b><a href="//cloudflare.com">Cloudflare</b></b>提供加速</div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div></br>
         </div>
@@ -195,5 +279,5 @@ $ pv /dev/random &gt; /dev/null
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"blog_comment","lightTheme":"github-light","repo":"Lairdkin/blog"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"blog_comment","lightTheme":"github-light","repo":"Lairdkin/blog"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
