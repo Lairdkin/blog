@@ -51,10 +51,10 @@ Linux用户也可以直接使用Homebrew进行安装，另外部分发行版，�
 
 笔者使用的系统是Windows10，在Windows上也有一些流行的包管理工具中提供了hugo的安装，在这里我们推荐使用`scoop`进行安装
 
-```powershell
+```epowershell
 scoop install hugo
-# 或者安装hugo-extend 
-scoop install hugo-extend
+# 或者安装hugo-extended 
+scoop install hugo-extended
 ```
 
 也可以使用Chocolatey进行安装
@@ -62,7 +62,7 @@ scoop install hugo-extend
 ```poweshell
 choco install hugo -confirm
 # or
-choco install hugo-extend -confirm
+choco install hugo-extended -confirm
 ```
 
 最近windows 中自带的包管理winget 终于转正，迎来了1.0版本，不过首批提供的1400个软件中并没有hugo，还是挺遗憾的。

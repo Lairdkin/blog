@@ -1,5 +1,21 @@
 console.log("load foo js")
 
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', function() {
+		navigator.serviceWorker.register('/sw.js', {
+				scope: '/'
+			})
+			.then(function(registration) {
+				// 注册成功
+				console.log('ServiceWorker registration successful with scope: ', registration.scope)
+			})
+			.catch(function(err) {
+				// 注册失败:(
+				console.log('ServiceWorker registration failed: ', err)
+			})
+	})
+}
+
 fetch("https://v1.hitokoto.cn/?c=a").then(res => {
     return res.json()
 }).then(res => {
