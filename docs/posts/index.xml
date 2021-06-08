@@ -4,7 +4,14 @@
         <link>https://radish.cloud/posts/</link>
         <description>所有文章 | 萝卜炖鱼丸</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
-            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Tue, 08 Jun 2021 00:40:22 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Tue, 08 Jun 2021 12:01:44 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Anhlaidh的java笔记1</title>
+    <link>https://radish.cloud/posts/anhlaidh%E7%9A%84java%E7%AC%94%E8%AE%B01/</link>
+    <pubDate>Tue, 08 Jun 2021 12:01:44 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/anhlaidh%E7%9A%84java%E7%AC%94%E8%AE%B01/</guid>
+    <description><![CDATA[Maven Junit 测试 单元测试：对软件中最小可测试单元进行检查和验证，通常是一个函数/方法（属于白盒测试） 集成测试： 将多个单元相互作用，形成一个整体，对整体协调性进行测试 白盒测试： 全面了解程序内部逻辑结构，对所有的逻辑路径都进行测试，一般由程序员完成 黑盒测试：又名功能测试，将程序看作不可打开的盒子，一般由独立使用者完成 自动测试：用程序批量、反复的测试程序，并可自动检查程序]]></description>
+</item><item>
     <title>博客emoji支持一览</title>
     <link>https://radish.cloud/posts/emoji-support/</link>
     <pubDate>Tue, 08 Jun 2021 00:40:22 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://radish.cloud/posts/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E8%AF%91jdk/</guid>
     <description><![CDATA[想要深入了解JVM，就必须了解其实现机制。了解JVM实现的最好方法便是自己动手编译JDK。本文中，我将参照《深入理解Java虚拟机》中的教程，编译openjdk1.8 准备工作 系统环境 编译机器：Lenovo RUI7000 (i7-7700hq+8g DDRR4内存) 操作系统：Manjaro i3wm 18.0 软件环境 java虚拟机部分大多是C++代码，但类库都是由java写成的，所以编译JDK之前你首先需要有个jd]]></description>
-</item><item>
-    <title>熵与随机数</title>
-    <link>https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</link>
-    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://radish.cloud/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/</guid>
-    <description><![CDATA[昨天写Dockerfile那篇文章的时候，发下我的镜像中java有一个启动参数-Djava.security.egd=file:/dev/./urandom，我查了察相关资料，发现了些有趣的事情 随机数 关于这个参数，我们从随机数来说起 学过编程的同学应该都接触过随机数这个概念，虽然叫随机，但是大多数随机数生成实质上是通过一定的预先设定的算法计算出来的，根据密码学]]></description>
 </item></channel>
 </rss>
