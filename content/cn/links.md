@@ -4,6 +4,11 @@ date: 2021-05-29T03:13:29+08:00
 
 ---
 
+###  Oxide
+
+[https://blog.oxide.ink](https://blog.oxide.ink)
+
+
 
 ### 萝卜云服务
 
