@@ -1,0 +1,17 @@
+{
+    "name": "萝卜云博客",
+    "short_name": "萝卜", 
+    "theme_color": "#fff", 
+    "background_color": "#fff", 
+    "display": "standalone", 
+    "start_url": "/", 
+    "scope": "/", 
+    "icons": [ 
+      {
+        "src": "/favicon-32x32.png",
+        "sizes": "480x480",
+        "type": "image/png"
+      }
+    ],
+    "splash_pages": null
+  }
