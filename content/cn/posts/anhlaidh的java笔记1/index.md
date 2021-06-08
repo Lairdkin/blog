@@ -11,7 +11,14 @@ categories:
 - 笔记
 author: Anhlaidh
 authorlink : https://github.com/Anhlaidh
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
+
+lightgallery: true
 ---
+
+
 
 
 ## Maven
