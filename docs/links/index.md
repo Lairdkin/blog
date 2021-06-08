@@ -1,6 +1,11 @@
 # 友情链接
 
 
+###  Oxide
+
+[https://blog.oxide.ink](https://blog.oxide.ink)
+
+
 
 ### 萝卜云服务
 
