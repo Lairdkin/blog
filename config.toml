@@ -260,11 +260,20 @@ theme = "LoveIt"
 # 用于 Hugo 输出文档的设置
 [outputs]
   # LoveIt 更改 | 0.2.0
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON","SW"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
+
+[outputFormats]
+  [outputFormats.SW]
+
+    baseName = "sw"
+
+    mediaType = "application/javascript"
+
+    path = "/"
 
 
   

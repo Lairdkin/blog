@@ -1,5 +1,5 @@
 // 使用{uniqueIdentifier}模板，稍后我们将使用hexo的事件机制，替换成ISO时间，作为每次构建的唯一标识符
-var cacheName = 'tellyouwhat-cache-2021-06-08 12:01:44 &#43;0800 CST';
+var cacheName = 'tellyouwhat-cache-2021-05-28 01:55:54 &#43;0800 CST';
 // 在这个数组里面写入您主页加载需要的资源文件
 var filesToCache = [
   '/',
