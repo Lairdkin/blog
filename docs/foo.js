@@ -18,6 +18,13 @@ window.addEventListener('beforeinstallprompt', function (e) {
   showAddToHomeScreen();
 });
 
+
+function showAddToHomeScreen() {
+    var a2hsBtn = document.querySelector(".ad2hs-prompt");
+    a2hsBtn.style.display = "block";
+    a2hsBtn.addEventListener("click", addToHomeScreen);
+  }
+
 function addToHomeScreen() {
     deferredPrompt.prompt();  // Wait for the user to respond to the prompt
     deferredPrompt.userChoice
@@ -31,14 +38,6 @@ function addToHomeScreen() {
         deferredPrompt = null;
       });
   }
-
-function showAddToHomeScreen() {
-    var a2hsBtn = document.querySelector(".ad2hs-prompt");
-    a2hsBtn.style.display = "block";
-    a2hsBtn.addEventListener("click", addToHomeScreen);
-  }
-
-
 
 fetch("https://v1.hitokoto.cn/?c=a").then(res => {
     return res.json()
