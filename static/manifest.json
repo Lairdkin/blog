@@ -2,7 +2,7 @@
   "name": "萝卜炖鱼丸的博客",
   "short_name": "萝卜博客",
   "theme_color": "#ffaf01",
-  "background_color": "#ffaf01",
+  "background_color": "#a0abbe",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
