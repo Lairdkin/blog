@@ -69,7 +69,6 @@ if (workbox) {
     
 
     workbox.precaching.precacheAndRoute([
-        {url: '/', revision: CACHE_VERSION },
         {url: '/index.html', revision: CACHE_VERSION },
         {url:'/posts/index.html', revision: CACHE_VERSION },
         {url:'/categories/index.html', revision: CACHE_VERSION },

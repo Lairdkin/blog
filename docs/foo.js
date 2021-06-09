@@ -5,7 +5,6 @@ if('serviceWorker' in navigator) {
         .then(() => {
             console.log('Service Worker Registered');
         });
-
 }
 
 let deferredPrompt;
