@@ -1,42 +1,37 @@
 console.log("loading Customer Javascript file...")
 if('serviceWorker' in navigator) {
-    const PREFETCH = true;
-    const PREFETCH_LINK_RELS = ['index','next', 'prev', 'prefetch'];
-    function prefetchCache() {
-        if(navigator.serviceWorker.controller) {
-            let links = document.querySelectorAll(
-                PREFETCH_LINK_RELS.map((rel) => {
-                    return 'link[rel='+rel+']';
-                }).join(',')
-            );
-            console.log("links")
-            if(links.length > 0) {
-                Array.from(links)
-                    .map((link) => {
-                        let href = link.getAttribute('href');
-                        navigator.serviceWorker.controller.postMessage({
-                            action : 'cache',
-                            url : href,
-                        });
-                    });
-            }
-        }
-    }
-
     navigator.serviceWorker
         .register('/sw.js', { scope: '/' })
         .then(() => {
             console.log('Service Worker Registered');
         });
 
-    navigator.serviceWorker
-        .ready
-        .then(() => {
-            if(PREFETCH) {
-                prefetchCache();
-            }
-        });
 }
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', function (e) {
+  console.log('before install prompt')
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  showAddToHomeScreen();
+});
+
+function addToHomeScreen() {
+    deferredPrompt.prompt();  // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice
+      .then(function (choiceResult) {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        // 释放不再有用的deferredPrompt对象
+        deferredPrompt = null;
+      });
+  }
 
 fetch("https://v1.hitokoto.cn/?c=a").then(res => {
     return res.json()
