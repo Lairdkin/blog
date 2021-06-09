@@ -17,6 +17,7 @@ var filesToCache = [
   '/lib/lunr/lunr.zh.min.js',
   '/lib/mapbox-gl/mapbox-gl.min.js',
   '/lib/aplayer/APlayer.min.js',
+  '/lib/typeit/typeit.min.js',
   'https://utterances.radish.cloud/utterances.5ae8c64c.js',
   'https://utterances.radish.cloud/client.js',
   '/lib/fontawesome-free/all.min.css',
