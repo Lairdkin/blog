@@ -4,12 +4,12 @@ importScripts('./workbox-sw.js')
 
 if (workbox) {
     console.log(`Yay! Workbox is loaded 🎉`)
-    workbox.setConfig({debug: false})
+    workbox.setConfig({ debug: false })
 
     self.skipWaiting()
     workbox.core.clientsClaim();
 
-    
+
     workbox.routing.registerRoute(
         /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico)$/,
         new workbox.strategies.CacheFirst({
@@ -26,12 +26,7 @@ if (workbox) {
         })
     );
 
-    workbox.routing.registerRoute(
-        /index\.html/,
-        workbox.strategies.networkFirst({
-          cacheName: 'workbox:html',
-        })
-      );
+
 
     workbox.routing.registerRoute(
         /^https:\/\/utterances\.radish\.cloud/,
@@ -66,22 +61,28 @@ if (workbox) {
         })
     );
 
-    
+
 
     workbox.precaching.precacheAndRoute([
-        {url: '/index.html', revision: CACHE_VERSION },
-        {url:'/posts/index.html', revision: CACHE_VERSION },
-        {url:'/categories/index.html', revision: CACHE_VERSION },
-        {url:'/about/index.html', revision: CACHE_VERSION },
+        { url: '/index.html', revision: CACHE_VERSION },
+        { url: '/posts/index.html', revision: CACHE_VERSION },
+        { url: '/categories/index.html', revision: CACHE_VERSION },
+        { url: '/about/index.html', revision: CACHE_VERSION },
         // ... other entries ...
-      ]);
+    ]);
+
+
+    const matchFunction = ({ url }) => {
+        return /\.(?:js|css|json)$/.test(url['href']) && !/variable.js/.test(url['href']);
+    };
 
     workbox.routing.registerRoute(
-        /\.(?:js|css|json)$/,
+        matchFunction,
         new workbox.strategies.StaleWhileRevalidate({
             cacheName: 'static-resources'
         })
     )
+
 
 
     workbox.routing.registerRoute(

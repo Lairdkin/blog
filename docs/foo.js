@@ -32,6 +32,14 @@ function addToHomeScreen() {
       });
   }
 
+function showAddToHomeScreen() {
+    var a2hsBtn = document.querySelector(".ad2hs-prompt");
+    a2hsBtn.style.display = "block";
+    a2hsBtn.addEventListener("click", addToHomeScreen);
+  }
+
+
+
 fetch("https://v1.hitokoto.cn/?c=a").then(res => {
     return res.json()
 }).then(res => {
