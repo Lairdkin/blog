@@ -27,6 +27,13 @@ if (workbox) {
     );
 
     workbox.routing.registerRoute(
+        /index\.html/,
+        workbox.strategies.networkFirst({
+          cacheName: 'workbox:html',
+        })
+      );
+
+    workbox.routing.registerRoute(
         /^https:\/\/utterances\.radish\.cloud/,
         new workbox.strategies.CacheFirst({
             cacheName: "comment",
