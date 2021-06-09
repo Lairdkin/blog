@@ -26,7 +26,7 @@ var filesToCache = [
   '/lib/cookieconsent/cookieconsent.min.css',
   '/lib/normalize/normalize.min.css',
   '/css/style.min.css',
-  '/css/my-gitalk.css',
+  '/images/avatar.jpg',
   '/page/2/',
   '/index.json',
   '/favicon.png',
