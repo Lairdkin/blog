@@ -73,7 +73,7 @@ if (workbox) {
 
 
     const matchFunction = ({ url }) => {
-        return /\.(?:js|css|json)$/.test(url['href']) && !/variable.js/.test(url['href']);
+        return /\.(?:js|css|json)$/.test(url['href']) && !/variable.js/.test(url['href']) && !/sw.js/.test(url['href']);
     };
 
     workbox.routing.registerRoute(
