@@ -1,103 +1,103 @@
-import "/swfunc.js"
-// 在这个数组里面写入您主页加载需要的资源文件
-const BASE_CACHE_FILES = [
-  '/',
-  '/categories/',
-  '/posts/',
-  '/archives/',
-  '/about/',
-  '/links/',
-  '/lib/lunr/lunr.segmentit.js',
-  '/lib/katex/katex.min.js',
-  '/lib/autocomplete/autocomplete.min.js',
-  '/lib/lunr/lunr.min.js',
-  '/js/theme.min.js',
-  '/lib/cookieconsent/cookieconsent.min.js',
-  '/lib/lunr/lunr.zh.min.js',
-  '/lib/mapbox-gl/mapbox-gl.min.js',
-  '/lib/aplayer/APlayer.min.js',
-  '/lib/typeit/typeit.min.js',
-  'https://utterances.radish.cloud/utterances.5ae8c64c.js',
-  'https://utterances.radish.cloud/client.js',
-  '/lib/fontawesome-free/all.min.css',
-  '/lib/animate/animate.min.css',
-  '/lib/katex/katex.min.css',
-  '/lib/cookieconsent/cookieconsent.min.css',
-  '/lib/normalize/normalize.min.css',
-  '/css/style.min.css',
-  '/images/avatar.jpg',
-  '/page/2/',
-  '/index.json',
-  '/favicon.png',
-  '/manifest.json',
-];
+const CACHE_VERSION = "1623431496";
+importScripts('./workbox-sw.js')
+
+//1
+if (workbox) {
+    console.log(`Yay! Workbox is loaded 🎉`)
+    workbox.setConfig({ debug: false })
+
+    //self.skipWaiting()
+    workbox.core.clientsClaim();
 
 
-const CACHE_VERSION = "1623241188";
+    self.addEventListener("message",(event)=>{
+        if(event.data && event.data.type === "SKIP_WAITING"){
+            self.skipWaiting()
+        }
+    })
 
 
-const OFFLINE_CACHE_FILES = [
-  '/',
-  '/categories/',
-  '/posts/',
-  '/archives/',
-  '/about/',
-  '/links/',
-  '/lib/lunr/lunr.segmentit.js',
-  '/lib/katex/katex.min.js',
-  '/lib/autocomplete/autocomplete.min.js',
-  '/lib/lunr/lunr.min.js',
-  '/js/theme.min.js',
-  '/lib/cookieconsent/cookieconsent.min.js',
-  '/lib/lunr/lunr.zh.min.js',
-  '/lib/mapbox-gl/mapbox-gl.min.js',
-  '/lib/aplayer/APlayer.min.js',
-  '/lib/typeit/typeit.min.js',
-  '/lib/fontawesome-free/all.min.css',
-  '/lib/animate/animate.min.css',
-  '/lib/katex/katex.min.css',
-  '/lib/cookieconsent/cookieconsent.min.css',
-  '/lib/normalize/normalize.min.css',
-  '/css/style.min.css',
-  '/images/avatar.jpg',
-  '/page/2/',
-  '/index.json',
-  '/favicon.png',
-  '/manifest.json'
-];
+    workbox.routing.registerRoute(
+        /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico)$/,
+        new workbox.strategies.CacheFirst({
+            cacheName: "images",
+            plugins: [
+                new workbox.expiration.ExpirationPlugin({
+                    maxEntries: 1000,
+                    maxAgeSeconds: 60 * 60 * 24 * 30
+                }),
+                new workbox.cacheableResponse.CacheableResponsePlugin({
+                    statuses: [0, 200]
+                })
+            ],
+        })
+    );
 
-const NOT_FOUND_CACHE_FILES = [
-    '/css/style.min.css',
-    '/js/theme.min.js',
-    '/404.html',
-];
 
-const OFFLINE_PAGE = '/index.html';
-const NOT_FOUND_PAGE = '/404.html';
 
-const CACHE_VERSIONS = {
-    assets: 'assets-v' + CACHE_VERSION,
-    content: 'content-v' + CACHE_VERSION,
-    offline: 'offline-v' + CACHE_VERSION,
-    notFound: '404-v' + CACHE_VERSION,
-};
+    workbox.routing.registerRoute(
+        /^https:\/\/utterances\.radish\.cloud/,
+        new workbox.strategies.CacheFirst({
+            cacheName: "comment",
+            plugins: [
+                new workbox.expiration.ExpirationPlugin({
+                    maxEntries: 1000,
+                    maxAgeSeconds: 60 * 60 * 24 * 30
+                }),
+                new workbox.cacheableResponse.CacheableResponsePlugin({
+                    statuses: [0, 200]
+                })
+            ]
+        })
+    );
 
-// Define MAX_TTL's in SECONDS for specific file extensions
-const MAX_TTL = {
-    '/': 3600,
-    html: 3600,
-    json: 86400,
-    js: 86400,
-    css: 86400,
-};
 
-const CACHE_BLACKLIST = [
-    //(str) => {
-    //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
-    //},
-];
+    workbox.routing.registerRoute(
+        /^https:\/\/cdn\.jsdelivr\.net/,
+        new workbox.strategies.CacheFirst({
+            cacheName: "static-libs",
+            plugins: [
+                new workbox.expiration.ExpirationPlugin({
+                    maxEntries: 1000,
+                    maxAgeSeconds: 60 * 60 * 24 * 30
+                }),
+                new workbox.cacheableResponse.CacheableResponsePlugin({
+                    statuses: [0, 200]
+                })
+            ]
+        })
+    );
 
-const SUPPORTED_METHODS = [
-    'GET',
-];
+    
+    workbox.precaching.precacheAndRoute([
+        { url: '/index.html', revision: CACHE_VERSION },
+        { url: '/posts/index.html', revision: CACHE_VERSION },
+        { url: '/categories/index.html', revision: CACHE_VERSION },
+        { url: '/about/index.html', revision: CACHE_VERSION },
+        // ... other entries ...
+    ]);
 
+
+    const matchFunction = ({ url }) => {
+        return /\.(?:js|css|json||woff2)$/.test(url['href']) && !/variable.js/.test(url['href']) && !/sw.js/.test(url['href']);
+    };
+
+    workbox.routing.registerRoute(
+        matchFunction,
+        new workbox.strategies.StaleWhileRevalidate({
+            cacheName: 'static-resources'
+        })
+    )
+
+
+
+    workbox.routing.registerRoute(
+        /^https:\/\/fonts\.googleapis\.com/,
+        new workbox.strategies.StaleWhileRevalidate({
+            cacheName: 'google-fonts-stylesheets'
+        })
+    )
+
+} else {
+    console.log(`Boo! Workbox didn't load 😬`)
+}

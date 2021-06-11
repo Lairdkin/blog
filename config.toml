@@ -34,9 +34,6 @@ theme = "LoveIt"
     # RSS 文章数目
     rss = 10
 
-        
-  
-
   [params.home]
     # LoveIt 新增 | 0.2.0 RSS 文章数目
     rss = 20
@@ -263,18 +260,17 @@ theme = "LoveIt"
 # 用于 Hugo 输出文档的设置
 [outputs]
   # LoveIt 更改 | 0.2.0
-  home = ["HTML", "RSS", "JSON","variable"]
+  home = ["HTML", "RSS", "JSON","variable","sw"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   taxonomyTerm = ["HTML"]
 
 [outputFormats]
-  [outputFormats.variable]
-    baseName = "variable"
+  [outputFormats.sw]
+    baseName = "sw"
     mediaType = "application/javascript"
     path = "/"
-
 
   
 
