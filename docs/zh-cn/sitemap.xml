@@ -11,6 +11,16 @@
                     hreflang="zh-cn"
                     href="https://radish.cloud/projects/demoproject/"
                     /></url><url>
+            <loc>https://radish.cloud/categories/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://radish.cloud/en/categories/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://radish.cloud/categories/"
+                    /></url><url>
+            <loc>https://radish.cloud/tags/cdn/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/posts/doge-cloud/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/posts/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
@@ -21,6 +31,16 @@
                     hreflang="zh-cn"
                     href="https://radish.cloud/posts/"
                     /></url><url>
+            <loc>https://radish.cloud/tags/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://radish.cloud/en/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://radish.cloud/tags/"
+                    /></url><url>
+            <loc>https://radish.cloud/categories/%E5%8D%9A%E5%AE%A2%E7%AC%94%E8%AE%B0/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/</loc><lastmod>2021-06-10T13:27:33&#43;08:00</lastmod><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -32,26 +52,8 @@
                     /></url><url>
             <loc>https://radish.cloud/posts/service-worker-update/</loc><lastmod>2021-06-09T21:50:22&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/posts/anhlaidh%E7%9A%84java%E7%AC%94%E8%AE%B01/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod></url><url>
-            <loc>https://radish.cloud/categories/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://radish.cloud/en/categories/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://radish.cloud/categories/"
-                    /></url><url>
             <loc>https://radish.cloud/tags/java/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/tags/junit/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod></url><url>
-            <loc>https://radish.cloud/tags/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://radish.cloud/en/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://radish.cloud/tags/"
-                    /></url><url>
             <loc>https://radish.cloud/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/categories/%E7%AC%94%E8%AE%B0/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod></url><url>
             <loc>https://radish.cloud/tags/%E7%BD%91%E7%BB%9C/</loc><lastmod>2021-06-08T12:01:44&#43;08:00</lastmod></url><url>

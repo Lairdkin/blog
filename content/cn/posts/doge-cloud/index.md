@@ -8,8 +8,8 @@ author: ""
 authorLink: ""
 description: ""
 
-tags: []
-categories: []
+tags: ['cdn']
+categories: ['博客笔记']
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -24,7 +24,8 @@ math:
 lightgallery: false
 license: ""
 ---
-
+DogeCloud：一家专注于视频、融合CDN与云存储的公有云
+<!--more-->
 
 <div id="player"></div>
 <script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
@@ -37,4 +38,3 @@ var player = new DogePlayer({
 });
 </script>
 
-<!--more-->
