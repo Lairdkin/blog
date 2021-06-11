@@ -1,13 +1,20 @@
 importScripts('./variable.js')
 importScripts('./workbox-sw.js')
 
-
+//1
 if (workbox) {
     console.log(`Yay! Workbox is loaded 🎉`)
     workbox.setConfig({ debug: false })
 
-    self.skipWaiting()
+    //self.skipWaiting()
     workbox.core.clientsClaim();
+
+
+    self.addEventListener("message",(event)=>{
+        if(event.data && event.data.type === "SKIP_WAITING"){
+            self.skipWaiting()
+        }
+    })
 
 
     workbox.routing.registerRoute(
@@ -73,7 +80,7 @@ if (workbox) {
 
 
     const matchFunction = ({ url }) => {
-        return /\.(?:js|css|json)$/.test(url['href']) && !/variable.js/.test(url['href']) && !/sw.js/.test(url['href']);
+        return /\.(?:js|css|json||woff2)$/.test(url['href']) && !/variable.js/.test(url['href']) && !/sw.js/.test(url['href']);
     };
 
     workbox.routing.registerRoute(

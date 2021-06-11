@@ -1,5 +1,5 @@
 baseURL = "https://radish.cloud/"
-publishdir                       = "docs"
+publishdir  = "docs"
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
 summaryLength = 180
@@ -98,7 +98,10 @@ theme = "LoveIt"
       # LoveIt 新增 | 0.2.0 目录配置
 
       [params.page.library.js]
-        someJavascript = "foo.js"
+          someJavascript = "js/tata.js"
+      
+      [params.page.library.css]
+          # someCSS = "css/materialize.min.css"
   
       [params.page.toc]
         # 是否使用目录
