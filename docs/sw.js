@@ -68,8 +68,6 @@ if (workbox) {
         })
     );
 
-
-
     workbox.precaching.precacheAndRoute([
         { url: '/index.html', revision: CACHE_VERSION },
         { url: '/posts/index.html', revision: CACHE_VERSION },
