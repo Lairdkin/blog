@@ -8,22 +8,15 @@ window.addEventListener('beforeinstallprompt', function (e) {
 });
 
 function showAddToHomeScreen() {
-  if (/mobile/i.test(navigator.userAgent) === true) {
-    tata.text("<span>开启离线访问功能?</span>", '<a href="javascript:void(0);" stytle="color:;" onclick="addToHomeScreen()">好的</a>', {
-      position: "bm",
-      duration: 4000
-    })
-  } else {
-    tata.log("<span>开启离线访问功能?</span>", '<a href="javascript:void(0);" stytle="color:;" onclick="addToHomeScreen()">好的</a>', {
-      position: "bm",
-      duration: 4000
-    })
-  }
+  tata.log("<span>开启离线访问功能?</span>", '<a href="javascript:void(0);" style="color:#455760;" onclick="addToHomeScreen()">好的</a>', {
+    position: "bm",
+    duration: 4000
+  })
 
 }
 
 function addToHomeScreen() {
-  deferredPrompt.prompt();  
+  deferredPrompt.prompt();
   deferredPrompt.userChoice
     .then(function (choiceResult) {
       if (choiceResult.outcome === 'accepted') {
