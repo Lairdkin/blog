@@ -14,7 +14,8 @@
 <meta name="twitter:title" content="杂谈"/>
 <meta name="twitter:description" content=""/>
 <meta name="application-name" content="RadishCloud">
-<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><script src='/js/nprogress.js'></script>
+<link rel='stylesheet' href='/css/nprogress.css'/><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/manifest.json"><link rel="canonical" href="https://radish.cloud/categories/%E6%9D%82%E8%B0%88/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -88,7 +89,20 @@
                         <a href="/posts/%E7%86%B5%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%95%B0/" class="archive-item-link">熵与随机数</a>
                         <span class="archive-item-date">05-28</span>
                     </article></div></div>
-            </main><footer class="footer">
+            </main><script>
+    NProgress.configure({ easing: 'ease', speed: 300 ,showSpinner: false,parent:'html'});
+    NProgress.start();
+    var porcessTimer = setInterval(function() {
+        NProgress.inc()
+    }, 200);
+    window.addEventListener("load",(e)=>{
+        NProgress.done(true);
+        clearInterval(porcessTimer)
+        console.log("测试")
+    })
+</script>
+
+    <footer class="footer">
         
         <div class="footer-container">
         

@@ -16,7 +16,8 @@
 <meta name="twitter:title" content="Hexo博客搭建"/>
 <meta name="twitter:description" content="最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 fetch(&#34;https://demo.radishkin.workers.dev/api/set?url=&#34;&#43;window.btoa(location.href)).then(res={ console.log(res) }) 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地"/>
 <meta name="application-name" content="RadishCloud">
-<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><script src='/js/nprogress.js'></script>
+<link rel='stylesheet' href='/css/nprogress.css'/><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/manifest.json"><link rel="canonical" href="https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" /><link rel="prev" href="https://radish.cloud/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" /><link rel="next" href="https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -722,7 +723,20 @@ hexo generate
 <div id="comments" style="padding: 2rem 0 2rem!important;"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
-            </main><footer class="footer">
+            </main><script>
+    NProgress.configure({ easing: 'ease', speed: 300 ,showSpinner: false,parent:'html'});
+    NProgress.start();
+    var porcessTimer = setInterval(function() {
+        NProgress.inc()
+    }, 200);
+    window.addEventListener("load",(e)=>{
+        NProgress.done(true);
+        clearInterval(porcessTimer)
+        console.log("测试")
+    })
+</script>
+
+    <footer class="footer">
         
         <div class="footer-container">
         

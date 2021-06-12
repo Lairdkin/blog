@@ -18,7 +18,8 @@
 <meta name="twitter:description" content="2018年的夏天，我坚持了仅仅两个月的博客，因为服务器到期关停了。当初的我还设定了一天一篇博客的“伟大”目标。然而直到博客关停的时候，仓库里还留着10多篇没有完结的草稿。在过去的两年时间里，我时常想把这个博客重新办起来，最终也因为各种原因一直也没有付诸于实践。
 最近我有了一点宽裕的时间，为了督促自己学习，我决定复活我的博客。"/>
 <meta name="application-name" content="RadishCloud">
-<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><script src='/js/nprogress.js'></script>
+<link rel='stylesheet' href='/css/nprogress.css'/><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/manifest.json"><link rel="canonical" href="https://radish.cloud/posts/blog-rebirth-record/" /><link rel="prev" href="https://radish.cloud/posts/pojo-javabean-entity%E5%8C%BA%E5%88%AB/" /><link rel="next" href="https://radish.cloud/posts/markdown-extend/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -695,7 +696,20 @@ Anonymous blog <span class="p">&lt;/</span><span class="nt">br</span><span class
 <div id="comments" style="padding: 2rem 0 2rem!important;"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
-            </main><footer class="footer">
+            </main><script>
+    NProgress.configure({ easing: 'ease', speed: 300 ,showSpinner: false,parent:'html'});
+    NProgress.start();
+    var porcessTimer = setInterval(function() {
+        NProgress.inc()
+    }, 200);
+    window.addEventListener("load",(e)=>{
+        NProgress.done(true);
+        clearInterval(porcessTimer)
+        console.log("测试")
+    })
+</script>
+
+    <footer class="footer">
         
         <div class="footer-container">
         
