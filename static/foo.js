@@ -2,25 +2,28 @@
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', function (e) {
-  console.log('before install prompt')
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
-  // Stash the event so it can be triggered later.
   deferredPrompt = e;
   showAddToHomeScreen();
 });
 
 function showAddToHomeScreen() {
-  tata.log("<span>开启离线访问功能?</span>",'<a href="#" stytle="color:;" onclick="addToHomeScreen()">好的</a>',{
-    position: "bm",
-    duration: 4000
-  })
+  if (/mobile/i.test(navigator.userAgent) === true) {
+    var a2hsBtn = document.querySelector(".ad2hs-prompt");
+    a2hsBtn.style.display = "block"; a2hsBtn.addEventListener("click", addToHomeScreen);
+  } else {
+    tata.log("<span>开启离线访问功能?</span>", '<a href="javascript:void(0);" stytle="color:;" onclick="addToHomeScreen()">好的</a>', {
+      position: "bm",
+      duration: 4000
+    })
+  }
+
 }
 
 
 
 function addToHomeScreen() {
-  deferredPrompt.prompt();  // Wait for the user to respond to the prompt
+  deferredPrompt.prompt();  
   deferredPrompt.userChoice
     .then(function (choiceResult) {
       if (choiceResult.outcome === 'accepted') {
@@ -28,7 +31,6 @@ function addToHomeScreen() {
       } else {
         console.log('User dismissed the A2HS prompt');
       }
-      // 释放不再有用的deferredPrompt对象
       deferredPrompt = null;
     });
 }
