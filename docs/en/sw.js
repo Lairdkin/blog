@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1623491911";
+const CACHE_VERSION = "1623492343";
 importScripts('./workbox-sw.js')
 
 //2
