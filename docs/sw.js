@@ -1,7 +1,7 @@
-const CACHE_VERSION = "1623479849";
+const CACHE_VERSION = "1623480031";
 importScripts('./workbox-sw.js')
 
-//1
+//2
 if (workbox) {
     console.log(`Yay! Workbox is loaded 🎉`)
     workbox.setConfig({ debug: false })
