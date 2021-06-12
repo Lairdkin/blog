@@ -9,8 +9,10 @@ window.addEventListener('beforeinstallprompt', function (e) {
 
 function showAddToHomeScreen() {
   if (/mobile/i.test(navigator.userAgent) === true) {
-    var a2hsBtn = document.querySelector(".ad2hs-prompt");
-    a2hsBtn.style.display = "block"; a2hsBtn.addEventListener("click", addToHomeScreen);
+    tata.text("<span>开启离线访问功能?</span>", '<a href="javascript:void(0);" stytle="color:;" onclick="addToHomeScreen()">好的</a>', {
+      position: "bm",
+      duration: 4000
+    })
   } else {
     tata.log("<span>开启离线访问功能?</span>", '<a href="javascript:void(0);" stytle="color:;" onclick="addToHomeScreen()">好的</a>', {
       position: "bm",
@@ -19,8 +21,6 @@ function showAddToHomeScreen() {
   }
 
 }
-
-
 
 function addToHomeScreen() {
   deferredPrompt.prompt();  
