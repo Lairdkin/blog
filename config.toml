@@ -98,7 +98,7 @@ theme = "LoveIt"
           someJavascript = "js/tata.js"
       
       [params.page.library.css]
-          # someCSS = "css/materialize.min.css"
+          someCSS = "foo.css"
   
       [params.page.toc]
         # 是否使用目录
@@ -166,7 +166,7 @@ theme = "LoveIt"
         enable = true
         appId = "nzQD1VSNO15t41r81iycjyxG-gzGzoHsz"
         appKey = "IsoxHJmeJAdEAei7Sa8ieCXX"
-        placeholder = ""
+        placeholder = "昵称填写qq可以显示qq头像和昵称哦~"
         avatar = "mp"
         meta= ""
         pageSize = 10
@@ -443,7 +443,7 @@ theme = "LoveIt"
       name = "友情链接"
       url = "/links/"
       title = ""
-      weight = 4
+      weight = 98
     [[languages.zh-cn.menu.main]]
       identifier = "about"
       pre = ""
@@ -451,7 +451,7 @@ theme = "LoveIt"
       name = "关于"
       url = "/about/"
       title = ""
-      weight = 5
+      weight = 99
     [[languages.zh-cn.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
@@ -459,7 +459,15 @@ theme = "LoveIt"
         name = ""
         url = "https://github.com/Lairdkin/blog"
         title = "GitHub"
-        weight = 6
+        weight = 100
+    [[languages.zh-cn.menu.main]]
+      identifier = "Weibo"
+      pre = ""
+      post = ""
+      name = "微言"
+      url = "/weibo/"
+      title = "小声BB"
+      weight = 5
     [languages.zh-cn.params.footer]
       enable = true
       # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
