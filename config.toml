@@ -175,7 +175,7 @@ theme = "LoveIt"
         recordIP = false
         highlight = true
         enableQQ = true
-        serverURLs = "http://comment.radish.cloud"
+        serverURLs = "https://comment.radish.cloud"
         # LoveIt 新增 | 0.2.6 emoji 数据文件名称, 默认是 "google.yml"
         # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
         # 位于 "themes/LoveIt/assets/data/emoji/" 目录
