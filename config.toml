@@ -393,6 +393,7 @@ theme = "LoveIt"
         url = "https://github.com/Lairdkin/blog"
         title = "GitHub"
         weight = 6
+        
     [languages.en.params.footer]
 
       enable = true
@@ -460,7 +461,7 @@ theme = "LoveIt"
       name = "关于"
       url = "/about/"
       title = ""
-      weight = 99
+      weight = 98
     [[languages.zh-cn.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
@@ -469,6 +470,14 @@ theme = "LoveIt"
         url = "https://github.com/Lairdkin/blog"
         title = "GitHub"
         weight = 100
+    [[languages.zh-cn.menu.main]]
+        identifier = "status"
+        pre = "<i class='fas fa-server'></i>"
+        post = ""
+        name = ""
+        url = "https://status.radish.cloud"
+        title = "服务状态"
+        weight = 101
     [[languages.zh-cn.menu.main]]
       identifier = "Weibo"
       pre = ""
