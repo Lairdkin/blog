@@ -1,0 +1,25 @@
+#veditor {
+	background-image: url(https://image.bestzuo.cn/images/20200708160947.gif!getwebp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: rgba(255, 255, 255, 0);
+	resize: vertical
+}
+
+#veditor:focus{
+	background-position-y: 200px;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+img.vimg {
+    transition: all 1s   /* 旋转时间为 1s */
+}
+
+img.vimg:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}

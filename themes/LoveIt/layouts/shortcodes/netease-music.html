@@ -1,0 +1,13 @@
+
+
+{{ if .IsNamedParams }}
+{{ if .Get "type" }}
+
+<meting-js auto="https://music.163.com/#/{{.Get "type"}}?id={{.Get "songid"}}" list-folded=true></meting-js>
+{{else}}
+<meting-js auto="https://music.163.com/#/song?id={{.Get "songid"}}" list-folded=true></meting-js>
+{{end}}
+{{ else }}
+
+<meting-js auto="https://music.163.com/#/song?id={{.Get 0}}" list-folded=true></meting-js>
+{{ end }}
