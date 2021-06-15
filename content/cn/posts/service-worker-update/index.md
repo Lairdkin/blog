@@ -1,5 +1,5 @@
 ---
-title: "谨慎处理 Service Worker 的更新"
+title: "[转]处理service worker 更新的常用方法"
 subtitle: ""
 date: 2021-06-09T21:50:22+08:00
 lastmod: 2021-06-09T21:50:22+08:00
@@ -8,8 +8,8 @@ author: ""
 authorLink: ""
 description: ""
 
-tags: []
-categories: []
+tags: [service worker,pwa]
+categories: [前端笔记]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -25,9 +25,9 @@ lightgallery: false
 license: ""
 ---
 
-> 转自：https://juejin.cn/post/6844903792522035208
-
-
+{{< admonition type=info title="转载信息" open=true >}}
+转自：[掘金 by 小蘑菇哥哥](https://juejin.cn/post/6844903792522035208) ，原标题：谨慎处理 Service Worker 的更新
+{{< /admonition >}}
 
 今天要聊的话题是前端最近的一个更新方向 PWA 中的核心 Service Worker 的更新问题。这是一个很容易被开发者忽略的问题，因为绝大部分开发者可能对它还不太熟悉。
 

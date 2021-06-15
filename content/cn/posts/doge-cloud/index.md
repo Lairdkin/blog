@@ -3,7 +3,7 @@ title: "DogeCloud视频云服务测试"
 subtitle: ""
 date: 2021-06-10T13:27:33+08:00
 lastmod: 2021-06-10T13:27:33+08:00
-draft: false
+draft: true
 author: ""
 authorLink: ""
 description: ""
@@ -16,7 +16,7 @@ hiddenFromSearch: false
 
 featuredImage: ""
 featuredImagePreview: ""
-
+draft: true
 toc:
   enable: true
 math:
@@ -37,4 +37,3 @@ var player = new DogePlayer({
     autoPlay: false
 });
 </script>
-

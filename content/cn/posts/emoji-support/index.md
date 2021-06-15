@@ -13,7 +13,7 @@ description: "Hugo 和 LoveIt 中的 Emoji 的用法指南."
 resources:
 - name: "featured-image"
   src: "featured-image.jpg"
-
+draft: true
 lightgallery: true
 ---
 
@@ -1286,5 +1286,4 @@ Emoji 可以通过多种方式在 Hugo 项目中启用.
 | :yemen: | `yemen` | :mayotte: | `mayotte` |
 | :south_africa: | `south_africa` | :zambia: | `zambia` |
 | :zimbabwe: | `zimbabwe` | | |
-
 
