@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1623754412";
+const CACHE_VERSION = "1623755314";
 importScripts('./workbox-sw.js')
 
 //2
@@ -74,6 +74,8 @@ if (workbox) {
         { url: '/posts/index.html', revision: CACHE_VERSION },
         { url: '/categories/index.html', revision: CACHE_VERSION },
         { url: '/about/index.html', revision: CACHE_VERSION },
+        { url: '/index.json', revision: CACHE_VERSION }
+        { url: '/links/index.html',revision: CACHE_VERSION}
         // ... other entries ...
     ]);
 
@@ -86,10 +88,9 @@ if (workbox) {
         matchFunction,
         new workbox.strategies.StaleWhileRevalidate({
             cacheName: 'static-resources'
-        })
+        }),
+        
     )
-
-
 
     workbox.routing.registerRoute(
         /^https:\/\/fonts\.googleapis\.com/,
