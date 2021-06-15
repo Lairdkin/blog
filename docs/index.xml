@@ -26,7 +26,7 @@
     <pubDate>Sat, 05 Jun 2021 17:46:20 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://radish.cloud/posts/markdown-extend/</guid>
-    <description><![CDATA[本文用于演示本站的对hugo写作功能的拓展以及实现 Mermaid 图 地图 youtube 视频 哔哩哔哩视频 网易云音乐 单曲： 歌单： Latex 行内样式：$x=2$ 代码块： $$ f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi $$ 打字段落 TODO PlantUml plantuml/plantuml-server: PlantUML Online Server (github.com) 通过JavaScript调用同步实时工作演示 (plantuml.com) 参考 HEXO博客引用B站视频并自动适配 [拓展hugo的markdown_流程图mermaid Hugo博客LaTeX渲染)]]></description>
+    <description><![CDATA[本文用于演示本站的对hugo写作功能的拓展以及实现 Mermaid 图 地图 youtube 视频 哔哩哔哩视频 网易云音乐 单曲： 歌单： Latex 行内样式：$x=2$ 代码块： $$ f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi $$ 打字段落 PlantUml Diagram TODO PlantUml plantuml/plantuml-server: PlantUML Online Server (github.com) 通过JavaScript调用同步实时工作演示 (plantuml.com) 参考 HEXO博客引用B站视频并自动适配 [拓展hugo的markdown_流程图mermaid Hugo博客LaTeX渲染)]]></description>
 </item><item>
     <title>博客重生小记</title>
     <link>https://radish.cloud/posts/blog-rebirth-record/</link>

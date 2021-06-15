@@ -1,0 +1,20 @@
+{{ $title := "Diagram" }}
+{{ if .IsNamedParams }}
+  {{ with .Get "title" }}
+    {{ $title = . }}
+  {{ end }}
+{{ else }}
+  {{ with .Get 0 }}
+    {{ $title = . }}
+  {{ end }}
+{{ end }}
+
+{{ $inner := .Inner }}
+
+<figure>
+  <img
+    src='https://g.gravizo.com/svg?{{ $inner }}'
+    alt='{{ $title  }}'
+    />
+    <figcaption>{{ $title  }}</figcaption>
+</figure>

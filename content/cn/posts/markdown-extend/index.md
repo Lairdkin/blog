@@ -87,9 +87,26 @@ public class HelloWorld {
 
 
 
+## PlantUml
+
+{{<uml>}}
+
+left to right direction
+skinparam packageStyle rectangle
+actor customer
+actor clerk
+rectangle checkout {
+  customer -- (checkout)
+  (checkout) .> (payment) : include
+  (help) .> (checkout) : extends
+  (checkout) -- clerk
+}
+
+{{</uml>}}
+
 ## TODO
 
-- [ ] PlantUml
+- [x] PlantUml
 
 	- [plantuml/plantuml-server: PlantUML Online Server (github.com)](https://github.com/plantuml/plantuml-server)
 
