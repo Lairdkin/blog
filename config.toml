@@ -168,6 +168,7 @@ theme = "LoveIt"
         appKey = "IsoxHJmeJAdEAei7Sa8ieCXX"
         placeholder = "昵称填写qq可以显示qq头像和昵称哦~"
         avatar = "mp"
+        master = 'a197ee9af986201f1482413a5f37f54a'
         meta= ""
         pageSize = 10
         lang = ""
