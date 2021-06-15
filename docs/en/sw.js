@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1623755396";
+const CACHE_VERSION = "1623755514";
 importScripts('./workbox-sw.js')
 
 //2
@@ -74,7 +74,7 @@ if (workbox) {
         { url: '/posts/index.html', revision: CACHE_VERSION },
         { url: '/categories/index.html', revision: CACHE_VERSION },
         { url: '/about/index.html', revision: CACHE_VERSION },
-        { url: '/index.json', revision: CACHE_VERSION }
+        { url: '/index.json', revision: CACHE_VERSION },
         { url: '/links/index.html',revision: CACHE_VERSION}
         // ... other entries ...
     ]);
