@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Hugo Markdown 功能拓展 - 萝卜炖鱼丸</title><meta name="Description" content=""><meta property="og:title" content="Hugo Markdown 功能拓展" />
-<meta property="og:description" content="本文用于演示本站的对hugo写作功能的拓展以及实现 Mermaid 图 地图 youtube 视频 哔哩哔哩视频 网易云音乐 单曲： 歌单： Latex 行内样式：$x=2$ 代码块： $$ f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi $$ 打字段落 PlantUml Diagram TODO PlantUml plantuml/plantuml-server: PlantUML Online Server (github.com) 通过JavaScript调用同步实时工作演示 (plantuml.com) 参考 HEXO博客引用B站视频并自动适配 [拓展hugo的markdown_流程图mermaid Hugo博客LaTeX渲染)" />
+<meta property="og:description" content="本文用于演示本站的对hugo写作功能的拓展以及实现 Mermaid 图 地图 youtube 视频 哔哩哔哩视频 网易云音乐 单曲： 歌单： Latex 行内样式：$x=2$ 代码块： $$ f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi $$ 打字段落 PlantUml Diagram 追番 TODO PlantUml plantuml/plantuml-server: PlantUML Online Server (github.com) 通过JavaScript调用同步实时工作演示 (plantuml.com) 参考 HEXO博客引用B站视频并自动适配 [拓展hugo的markdown_流程图mermaid Hugo博客LaTeX渲染)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://radish.cloud/posts/markdown-extend/" /><meta property="og:image" content="https://radish.cloud/posts/markdown-extend/featured-image.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-05T17:46:20&#43;08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://radish.cloud/posts/markdown-extend/featured-image.png"/>
 <meta name="twitter:title" content="Hugo Markdown 功能拓展"/>
-<meta name="twitter:description" content="本文用于演示本站的对hugo写作功能的拓展以及实现 Mermaid 图 地图 youtube 视频 哔哩哔哩视频 网易云音乐 单曲： 歌单： Latex 行内样式：$x=2$ 代码块： $$ f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi $$ 打字段落 PlantUml Diagram TODO PlantUml plantuml/plantuml-server: PlantUML Online Server (github.com) 通过JavaScript调用同步实时工作演示 (plantuml.com) 参考 HEXO博客引用B站视频并自动适配 [拓展hugo的markdown_流程图mermaid Hugo博客LaTeX渲染)"/>
+<meta name="twitter:description" content="本文用于演示本站的对hugo写作功能的拓展以及实现 Mermaid 图 地图 youtube 视频 哔哩哔哩视频 网易云音乐 单曲： 歌单： Latex 行内样式：$x=2$ 代码块： $$ f(x)=\int_{-\infty}^\infty\widehat f\xi,e^{2\pi i\xi x},d\xi $$ 打字段落 PlantUml Diagram 追番 TODO PlantUml plantuml/plantuml-server: PlantUML Online Server (github.com) 通过JavaScript调用同步实时工作演示 (plantuml.com) 参考 HEXO博客引用B站视频并自动适配 [拓展hugo的markdown_流程图mermaid Hugo博客LaTeX渲染)"/>
 <meta name="application-name" content="RadishCloud">
 <meta name="apple-mobile-web-app-title" content="RadishCloud"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><script src='/js/nprogress.js'></script>
 <link rel='stylesheet' href='/css/nprogress.css'/><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -34,7 +34,7 @@
                             "url": "https:\/\/radish.cloud\/posts\/markdown-extend\/featured-image.png",
                             "width":  1420 ,
                             "height":  708 
-                        }],"genre": "posts","wordcount":  166 ,
+                        }],"genre": "posts","wordcount":  168 ,
         "url": "https:\/\/radish.cloud\/posts\/markdown-extend\/","datePublished": "2021-06-05T17:46:20+08:00","dateModified": "2021-06-05T17:46:20+08:00","publisher": {
             "@type": "Organization",
             "name": "萝卜炖鱼丸"},"author": {
@@ -115,7 +115,7 @@
     <div class="toc-content" id="toc-content-auto"></div>
 </div><article class="page single"><h1 class="single-title animated flipInX">Hugo Markdown 功能拓展</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>萝卜炖鱼丸</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-05">2021-06-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 166 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-05">2021-06-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 168 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/markdown-extend/" class="leancloud_visitors" data-flag-title="Hugo Markdown 功能拓展">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
             </span>&nbsp;</div>
@@ -146,6 +146,7 @@
     <li><a href="#latex">Latex</a></li>
     <li><a href="#打字段落">打字段落</a></li>
     <li><a href="#plantuml">PlantUml</a></li>
+    <li><a href="#追番">追番</a></li>
     <li><a href="#todo">TODO</a></li>
     <li><a href="#参考">参考</a></li>
   </ul>
@@ -202,6 +203,19 @@ $$</p>
     />
     <figcaption>Diagram</figcaption>
 </figure>
+<h2 id="追番">追番</h2>
+<p>
+
+
+<div><div class="radish-bangumi-card" data-id="38395"></div></div>
+
+
+
+
+
+<div><div class="radish-bangumi-card" data-id="38221"></div></div>
+
+</p>
 <h2 id="todo">TODO</h2>
 <ul>
 <li>

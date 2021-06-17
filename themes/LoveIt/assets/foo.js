@@ -11,9 +11,20 @@ window.addEventListener('beforeinstallprompt', function (e) {
 });
 
 function showAddToHomeScreen() {
-  tata.info("<span>使<i>萝卜炖鱼丸的博客</i>可以离线访问？</span>",'<button class="btn-flat toast-action" onclick="addToHomeScreen()">Yes</button>')
+  tata.info("<span>使<i>萝卜炖鱼丸的博客</i>可以离线访问？</span>", '<button class="btn-flat toast-action" onclick="addToHomeScreen()">Yes</button>')
 }
 
+
+document.querySelectorAll(".radish-bangumi-card").forEach((node) => { 
+  id = node.getAttribute("data-id"); 
+  fetch("http://api.bilibili.com/pgc/view/web/season?season_id="+id).then(
+    res =>{
+      return res.json()
+    }
+  ).then(res=>{
+    node.innerHTML =res
+  }) 
+})
 
 
 function addToHomeScreen() {

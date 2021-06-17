@@ -1,0 +1,32 @@
+
+<!-- <div >
+    <div class="moe-bangumi-card mdui-card">
+        <div class="moe-bangumi-left"><img class="moe-bangumi-cover-pc"
+                src="https://i0.hdslb.com/bfs/bangumi/image/cac1699418451387f93572066b7e5d14d799d3cd.jpg"
+                referrerpolicy="no-referrer"><img class="moe-bangumi-cover-pe"
+                src="https://i0.hdslb.com/bfs/bangumi/image/b2626a6dabaaedb1573bdcf1dfa846519b700099.png"
+                referrerpolicy="no-referrer"></div>
+        <div class="moe-bangumi-right">
+            <div class="moe-bangumi-header">
+                <div class="moe-bangumi-title">关于我转生变成史莱姆这档事 转生史莱姆日记</div>
+                <div class="moe-bangumi-subtitle">番剧 | 日本 | 更新至第8话</div>
+            </div>
+            <main class="moe-bangumi-content">美妙的史莱姆人生！
+    
+                累计突破50万部的大人气外传四格漫画『转生史莱姆日记』，作为转生史莱姆的外传系列首次TV动画化！
+                「因为拿到了贵重的纸，我把至今为止发生的事情以日记形式记录了下来。开头的话就这么...</main>
+            <div class="moe-bangumi-footer"><a href="https://www.bilibili.com/bangumi/play/ss38221"
+                    class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent moe-bangumi-btn"
+                    target="_blank"><i class="mdui-icon material-icons">arrow_forward</i> 点击查看</a></div>
+        </div>
+    </div>
+</div> -->
+
+<div>
+    {{- if .IsNamedParams -}}
+        <div class="radish-bangumi-card" data-id="{{ .Get `id` }}"></div>
+    {{- else -}}
+        <div class="radish-bangumi-card" data-id="{{ .Get 0 }}"></div>
+    {{- end -}}
+</div>
+

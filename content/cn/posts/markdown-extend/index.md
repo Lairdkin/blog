@@ -104,6 +104,13 @@ rectangle checkout {
 
 {{</uml>}}
 
+
+
+## 追番
+
+{{<animate 38395>}}
+{{<animate 38221>}}
+
 ## TODO
 
 - [x] PlantUml
