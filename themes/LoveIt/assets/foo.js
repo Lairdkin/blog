@@ -15,17 +15,7 @@ function showAddToHomeScreen() {
 }
 
 
-document.querySelectorAll(".radish-bangumi-card").forEach((node) => { 
-  id = node.getAttribute("data-id"); 
-  fetch("http://api.bilibili.com/pgc/view/web/season?season_id="+id).then(
-    res =>{
-      return res.json()
-    }
-  ).then(res=>{
-    console.log(res)
-    node.innerHTML =res
-  }) 
-})
+
 
 
 function addToHomeScreen() {

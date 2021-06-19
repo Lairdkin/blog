@@ -22,7 +22,7 @@
                     <div class="moe-bangumi-subtitle">${res.result.positive.title} | 日本 | ${res.result.new_ep.desc}</div>
                 </div>
                 <main class="moe-bangumi-content">${res.result.evaluate}</main>
-                <div class="moe-bangumi-footer"><a href="${res.result.link}"
+                <div class="moe-bangumi-footer"><a href="${res.result.share_url}"
                         class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent moe-bangumi-btn"
                         target="_blank"><i class="mdui-icon material-icons">arrow_forward</i> 点击查看</a></div>
             </div>
