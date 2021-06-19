@@ -22,6 +22,7 @@ document.querySelectorAll(".radish-bangumi-card").forEach((node) => {
       return res.json()
     }
   ).then(res=>{
+    console.log(res)
     node.innerHTML =res
   }) 
 })

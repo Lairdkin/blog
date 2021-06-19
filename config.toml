@@ -486,6 +486,14 @@ theme = "LoveIt"
       url = "/weibo/"
       title = "小声BB"
       weight = 5
+     [[languages.zh-cn.menu.main]]
+      identifier = "bangumi"
+      pre = ""
+      post = ""
+      name = "追番"
+      url = "/bangumi/"
+      title = "番剧列表"
+      weight = 6
     [languages.zh-cn.params.footer]
       enable = true
       # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
