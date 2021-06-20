@@ -4,7 +4,14 @@
         <link>https://radish.cloud/posts/</link>
         <description>所有文章 | 萝卜炖鱼丸</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
-            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Thu, 17 Jun 2021 02:14:16 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Mon, 21 Jun 2021 01:07:28 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>单性生殖”的读书笔记</title>
+    <link>https://radish.cloud/posts/parthenogenesis/</link>
+    <pubDate>Mon, 21 Jun 2021 01:07:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/parthenogenesis/</guid>
+    <description><![CDATA[终于把考研分享的ppt做完了……有了一点点多余的时间，来学习一下最近很火的“单性生殖”吧。 最近一篇预印本文章很火，讲的是第二军医大通过构建相连的妊娠微环境，成功使雄性大鼠产生后代的故事。 简单来说呢，这个实验的第一步要先把一只经过去势（通俗来讲叫做“阉割”，去除睾丸、附睾、精囊等）的雄性大鼠和一只雌性大鼠通过手术结合在一起，构造一只人工“连体婴”（parabi]]></description>
+</item><item>
     <title>【补档】萝卜的狒狒国际服漫画</title>
     <link>https://radish.cloud/posts/ff14-cartoon/</link>
     <pubDate>Thu, 17 Jun 2021 02:14:16 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
     <description><![CDATA[最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 fetch("https://demo.radishkin.workers.dev/api/set?url="+window.btoa(location.href)).then(res={ console.log(res) }) 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地]]></description>
-</item><item>
-    <title>Springboot快速上手</title>
-    <link>https://radish.cloud/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</link>
-    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://radish.cloud/posts/springboot%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</guid>
-    <description><![CDATA[Springboot是由spring开发团队Pivotal推出的全新框架，他设计目的简化繁琐的Spring配置,专注于应用的开发。SpringBoot采用了&quot;约定优先于配置（COC，Convnetion Over Configuration）&ldquo;的设计思想，通过为企业开发应用环境设计出了很多自动配置的依赖模块,这些模块几乎不需要配置，开箱即用，极大]]></description>
 </item></channel>
 </rss>

@@ -334,8 +334,12 @@ hugo
 其中docs/就是hugo生成的静态站点文件
 
 
+## 部署博客
+### 部署github pages
 
-## 部署github pages和cloudflare
+### 部署nginx服务器
+
+### 部署cdn为站点加速
 
 ## 为博客添加评论
 
