@@ -21,9 +21,3 @@ weight: 0
 
 联络请优先通过[**Telegram**](https://t.me/radishcloud) 或者 邮箱联系，其他途径随缘
 
-## 捐助我们
-
-如果喜欢我的博客，可以考虑通过下面的方式资助一下哦~非常感激！
-
-<iframe src="https://sponsor.radish.cloud/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
-

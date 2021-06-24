@@ -224,7 +224,7 @@ theme = "LoveIt"
   [params.cdn]
     # CDN 数据文件名称, 默认不启用
     # ("jsdelivr.yml")
-    #data = "jsdelivr.yml"
+    data = "jsdelivr.yml"
       
       
 
@@ -459,9 +459,26 @@ theme = "LoveIt"
       pre = ""
       post = ""
       name = "关于"
-      url = "/about/"
+      url = ""
       title = ""
       weight = 98
+
+    [[languages.zh-cn.menu.main]]
+    parent = "about"
+    pre = ""
+    name = "关于我"
+    identifier = "aboutme"
+    url = "/about/"
+    weight = 1
+
+    [[languages.zh-cn.menu.main]]
+    parent = "about"
+    pre = ""
+    name = "支持我"
+    identifier = "sponsor"
+    url = "/sponsor/"
+    weight = 2
+
     [[languages.zh-cn.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
