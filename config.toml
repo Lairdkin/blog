@@ -497,7 +497,7 @@ theme = "LoveIt"
     [languages.zh-cn.params.footer]
       enable = true
       # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
-      custom = '站点部署于<b><a href="//pages.github.com">GIthub Pages</a></b>，由<b><a href="//cloudflare.com">Cloudflare</b></b>提供加速'
+      custom = '站点部署于<b><a href="//cloud.tencent.com">腾讯云</a></b>，由<b><a href="//DogeCloud.com">DogeCloud</b></b>提供加速</br>'
       # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
       hugo = true
       # LoveIt 新增 | 0.2.0 是否显示版权信息
