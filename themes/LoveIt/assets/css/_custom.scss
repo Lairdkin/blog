@@ -81,10 +81,15 @@ img.site-avatar-plug-bilibili {
 .dropdown-content {
   display: none;
   position: absolute;
+  background-color: $global-background-color;
   
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   line-height: 1.3rem;
+
+  [theme=dark] & {
+    background-color: $global-background-color-dark;
+  }
 }
 
 /* 子菜单的链接 */
@@ -99,7 +104,7 @@ img.site-avatar-plug-bilibili {
 
 /* 鼠标移上去后修改子菜单链接颜色 */
 .dropdown-content a:hover {
-  // background-color: #f1f1f1;
+  //background-color: #f1f1f1;
   border-radius: 4px;
 }
 
