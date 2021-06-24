@@ -18,4 +18,3 @@ new Artitalk({
     ,serverURL: 'https://comment.radish.cloud'
 })
 </script>
-
