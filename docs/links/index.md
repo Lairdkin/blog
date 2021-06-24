@@ -66,6 +66,15 @@ logo="https://files.catbox.moe/r0w5l0.png"
 word="基于github的博客评论系统，部署于cfworkers"
 
 >}}
+>
+{{<friends
+
+name="Tiny Tiny RSS服务"
+url="https://tt-rss.radish.cloud/"
+logo="https://i.loli.net/2021/06/24/xvm2fECSDV6W5Ag.png"
+word="自建rss阅读服务"
+
+>}}
 
 
 ### Telegram频道 
