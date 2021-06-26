@@ -4,9 +4,16 @@
         <link>https://radish.cloud/</link>
         <description>萝卜炖鱼丸</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
-            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Mon, 21 Jun 2021 01:07:28 &#43;0800</lastBuildDate>
+            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Fri, 25 Jun 2021 17:22:06 &#43;0800</lastBuildDate>
             <atom:link href="https://radish.cloud/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>博客重生记2</title>
+    <link>https://radish.cloud/posts/build-hugo-blog/</link>
+    <pubDate>Fri, 25 Jun 2021 17:22:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/build-hugo-blog/</guid>
+    <description><![CDATA[<p>本文是博客重生记的第二篇，本文将介绍站点的部署，本站的主题和一些相关功能的拓展。</p>]]></description>
+</item><item>
     <title>单性生殖”的读书笔记</title>
     <link>https://radish.cloud/posts/parthenogenesis/</link>
     <pubDate>Mon, 21 Jun 2021 01:07:28 &#43;0800</pubDate>

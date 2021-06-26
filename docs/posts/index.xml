@@ -4,7 +4,14 @@
         <link>https://radish.cloud/posts/</link>
         <description>所有文章 | 萝卜炖鱼丸</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1979646055@qq.com (萝卜炖鱼丸)</managingEditor>
-            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Mon, 21 Jun 2021 01:07:28 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1979646055@qq.com (萝卜炖鱼丸)</webMaster><lastBuildDate>Fri, 25 Jun 2021 17:22:06 &#43;0800</lastBuildDate><atom:link href="https://radish.cloud/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>博客重生记2</title>
+    <link>https://radish.cloud/posts/build-hugo-blog/</link>
+    <pubDate>Fri, 25 Jun 2021 17:22:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://radish.cloud/posts/build-hugo-blog/</guid>
+    <description><![CDATA[<p>本文是博客重生记的第二篇，本文将介绍站点的部署，本站的主题和一些相关功能的拓展。</p>]]></description>
+</item><item>
     <title>单性生殖”的读书笔记</title>
     <link>https://radish.cloud/posts/parthenogenesis/</link>
     <pubDate>Mon, 21 Jun 2021 01:07:28 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://radish.cloud/posts/docker%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
     <description><![CDATA[如今，如果你作为一个开发者而不知道容器化技术，那你可能要反思一下自己了，作为计算机领域发展最快最热门的技术之一，容器成为了现代互联网服务架构的基石。 2013年DotCloud发布了容器服务Docker，并在2015年发布了其第一个正式版本，同年国内的Daocloud和灵雀云等公司开始提供基于docker的云服务业务，正是在此机会下我有幸接触了当时还非常先进的]]></description>
-</item><item>
-    <title>Hexo博客搭建</title>
-    <link>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
-    <pubDate>Mon, 28 May 2018 01:56:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://radish.cloud/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
-    <description><![CDATA[最近记性实在是下降的厉害，搞的东西天天忘，所以把咕了好几年的博客又捡起来了，这次选用了Hexo作为博客的引擎，支持markdown，轻量，部署简单，不过安装中还是踩了一些坑，简单的记录下（其实就是博客太空水一篇2333 fetch("https://demo.radishkin.workers.dev/api/set?url="+window.btoa(location.href)).then(res={ console.log(res) }) 环境 服务器：阿里云学生机 轻量级应用服务器 服务器系统：Ubuntu16.04 阿里云一直不提供1804的镜像，但是不推荐手动升级，容易挂 本地]]></description>
 </item></channel>
 </rss>

@@ -16,20 +16,32 @@ word="不想当写手的码农不是好咸鱼_(xз」∠)_"
 
 >}}
 
-{{<friends
 
-name="萝卜炖鱼丸的博客"
-url="https://radish.cloud"
-logo="https://radish.cloud/images/avatar.jpg"
-word="大家要好好吃饭"
+{{< friends
+name="Anhlaidh的博客"
+url="https://blog.oxide.ink"
+logo="https://q1.qlogo.cn/g?b=qq&nk=1353387605&s=100"
+word="不想当写手的码农不是好咸鱼_(xз」∠)_"
 
 >}}
+
+
 
 
 
 ## 我的服务
 ### 网页服务
 一些我部署的常用服务
+
+{{<friends
+
+name="网盘服务"
+url="https://drive.radish.cloud"
+logo="https://drive.radish.cloud/static/img/favicon.ico"
+word="基于onedrive的私有云服务，支持webdev"
+
+>}}
+
 
 {{<friends
 
