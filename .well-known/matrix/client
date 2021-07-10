@@ -1,0 +1,35 @@
+
+{
+	"m.homeserver": {
+		"base_url": "https://matrix.radish.cloud"
+	}
+,
+	"m.identity_server": {
+		"base_url": "https://matrix.radish.cloud"
+	}
+,
+	"m.integrations": {
+		"managers": [
+			{
+				"api_url": "https://dimension.radish.cloud/api/v1/scalar",
+				"ui_url": "https://dimension.radish.cloud/element"
+			}
+		]
+	}
+,
+	"io.element.jitsi": {
+		"preferredDomain": "jitsi.radish.cloud"
+	},
+	"im.vector.riot.jitsi": {
+		"preferredDomain": "jitsi.radish.cloud"
+	}
+	,
+	"io.element.e2ee": {
+		"default": true,
+		"secure_backup_required": false,
+		"secure_backup_setup_methods": []
+	},
+	"im.vector.riot.e2ee": {
+		"default": true
+	}
+}

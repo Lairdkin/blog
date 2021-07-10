@@ -17,17 +17,6 @@ word="不想当写手的码农不是好咸鱼_(xз」∠)_"
 >}}
 
 
-{{< friends
-name="Anhlaidh的博客"
-url="https://blog.oxide.ink"
-logo="https://q1.qlogo.cn/g?b=qq&nk=1353387605&s=100"
-word="不想当写手的码农不是好咸鱼_(xз」∠)_"
-
->}}
-
-
-
-
 
 ## 我的服务
 ### 网页服务
