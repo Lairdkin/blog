@@ -16,7 +16,14 @@ word="不想当写手的码农不是好咸鱼_(xз」∠)_"
 
 >}}
 
+##  新朋友
 
+{{< friends
+name="JacklandaのBlog"
+url="https://lyyl.me"
+logo="https://myblog-1304161589.cos.ap-beijing.myqcloud.com/static/images/whoami/avatar.jpg"
+word="做自己喜欢的事"
+>}}
 
 ## 我的服务
 ### 网页服务
