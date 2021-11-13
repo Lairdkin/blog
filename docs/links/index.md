@@ -25,6 +25,13 @@ logo="https://myblog-1304161589.cos.ap-beijing.myqcloud.com/static/images/whoami
 word="做自己喜欢的事"
 >}}
 
+{{< friends
+name="Totoro's Blog"
+url="https://yyw.moe"
+logo="https://secure.gravatar.com/avatar/4c1c1becddf4fbf657678220ee14095a?s=256&d=identicon&r=g"
+word="南七技校里的大菜鸡"
+>}}
+
 ## 我的服务
 ### 网页服务
 一些我部署的常用服务
